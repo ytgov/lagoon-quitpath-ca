@@ -27,10 +27,13 @@ Unless otherwise noted, the source code of this project is distributed under the
 3. Install the site with the following options:
    - Choose language: English
    - Installation profile: Minimal
-   - Configure site: as desired but site settings will be overridden shortly
-4. Import the template's default configuration: `ddev drush cim -y`
-5. Genuflect to the Drupal God: `ddev drush cr`
-6. Add the user created in step #3 to the Administrator role.
-7. Verify there any errors shown on the Drupal
+   - Configure site: as desired but site settings will be overridden shortly.
+     The site email address should be `eservices@yukon.ca` unless advised otherwise by eServices.
+4. Override the system's site UUID from the value in `config/sync/system.site.yml`:
+   `ddev drush cset system.site uuid <uuid value from system.site.yml>`
+5. Import the template's default configuration: `ddev drush cim -y`
+6. Genuflect to the Drupal God: `ddev drush cr`
+7. Add the user created in step #3 to the Administrator role.
+8. Verify there any errors shown on the Drupal
    [Status report](https://lagoon-quitpath-ca.ddev.site/admin/reports/status)
    are within reason.
