@@ -1,19 +1,9 @@
-# Government of Yukon Lagoon Drupal 10 Template
+# lagoon-quitpath-ca: Yukon Government - HSS - Get help to quit smoking and vaping
 
 ## Introduction
 
-This template is the starting point for all new "boutique" Drupal CMS websites
-hosted by ICT - eServices.
-A boutique website is one that has received approval to exist separately from
-[yukon.ca](https://yukon.ca) or that is too large or technically complex to be
-implemented as a campaign site within yukon.ca's CMS.
-
-Once a new repository is created from this template, the website built from that
-repo can run:
-
-- locally in a development containerized environment managed by `ddev`,
-- hosted atop the eServices Platform in either a TEST or PROD environment, or
-- hosted atop the amazee.io Lagoon Platform under eServices' account.
+This project was generated from
+[lagoon-boutique-template](https://github.com/ytgov/lagoon-boutique-template).
 
 ## How to Contribute
 
@@ -26,29 +16,21 @@ Unless otherwise noted, the source code of this project is distributed under the
 
 ## Requirements
 
-- ddev installed
-- Lagoon CLI installed and configured
+- Install [ddev](https://ddev.readthedocs.io/en/stable/users/install/ddev-installation/) v1.24+.
 
 ## Installation
 
-### Install new site from template in local development environment
+### Install the new site in a local development environment
 
-Ask eServices to provide a Drupal instance name for this project.
-Instances made from this template will have names beginning with `lagoon-` and
-contain only alphanumeric or hyphen characters.
-
-1. Replace "lagoon-boutique-template" with the desired Drupal instance name,
-   particularly in `.ddev/config.yaml` and `composer.json`.
-2. Launch the development environment: `ddev start`
-3. Visit the new site's Drupal installation page at a URL like
-   `https://lagoon-instance-name.ddev.site`
-4. Install the site with the following options:
+1. Launch the development environment: `ddev start`
+2. Visit the new site's Drupal installation page at `https://lagoon-quitpath-ca.ddev.site`.
+3. Install the site with the following options:
    - Choose language: English
    - Installation profile: Minimal
-   - Configure site: as desired but will be overridden shortly
-5. Get the installation's site UUID: `ddev drush cget system.site uuid`
-6. Replace the `uuid` value in `config/sync/system.site.yml` with the UUID from
-   the previous step.
-   Change the `name` value as desired.
-7. Import the template's default configuration: `ddev drush cim -y`
-8. Genuflect to the Drupal God: `ddev drush cr`
+   - Configure site: as desired but site settings will be overridden shortly
+4. Import the template's default configuration: `ddev drush cim -y`
+5. Genuflect to the Drupal God: `ddev drush cr`
+6. Add the user created in step #3 to the Administrator role.
+7. Verify there any errors shown on the Drupal
+   [Status report](https://lagoon-quitpath-ca.ddev.site/admin/reports/status)
+   are within reason.
