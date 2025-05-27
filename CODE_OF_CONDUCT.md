@@ -1,6 +1,6 @@
-# Contributor Covenant Code of Conduct for the [`project_name`] project
+# Contributor Covenant Code of Conduct for the lagoon-quitpath-ca project
 
-Contributors to repositories hosted in [`project_name`] are expected to follow the Contributor Covenant Code of Conduct, and those working within Government are also expected to follow the Values and Ethics Code for the Public Sector
+Contributors to repositories hosted in lagoon-quitpath-ca are expected to follow the Contributor Covenant Code of Conduct, and those working within Government are also expected to follow the Values and Ethics Code for the Public Sector
 
 ## Our Pledge
 
@@ -45,7 +45,7 @@ Further details of specific enforcement policies may be posted separately.
 
 Project maintainers who do not follow or enforce the Code of Conduct in good faith may face temporary or permanent repercussions as determined by other members of the project's leadership.
 
-## Attribution 
+## Attribution
 This Code of Conduct is adapted from the [Contributor Covenant][homepage], version 1.4,
 available at [https://www.contributor-covenant.org/version/1/4/code-of-conduct.html](https://www.contributor-covenant.org/version/1/4/code-of-conduct.html)
 

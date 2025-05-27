@@ -1,6 +1,6 @@
 {
-    "name": "ytgov/lagoon-boutique-template",
-    "description": "Starting point for all YG boutique Drupal CMS websites.",
+    "name": "ytgov/lagoon-quitpath-ca",
+    "description": "Yukon Government - HSS - Get help to quit smoking and vaping.",
     "type": "project",
     "license": "MIT",
     "repositories": [

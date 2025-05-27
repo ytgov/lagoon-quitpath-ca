@@ -1,10 +1,10 @@
 _core:
   default_config_hash: HlN7eAN2N4JIHsYv56V4E7sqC9bS609KwvGFjyD_mgk
 langcode: en
-uuid: REPLACE_WITH_INSTALLED_SYSTEM.SITE_UUID
-name: lagoon-boutique-template
+uuid: 69fc82f2-a604-427c-992a-1564665ae70b
+name: QuitPath
 mail: eservices@yukon.ca
-slogan: ''
+slogan: 'Get help to quit smoking and vaping'
 page:
   403: ''
   404: ''
