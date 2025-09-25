@@ -1,0 +1,25 @@
+uuid: fa6de49a-f0ce-431c-b9be-9de440434b42
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_quit_date
+    - paragraphs.paragraphs_type.story
+  module:
+    - datetime
+    - tmgmt_content
+third_party_settings:
+  tmgmt_content:
+    excluded: false
+id: paragraph.story.field_quit_date
+field_name: field_quit_date
+entity_type: paragraph
+bundle: story
+label: 'Quit date'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

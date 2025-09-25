@@ -1,0 +1,18 @@
+uuid: d19d62d6-dfc6-4043-883d-2de46a6c2bfa
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.chewing_tobacco_nicotine_pouches
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: paragraph.chewing_tobacco_nicotine_pouches
+target_entity_type_id: paragraph
+target_bundle: chewing_tobacco_nicotine_pouches
+default_langcode: site_default
+language_alterable: true

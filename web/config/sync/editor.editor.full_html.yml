@@ -1,0 +1,625 @@
+uuid: 8fbd0b12-7347-47b3-9e57-9480e08e1306
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.full_html
+  module:
+    - ckeditor5
+format: full_html
+editor: ckeditor5
+settings:
+  toolbar:
+    items:
+      - undo
+      - redo
+      - specialCharacters
+      - strikethrough
+      - underline
+      - code
+      - superscript
+      - subscript
+      - blockQuote
+      - link
+      - bulletedList
+      - numberedList
+      - indent
+      - outdent
+      - horizontalLine
+      - alignment
+      - insertTable
+      - drupalInsertImage
+      - drupalMedia
+      - style
+      - removeFormat
+      - codeBlock
+      - showBlocks
+      - heading
+      - bold
+      - italic
+      - sourceEditing
+  plugins:
+    ckeditor5_alignment:
+      enabled_alignments:
+        - center
+        - justify
+        - left
+        - right
+    ckeditor5_codeBlock:
+      languages:
+        -
+          label: 'Plain text'
+          language: plaintext
+        -
+          label: C
+          language: c
+        -
+          label: 'C#'
+          language: cs
+        -
+          label: C++
+          language: cpp
+        -
+          label: CSS
+          language: css
+        -
+          label: Diff
+          language: diff
+        -
+          label: HTML
+          language: html
+        -
+          label: Java
+          language: java
+        -
+          label: JavaScript
+          language: javascript
+        -
+          label: PHP
+          language: php
+        -
+          label: Python
+          language: python
+        -
+          label: Ruby
+          language: ruby
+        -
+          label: TypeScript
+          language: typescript
+        -
+          label: XML
+          language: xml
+    ckeditor5_heading:
+      enabled_headings:
+        - heading2
+        - heading3
+        - heading4
+        - heading5
+        - heading6
+    ckeditor5_imageResize:
+      allow_resize: true
+    ckeditor5_list:
+      properties:
+        reversed: true
+        startIndex: true
+      multiBlock: true
+    ckeditor5_sourceEditing:
+      allowed_tags: {  }
+    ckeditor5_style:
+      styles:
+        -
+          label: s16-w400
+          element: '<p class="s16-w400">'
+        -
+          label: s16-w500
+          element: '<p class="s16-w500">'
+        -
+          label: s16-w600
+          element: '<p class="s16-w600">'
+        -
+          label: s16-w700
+          element: '<p class="s16-w700">'
+        -
+          label: s20-w400
+          element: '<p class="s20-w400">'
+        -
+          label: s20-w500
+          element: '<p class="s20-w500">'
+        -
+          label: s20-w600
+          element: '<p class="s20-w600">'
+        -
+          label: s20-w700
+          element: '<p class="s20-w700">'
+        -
+          label: s24-w400
+          element: '<p class="s24-w400">'
+        -
+          label: s24-w500
+          element: '<p class="s24-w500">'
+        -
+          label: s24-w600
+          element: '<p class="s24-w600">'
+        -
+          label: s24-w700
+          element: '<p class="s24-w700">'
+        -
+          label: s30-w400
+          element: '<p class="s30-w400">'
+        -
+          label: s30-w500
+          element: '<p class="s30-w500">'
+        -
+          label: s30-w600
+          element: '<p class="s30-w600">'
+        -
+          label: s30-w700
+          element: '<p class="s30-w700">'
+        -
+          label: s48-w400
+          element: '<p class="s48-w400">'
+        -
+          label: s48-w500
+          element: '<p class="s48-w500">'
+        -
+          label: s48-w600
+          element: '<p class="s48-w600">'
+        -
+          label: s48-w700
+          element: '<p class="s48-w700">'
+        -
+          label: s60-w400
+          element: '<p class="s60-w400">'
+        -
+          label: s60-w500
+          element: '<p class="s60-w500">'
+        -
+          label: s60-w600
+          element: '<p class="s60-w600">'
+        -
+          label: s60-w700
+          element: '<p class="s60-w700">'
+        -
+          label: s72-w400
+          element: '<p class="s72-w400">'
+        -
+          label: s72-w500
+          element: '<p class="s72-w500">'
+        -
+          label: s72-w600
+          element: '<p class="s72-w600">'
+        -
+          label: s72-w700
+          element: '<p class="s72-w700">'
+        -
+          label: h2.s16-w400
+          element: '<h2 class="s16-w400">'
+        -
+          label: h2.s16-w500
+          element: '<h2 class="s16-w500">'
+        -
+          label: h2.s16-w600
+          element: '<h2 class="s16-w600">'
+        -
+          label: h2.s16-w700
+          element: '<h2 class="s16-w700">'
+        -
+          label: h2.s20-w400
+          element: '<h2 class="s20-w400">'
+        -
+          label: h2.s20-w500
+          element: '<h2 class="s20-w500">'
+        -
+          label: h2.s20-w600
+          element: '<h2 class="s20-w600">'
+        -
+          label: h2.s20-w700
+          element: '<h2 class="s20-w700">'
+        -
+          label: h2.s24-w400
+          element: '<h2 class="s24-w400">'
+        -
+          label: h2.s24-w500
+          element: '<h2 class="s24-w500">'
+        -
+          label: h2.s24-w600
+          element: '<h2 class="s24-w600">'
+        -
+          label: h2.s24-w700
+          element: '<h2 class="s24-w700">'
+        -
+          label: h2.s30-w400
+          element: '<h2 class="s30-w400">'
+        -
+          label: h2.s30-w500
+          element: '<h2 class="s30-w500">'
+        -
+          label: h2.s30-w600
+          element: '<h2 class="s30-w600">'
+        -
+          label: h2.s30-w700
+          element: '<h2 class="s30-w700">'
+        -
+          label: h2.s48-w400
+          element: '<h2 class="s48-w400">'
+        -
+          label: h2.s48-w500
+          element: '<h2 class="s48-w500">'
+        -
+          label: h2.s48-w600
+          element: '<h2 class="s48-w600">'
+        -
+          label: h2.s48-w700
+          element: '<h2 class="s48-w700">'
+        -
+          label: h2.s60-w400
+          element: '<h2 class="s60-w400">'
+        -
+          label: h2.s60-w500
+          element: '<h2 class="s60-w500">'
+        -
+          label: h2.s60-w600
+          element: '<h2 class="s60-w600">'
+        -
+          label: h2.s60-w700
+          element: '<h2 class="s60-w700">'
+        -
+          label: h2.s72-w400
+          element: '<h2 class="s72-w400">'
+        -
+          label: h2.s72-w500
+          element: '<h2 class="s72-w500">'
+        -
+          label: h2.s72-w600
+          element: '<h2 class="s72-w600">'
+        -
+          label: h2.s72-w700
+          element: '<h2 class="s72-w700">'
+        -
+          label: h3.s16-w400
+          element: '<h3 class="s16-w400">'
+        -
+          label: h3.s16-w500
+          element: '<h3 class="s16-w500">'
+        -
+          label: h3.s16-w600
+          element: '<h3 class="s16-w600">'
+        -
+          label: h3.s16-w700
+          element: '<h3 class="s16-w700">'
+        -
+          label: h3.s20-w400
+          element: '<h3 class="s20-w400">'
+        -
+          label: h3.s20-w500
+          element: '<h3 class="s20-w500">'
+        -
+          label: h3.s20-w600
+          element: '<h3 class="s20-w600">'
+        -
+          label: h3.s20-w700
+          element: '<h3 class="s20-w700">'
+        -
+          label: h3.s24-w400
+          element: '<h3 class="s24-w400">'
+        -
+          label: h3.s24-w500
+          element: '<h3 class="s24-w500">'
+        -
+          label: h3.s24-w600
+          element: '<h3 class="s24-w600">'
+        -
+          label: h3.s24-w700
+          element: '<h3 class="s24-w700">'
+        -
+          label: h3.s30-w400
+          element: '<h3 class="s30-w400">'
+        -
+          label: h3.s30-w500
+          element: '<h3 class="s30-w500">'
+        -
+          label: h3.s30-w600
+          element: '<h3 class="s30-w600">'
+        -
+          label: h3.s30-w700
+          element: '<h3 class="s30-w700">'
+        -
+          label: h3.s48-w400
+          element: '<h3 class="s48-w400">'
+        -
+          label: h3.s48-w500
+          element: '<h3 class="s48-w500">'
+        -
+          label: h3.s48-w600
+          element: '<h3 class="s48-w600">'
+        -
+          label: h3.s48-w700
+          element: '<h3 class="s48-w700">'
+        -
+          label: h3.s60-w400
+          element: '<h3 class="s60-w400">'
+        -
+          label: h3.s60-w500
+          element: '<h3 class="s60-w500">'
+        -
+          label: h3.s60-w600
+          element: '<h3 class="s60-w600">'
+        -
+          label: h3.s60-w700
+          element: '<h3 class="s60-w700">'
+        -
+          label: h3.s72-w400
+          element: '<h3 class="s72-w400">'
+        -
+          label: h3.s72-w500
+          element: '<h3 class="s72-w500">'
+        -
+          label: h3.s72-w600
+          element: '<h3 class="s72-w600">'
+        -
+          label: h3.s72-w700
+          element: '<h3 class="s72-w700">'
+        -
+          label: h4.s16-w400
+          element: '<h4 class="s16-w400">'
+        -
+          label: h4.s16-w500
+          element: '<h4 class="s16-w500">'
+        -
+          label: h4.s16-w600
+          element: '<h4 class="s16-w600">'
+        -
+          label: h4.s16-w700
+          element: '<h4 class="s16-w700">'
+        -
+          label: h4.s20-w400
+          element: '<h4 class="s20-w400">'
+        -
+          label: h4.s20-w500
+          element: '<h4 class="s20-w500">'
+        -
+          label: h4.s20-w600
+          element: '<h4 class="s20-w600">'
+        -
+          label: h4.s20-w700
+          element: '<h4 class="s20-w700">'
+        -
+          label: h4.s24-w400
+          element: '<h4 class="s24-w400">'
+        -
+          label: h4.s24-w500
+          element: '<h4 class="s24-w500">'
+        -
+          label: h4.s24-w600
+          element: '<h4 class="s24-w600">'
+        -
+          label: h4.s24-w700
+          element: '<h4 class="s24-w700">'
+        -
+          label: h4.s30-w400
+          element: '<h4 class="s30-w400">'
+        -
+          label: h4.s30-w500
+          element: '<h4 class="s30-w500">'
+        -
+          label: h4.s30-w600
+          element: '<h4 class="s30-w600">'
+        -
+          label: h4.s30-w700
+          element: '<h4 class="s30-w700">'
+        -
+          label: h4.s48-w400
+          element: '<h4 class="s48-w400">'
+        -
+          label: h4.s48-w500
+          element: '<h4 class="s48-w500">'
+        -
+          label: h4.s48-w600
+          element: '<h4 class="s48-w600">'
+        -
+          label: h4.s48-w700
+          element: '<h4 class="s48-w700">'
+        -
+          label: h4.s60-w400
+          element: '<h4 class="s60-w400">'
+        -
+          label: h4.s60-w500
+          element: '<h4 class="s60-w500">'
+        -
+          label: h4.s60-w600
+          element: '<h4 class="s60-w600">'
+        -
+          label: h4.s60-w700
+          element: '<h4 class="s60-w700">'
+        -
+          label: h4.s72-w400
+          element: '<h4 class="s72-w400">'
+        -
+          label: h4.s72-w500
+          element: '<h4 class="s72-w500">'
+        -
+          label: h4.s72-w600
+          element: '<h4 class="s72-w600">'
+        -
+          label: h4.s72-w700
+          element: '<h4 class="s72-w700">'
+        -
+          label: 'h5.s16- w400'
+          element: '<h5 class="s16-w400">'
+        -
+          label: 'h5.s16- w500'
+          element: '<h5 class="s16-w500">'
+        -
+          label: 'h5.s16- w600'
+          element: '<h5 class="s16-w600">'
+        -
+          label: 'h5.s16- w700'
+          element: '<h5 class="s16-w700">'
+        -
+          label: 'h5.s20- w400'
+          element: '<h5 class="s20-w400">'
+        -
+          label: 'h5.s20- w500'
+          element: '<h5 class="s20-w500">'
+        -
+          label: 'h5.s20- w600'
+          element: '<h5 class="s20-w600">'
+        -
+          label: 'h5.s20- w700'
+          element: '<h5 class="s20-w700">'
+        -
+          label: 'h5.s24- w400'
+          element: '<h5 class="s24-w400">'
+        -
+          label: 'h5.s24- w500'
+          element: '<h5 class="s24-w500">'
+        -
+          label: 'h5.s24- w600'
+          element: '<h5 class="s24-w600">'
+        -
+          label: 'h5.s24- w700'
+          element: '<h5 class="s24-w700">'
+        -
+          label: 'h5.s30- w400'
+          element: '<h5 class="s30-w400">'
+        -
+          label: 'h5.s30- w500'
+          element: '<h5 class="s30-w500">'
+        -
+          label: 'h5.s30- w600'
+          element: '<h5 class="s30-w600">'
+        -
+          label: 'h5.s30- w700'
+          element: '<h5 class="s30-w700">'
+        -
+          label: 'h5.s48- w400'
+          element: '<h5 class="s48-w400">'
+        -
+          label: 'h5.s48- w500'
+          element: '<h5 class="s48-w500">'
+        -
+          label: 'h5.s48- w600'
+          element: '<h5 class="s48-w600">'
+        -
+          label: 'h5.s48- w700'
+          element: '<h5 class="s48-w700">'
+        -
+          label: 'h5.s60- w400'
+          element: '<h5 class="s60-w400">'
+        -
+          label: 'h5.s60- w500'
+          element: '<h5 class="s60-w500">'
+        -
+          label: 'h5.s60- w600'
+          element: '<h5 class="s60-w600">'
+        -
+          label: 'h5.s60- w700'
+          element: '<h5 class="s60-w700">'
+        -
+          label: 'h5.s72- w400'
+          element: '<h5 class="s72-w400">'
+        -
+          label: 'h5.s72- w500'
+          element: '<h5 class="s72-w500">'
+        -
+          label: 'h5.s72- w600'
+          element: '<h5 class="s72-w600">'
+        -
+          label: 'h5.s72- w700'
+          element: '<h5 class="s72-w700">'
+        -
+          label: 'h6.s16 - w400'
+          element: '<h6 class="s16-w400">'
+        -
+          label: 'h6.s16 - w500'
+          element: '<h6 class="s16-w500">'
+        -
+          label: 'h6.s16 - w600'
+          element: '<h6 class="s16-w600">'
+        -
+          label: 'h6.s16 - w700'
+          element: '<h6 class="s16-w700">'
+        -
+          label: 'h6.s20 - w400'
+          element: '<h6 class="s20-w400">'
+        -
+          label: 'h6.s20 - w500'
+          element: '<h6 class="s20-w500">'
+        -
+          label: 'h6.s20 - w600'
+          element: '<h6 class="s20-w600">'
+        -
+          label: 'h6.s20 - w700'
+          element: '<h6 class="s20-w700">'
+        -
+          label: 'h6.s24 - w400'
+          element: '<h6 class="s24-w400">'
+        -
+          label: 'h6.s24 - w500'
+          element: '<h6 class="s24-w500">'
+        -
+          label: 'h6.s24 - w600'
+          element: '<h6 class="s24-w600">'
+        -
+          label: 'h6.s24 - w700'
+          element: '<h6 class="s24-w700">'
+        -
+          label: 'h6.s30 - w400'
+          element: '<h6 class="s30-w400">'
+        -
+          label: 'h6.s30 - w500'
+          element: '<h6 class="s30-w500">'
+        -
+          label: 'h6.s30 - w600'
+          element: '<h6 class="s30-w600">'
+        -
+          label: 'h6.s30 - w700'
+          element: '<h6 class="s30-w700">'
+        -
+          label: 'h6.s48 - w400'
+          element: '<h6 class="s48-w400">'
+        -
+          label: 'h6.s48 - w500'
+          element: '<h6 class="s48-w500">'
+        -
+          label: 'h6.s48 - w600'
+          element: '<h6 class="s48-w600">'
+        -
+          label: 'h6.s48 - w700'
+          element: '<h6 class="s48-w700">'
+        -
+          label: 'h6.s60 - w400'
+          element: '<h6 class="s60-w400">'
+        -
+          label: 'h6.s60 - w500'
+          element: '<h6 class="s60-w500">'
+        -
+          label: 'h6.s60 - w600'
+          element: '<h6 class="s60-w600">'
+        -
+          label: 'h6.s60 - w700'
+          element: '<h6 class="s60-w700">'
+        -
+          label: 'h6.s72 - w400'
+          element: '<h6 class="s72-w400">'
+        -
+          label: 'h6.s72 - w500'
+          element: '<h6 class="s72-w500">'
+        -
+          label: 'h6.s72 - w600'
+          element: '<h6 class="s72-w600">'
+        -
+          label: 'h6.s72 - w700'
+          element: '<h6 class="s72-w700">'
+    linkit_extension:
+      linkit_enabled: false
+    media_media:
+      allow_view_mode_override: false
+image_upload:
+  status: true
+  scheme: public
+  directory: inline-images
+  max_size: null
+  max_dimensions:
+    width: null
+    height: null

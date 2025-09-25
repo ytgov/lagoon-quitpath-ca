@@ -1,0 +1,10 @@
+uuid: aa9633b6-1c7a-451e-ad35-9e0afc297913
+langcode: en
+status: true
+dependencies: {  }
+id: health_center_section
+label: 'Health Center Section'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

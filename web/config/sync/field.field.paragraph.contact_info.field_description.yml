@@ -1,0 +1,29 @@
+uuid: ce0fc0a5-7e8e-45e8-a50f-238c9e7c945a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_description
+    - paragraphs.paragraphs_type.contact_info
+  module:
+    - allowed_formats
+    - text
+    - tmgmt_content
+third_party_settings:
+  allowed_formats:
+    allowed_formats: {  }
+  tmgmt_content:
+    excluded: false
+id: paragraph.contact_info.field_description
+field_name: field_description
+entity_type: paragraph
+bundle: contact_info
+label: Description
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

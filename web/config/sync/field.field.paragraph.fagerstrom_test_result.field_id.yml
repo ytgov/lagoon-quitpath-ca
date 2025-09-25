@@ -1,0 +1,24 @@
+uuid: bb18b055-fe4f-4159-a0b1-ff6caa8f9ef2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_id
+    - paragraphs.paragraphs_type.fagerstrom_test_result
+  module:
+    - tmgmt_content
+third_party_settings:
+  tmgmt_content:
+    excluded: false
+id: paragraph.fagerstrom_test_result.field_id
+field_name: field_id
+entity_type: paragraph
+bundle: fagerstrom_test_result
+label: id
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

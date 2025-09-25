@@ -1,0 +1,24 @@
+uuid: 538115bb-e57e-4b85-af40-944f0b59d93f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_score
+    - paragraphs.paragraphs_type.fagerstrom_result
+  module:
+    - tmgmt_content
+third_party_settings:
+  tmgmt_content:
+    excluded: false
+id: paragraph.fagerstrom_result.field_score
+field_name: field_score
+entity_type: paragraph
+bundle: fagerstrom_result
+label: Score
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

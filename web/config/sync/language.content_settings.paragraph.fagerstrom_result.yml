@@ -1,0 +1,18 @@
+uuid: 07d6f6b9-81c4-4ea1-921c-9755704397d3
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.fagerstrom_result
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: paragraph.fagerstrom_result
+target_entity_type_id: paragraph
+target_bundle: fagerstrom_result
+default_langcode: site_default
+language_alterable: true

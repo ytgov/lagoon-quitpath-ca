@@ -1,0 +1,10 @@
+uuid: d96dce71-1a6b-459e-9906-371d4fd118ba
+langcode: en
+status: true
+dependencies: {  }
+id: vaping
+label: Vaping
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

@@ -1,0 +1,31 @@
+uuid: e731639e-14f8-4778-aef7-29365c1d621f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.options.field_option
+    - field.field.paragraph.options.field_points
+    - paragraphs.paragraphs_type.options
+  module:
+    - options
+id: paragraph.options.default
+targetEntityType: paragraph
+bundle: options
+mode: default
+content:
+  field_option:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_points:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

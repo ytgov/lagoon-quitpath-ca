@@ -1,0 +1,84 @@
+display:
+  default:
+    display_options:
+      filters:
+        status:
+          expose:
+            label: État
+  closed:
+    display_options:
+      fields:
+        status:
+          label: État
+        operations:
+          label: Actions
+      filters:
+        status:
+          expose:
+            label: État
+  completed:
+    display_options:
+      fields:
+        status:
+          label: État
+        operations:
+          label: Actions
+      filters:
+        status:
+          expose:
+            label: État
+  eligible:
+    display_options:
+      fields:
+        status:
+          label: État
+        operations:
+          label: Actions
+      filters:
+        status:
+          expose:
+            label: État
+  my_tasks:
+    display_options:
+      fields:
+        status:
+          label: État
+        operations:
+          label: Actions
+      filters:
+        status:
+          expose:
+            label: État
+  pending:
+    display_options:
+      fields:
+        status:
+          label: État
+        operations:
+          label: Actions
+      filters:
+        status:
+          expose:
+            label: État
+  rejected:
+    display_options:
+      fields:
+        status:
+          label: État
+        operations:
+          label: Actions
+      filters:
+        status:
+          expose:
+            label: État
+  unassigned:
+    display_options:
+      fields:
+        status:
+          label: État
+        operations:
+          label: Actions
+      filters:
+        status:
+          expose:
+            label: État

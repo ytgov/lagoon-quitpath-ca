@@ -1,0 +1,25 @@
+uuid: 87e48561-e9ba-4086-af53-30337cea620f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title_tags
+    - paragraphs.paragraphs_type.featured_content
+  module:
+    - options
+    - tmgmt_content
+third_party_settings:
+  tmgmt_content:
+    excluded: false
+id: paragraph.featured_content.field_title_tags
+field_name: field_title_tags
+entity_type: paragraph
+bundle: featured_content
+label: 'Title tags'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

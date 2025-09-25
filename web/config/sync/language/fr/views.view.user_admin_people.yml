@@ -1,0 +1,23 @@
+display:
+  default:
+    display_title: 'Par défaut'
+    display_options:
+      fields:
+        name:
+          label: "Nom d'utilisateur"
+        status:
+          label: État
+        roles_target_id:
+          label: Rôles
+        operations:
+          label: Actions
+      filters:
+        status:
+          group_info:
+            label: État
+        roles_target_id:
+          expose:
+            label: Rôle
+      use_more_text: plus
+  page_1:
+    display_title: Page

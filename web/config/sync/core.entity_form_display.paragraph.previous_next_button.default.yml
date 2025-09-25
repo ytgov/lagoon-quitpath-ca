@@ -1,0 +1,53 @@
+uuid: 8431d377-4099-4f11-b95c-be492afa5e41
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.previous_next_button.field_button_color
+    - field.field.paragraph.previous_next_button.field_next
+    - field.field.paragraph.previous_next_button.field_padding_size
+    - field.field.paragraph.previous_next_button.field_previous
+    - paragraphs.paragraphs_type.previous_next_button
+  module:
+    - link
+id: paragraph.previous_next_button.default
+targetEntityType: paragraph
+bundle: previous_next_button
+mode: default
+content:
+  field_button_color:
+    type: options_select
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_next:
+    type: link_default
+    weight: 2
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  field_padding_size:
+    type: options_select
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_previous:
+    type: link_default
+    weight: 1
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  translation:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

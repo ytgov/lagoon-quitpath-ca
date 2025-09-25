@@ -1,0 +1,28 @@
+uuid: 12619307-5c5b-4f92-8b6b-90bbb082330a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_image_height
+    - paragraphs.paragraphs_type.two_column_block_small
+  module:
+    - tmgmt_content
+third_party_settings:
+  tmgmt_content:
+    excluded: false
+id: paragraph.two_column_block_small.field_image_height
+field_name: field_image_height
+entity_type: paragraph
+bundle: two_column_block_small
+label: 'Image height (optional)'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 0
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

@@ -1,0 +1,47 @@
+uuid: e0d9033e-f77d-44d0-a6eb-c843ab9c1912
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.cost_calculator_options.field_icon
+    - field.field.paragraph.cost_calculator_options.field_id
+    - field.field.paragraph.cost_calculator_options.field_name
+    - paragraphs.paragraphs_type.cost_calculator_options
+  module:
+    - media_library
+id: paragraph.cost_calculator_options.default
+targetEntityType: paragraph
+bundle: cost_calculator_options
+mode: default
+content:
+  field_icon:
+    type: media_library_widget
+    weight: 1
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+  field_id:
+    type: string_textfield
+    weight: 11
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  translation:
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

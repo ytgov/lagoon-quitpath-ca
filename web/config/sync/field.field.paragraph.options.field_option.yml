@@ -1,0 +1,24 @@
+uuid: e75ff8ec-0dbd-4a39-8580-c1ca852c3408
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_option
+    - paragraphs.paragraphs_type.options
+  module:
+    - tmgmt_content
+third_party_settings:
+  tmgmt_content:
+    excluded: false
+id: paragraph.options.field_option
+field_name: field_option
+entity_type: paragraph
+bundle: options
+label: Option
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

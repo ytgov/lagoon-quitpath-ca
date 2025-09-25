@@ -1,0 +1,25 @@
+uuid: b5847060-56bb-4f22-a005-903abe8d8634
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_box_alignment
+    - paragraphs.paragraphs_type.featured_content
+  module:
+    - options
+    - tmgmt_content
+third_party_settings:
+  tmgmt_content:
+    excluded: false
+id: paragraph.featured_content.field_box_alignment
+field_name: field_box_alignment
+entity_type: paragraph
+bundle: featured_content
+label: 'Box align'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,28 @@
+uuid: 0f8e76de-9f9a-43f5-977e-4e9182a3aaa1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_age
+    - paragraphs.paragraphs_type.story
+  module:
+    - tmgmt_content
+third_party_settings:
+  tmgmt_content:
+    excluded: false
+id: paragraph.story.field_age
+field_name: field_age
+entity_type: paragraph
+bundle: story
+label: Age
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 0
+  max: 120
+  prefix: ''
+  suffix: ''
+field_type: integer

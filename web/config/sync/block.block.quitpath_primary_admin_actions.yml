@@ -1,0 +1,20 @@
+uuid: f67d3f93-2e57-4abc-b999-b1e0ea4ebe8c
+langcode: en
+status: true
+dependencies:
+  theme:
+    - quitpath
+_core:
+  default_config_hash: Q9_2whdOj1YIomfvsIfopROW4FT_X5pY0DjdOiOaQ5U
+id: quitpath_primary_admin_actions
+theme: quitpath
+region: highlighted
+weight: -9
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  label_display: '0'
+  provider: core
+visibility: {  }

@@ -1,0 +1,89 @@
+uuid: 1f5b2d41-f699-428d-a47e-663cfc544e9c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.featured_content.field_box_alignment
+    - field.field.paragraph.featured_content.field_description
+    - field.field.paragraph.featured_content.field_image
+    - field.field.paragraph.featured_content.field_image_alt_text
+    - field.field.paragraph.featured_content.field_link
+    - field.field.paragraph.featured_content.field_title
+    - field.field.paragraph.featured_content.field_title_size_weight
+    - field.field.paragraph.featured_content.field_title_tags
+    - paragraphs.paragraphs_type.featured_content
+  module:
+    - link
+    - options
+    - text
+id: paragraph.featured_content.default
+targetEntityType: paragraph
+bundle: featured_content
+mode: default
+content:
+  field_box_alignment:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_description:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_image:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_image_alt_text:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_link:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_title:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_title_size_weight:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 11
+    region: content
+  field_title_tags:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+hidden: {  }

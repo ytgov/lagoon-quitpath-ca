@@ -1,0 +1,19 @@
+mobile_menu_all_widths: 0
+site_branding_bg_color: default
+base_primary_color: ''
+features:
+  node_user_picture: false
+  comment_user_picture: true
+  comment_user_verification: true
+  favicon: 1
+logo:
+  use_default: 0
+  path: sites/default/files/logo.svg
+favicon:
+  use_default: 0
+  path: 'public://favicon.svg'
+  mimetype: image/svg+xml
+footer_logo:
+  - '93'
+footer_copyrights: '© 2025 Government of Yukon'
+contact_form_recipient_email: quitpath@quitpath.shareacopy.com

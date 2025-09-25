@@ -1,0 +1,25 @@
+uuid: 66ccafc0-eef9-471a-9b76-5a80fed0de97
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_background_color
+    - paragraphs.paragraphs_type.text_block
+  module:
+    - options
+    - tmgmt_content
+third_party_settings:
+  tmgmt_content:
+    excluded: false
+id: paragraph.text_block.field_background_color
+field_name: field_background_color
+entity_type: paragraph
+bundle: text_block
+label: 'Background color'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

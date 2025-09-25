@@ -1,0 +1,38 @@
+display:
+  default:
+    display_options:
+      fields:
+        created:
+          label: Créé
+        view_webform_submission:
+          label: Actions
+          text: voir
+      arguments:
+        in_draft:
+          exception:
+            title: Tout
+  embed_administer:
+    display_options:
+      fields:
+        created:
+          label: Créé
+        operations:
+          label: Actions
+  embed_manage:
+    display_options:
+      fields:
+        created:
+          label: Créé
+        view_webform_submission:
+          label: Actions
+          text: voir
+        edit_webform_submission:
+          label: Actions
+  embed_review:
+    display_options:
+      fields:
+        created:
+          label: Créé
+        view_webform_submission:
+          label: Actions
+          text: voir

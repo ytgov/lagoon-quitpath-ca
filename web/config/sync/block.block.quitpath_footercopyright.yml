@@ -1,0 +1,25 @@
+uuid: 5bc96818-da0f-41d6-b8cb-cfd5ff4f12c6
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:00d7eba2-213a-41cc-8fb7-402d84adaab2'
+  module:
+    - block_content
+  theme:
+    - quitpath
+id: quitpath_footercopyright
+theme: quitpath
+region: footer_copyright
+weight: 0
+provider: null
+plugin: 'block_content:00d7eba2-213a-41cc-8fb7-402d84adaab2'
+settings:
+  id: 'block_content:00d7eba2-213a-41cc-8fb7-402d84adaab2'
+  label: 'Footer Copyright'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

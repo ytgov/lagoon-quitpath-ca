@@ -1,0 +1,13 @@
+display:
+  default:
+    display_options:
+      fields:
+        created:
+          label: Créé
+        name:
+          label: Nom
+      title: Messages
+      arguments:
+        tjid:
+          exception:
+            title: Tout

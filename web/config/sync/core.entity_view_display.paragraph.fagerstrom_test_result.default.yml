@@ -1,0 +1,33 @@
+uuid: 0a526b26-dbb5-400d-bb54-6ff424bb3b20
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.fagerstrom_test_result.field_id
+    - field.field.paragraph.fagerstrom_test_result.field_result
+    - paragraphs.paragraphs_type.fagerstrom_test_result
+  module:
+    - entity_reference_revisions
+id: paragraph.fagerstrom_test_result.default
+targetEntityType: paragraph
+bundle: fagerstrom_test_result
+mode: default
+content:
+  field_id:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_result:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

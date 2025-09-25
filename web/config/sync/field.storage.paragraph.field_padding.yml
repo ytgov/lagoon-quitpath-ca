@@ -1,0 +1,30 @@
+uuid: 02d9dcb5-722e-4e66-a57e-7d53f6be872c
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_padding
+field_name: field_padding
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: left
+      label: Small
+    -
+      value: medium
+      label: Medium
+    -
+      value: large
+      label: Large
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

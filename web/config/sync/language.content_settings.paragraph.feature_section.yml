@@ -1,0 +1,18 @@
+uuid: 4ca4cafe-eb2a-43b2-a550-7dfb87e6cd69
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.feature_section
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: paragraph.feature_section
+target_entity_type_id: paragraph
+target_bundle: feature_section
+default_langcode: site_default
+language_alterable: true

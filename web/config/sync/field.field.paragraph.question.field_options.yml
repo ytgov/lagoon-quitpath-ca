@@ -1,0 +1,38 @@
+uuid: 710b2d79-7147-4e6f-a634-95c328c4badd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_options
+    - paragraphs.paragraphs_type.options
+    - paragraphs.paragraphs_type.question
+  module:
+    - entity_reference_revisions
+    - tmgmt_content
+third_party_settings:
+  tmgmt_content:
+    excluded: false
+id: paragraph.question.field_options
+field_name: field_options
+entity_type: paragraph
+bundle: question
+label: Options
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      options: options
+    negate: 0
+    target_bundles_drag_drop:
+      options:
+        weight: 3
+        enabled: true
+      question:
+        weight: 4
+        enabled: false
+field_type: entity_reference_revisions

@@ -1,0 +1,25 @@
+uuid: 44bbb282-f642-44f4-ae0d-c8dc716b1baf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title_alignment
+    - paragraphs.paragraphs_type.2_col_rows
+  module:
+    - options
+    - tmgmt_content
+third_party_settings:
+  tmgmt_content:
+    excluded: false
+id: paragraph.2_col_rows.field_title_alignment
+field_name: field_title_alignment
+entity_type: paragraph
+bundle: 2_col_rows
+label: 'Title alignment'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

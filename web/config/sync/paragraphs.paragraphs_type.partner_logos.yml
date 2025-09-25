@@ -1,0 +1,10 @@
+uuid: 800f71c9-f69b-4f97-92bf-97113b51a205
+langcode: en
+status: true
+dependencies: {  }
+id: partner_logos
+label: 'Partner Logos'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

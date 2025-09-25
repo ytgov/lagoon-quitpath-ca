@@ -1,0 +1,25 @@
+uuid: d865b9e2-e24b-4f8c-9f8d-beecb69b8613
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_points
+    - paragraphs.paragraphs_type.options
+  module:
+    - options
+    - tmgmt_content
+third_party_settings:
+  tmgmt_content:
+    excluded: false
+id: paragraph.options.field_points
+field_name: field_points
+entity_type: paragraph
+bundle: options
+label: Points
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_integer

@@ -1,0 +1,10 @@
+uuid: 54f0fd43-58bd-47fd-a678-8f102c4f157e
+langcode: en
+status: true
+dependencies: {  }
+id: two_column_block_full_width
+label: '2-Col Full-Width'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

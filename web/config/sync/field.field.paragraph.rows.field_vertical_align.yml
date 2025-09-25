@@ -1,0 +1,25 @@
+uuid: 2a6c28f0-ff06-4448-8f49-fffdba843e05
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_vertical_align
+    - paragraphs.paragraphs_type.rows
+  module:
+    - options
+    - tmgmt_content
+third_party_settings:
+  tmgmt_content:
+    excluded: false
+id: paragraph.rows.field_vertical_align
+field_name: field_vertical_align
+entity_type: paragraph
+bundle: rows
+label: 'Vertical align'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

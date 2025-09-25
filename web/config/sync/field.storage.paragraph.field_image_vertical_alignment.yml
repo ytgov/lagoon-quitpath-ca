@@ -1,0 +1,36 @@
+uuid: 8680c5b5-823b-415f-8e3d-f5accbe7b625
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_image_vertical_alignment
+field_name: field_image_vertical_alignment
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: bottom-12
+      label: Middle
+    -
+      value: bottom-0
+      label: Bottom
+    -
+      value: '-bottom-6'
+      label: 'Bottom negative small'
+    -
+      value: '-bottom-17'
+      label: 'Bottom negative medium'
+    -
+      value: '-bottom-25'
+      label: 'Bottom negative large'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

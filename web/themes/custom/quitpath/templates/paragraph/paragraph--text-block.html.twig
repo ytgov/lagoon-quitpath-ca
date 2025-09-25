@@ -1,0 +1,242 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a paragraph.
+ *
+ * Available variables:
+ * - paragraph: Full paragraph entity.
+ *   Only method names starting with "get", "has", or "is" and a few common
+ *   methods such as "id", "label", and "bundle" are available. For example:
+ *   - paragraph.getCreatedTime() will return the paragraph creation timestamp.
+ *   - paragraph.id(): The paragraph ID.
+ *   - paragraph.bundle(): The type of the paragraph, for example, "image" or "text".
+ *   - paragraph.getOwnerId(): The user ID of the paragraph author.
+ *   See Drupal\paragraphs\Entity\Paragraph for a full list of public properties
+ *   and methods for the paragraph object.
+ * - content: All paragraph items. Use {{ content }} to print them all,
+ *   or print a subset such as {{ content.field_example }}. Use
+ *   {{ content|without('field_example') }} to temporarily suppress the printing
+ *   of a given child element.
+ * - attributes: HTML attributes for the containing element.
+ *   The attributes.class element may contain one or more of the following
+ *   classes:
+ *   - paragraphs: The current template type (also known as a "theming hook").
+ *   - paragraphs--type-[type]: The current paragraphs type. For example, if the paragraph is an
+ *     "Image" it would result in "paragraphs--type--image". Note that the machine
+ *     name will often be in a short form of the human readable label.
+ *   - paragraphs--view-mode--[view_mode]: The View Mode of the paragraph; for example, a
+ *     preview would result in: "paragraphs--view-mode--preview", and
+ *     default: "paragraphs--view-mode--default".
+ * - view_mode: View mode; for example, "preview" or "full".
+ * - logged_in: Flag for authenticated user status. Will be true when the
+ *   current user is a logged-in member.
+ * - is_admin: Flag for admin user status. Will be true when the current user
+ *   is an administrator.
+ *
+ * @see template_preprocess_paragraph()
+ *
+ * @ingroup themeable
+ */
+#}
+
+{%
+  set classes = [
+    'paragraph',
+    'paragraph--type--' ~ paragraph.bundle|clean_class,
+    view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+    not paragraph.isPublished() ? 'paragraph--unpublished'
+  ]
+%}
+
+{#{% if paragraph.field_heading_size.value == 'h2' %}#}
+{#    {%  set heading = 'h2' %}#}
+{#    {%  set heading_class = 'text-display-sm font-medium' %}#}
+{#{% elseif paragraph.field_heading_size.value == 'h2_large' %}#}
+{#    {%  set heading = 'h2' %}#}
+{#    {%  set heading_class = 'font-medium' %}#}
+{#{% else %}#}
+{#    {%  set heading = paragraph.field_heading_size.value %}#}
+{#    {%  set heading_class = 'font-medium' %}#}
+{#{% endif %}#}
+
+{% if paragraph.field_title_tags.value is not empty %}
+    {% set title_heading =  paragraph.field_title_tags.value  %}
+{% else %}
+    {% set title_heading =  'h2'  %}
+{% endif %}
+
+{% if paragraph.field_title_size_weight.value is not empty %}
+    {% set heading_class =  paragraph.field_title_size_weight.value  %}
+{% else %}
+    {% set heading_class =  'font-medium'  %}
+{% endif %}
+
+
+{% if paragraph.field_space.value == 'small' %}
+    {%  set space = 'pt-5 md:pt-10' %}
+{% elseif paragraph.field_space.value == 'medium' %}
+    {%  set space = 'pt-8 md:pt-16' %}
+{% elseif paragraph.field_space.value == 'large' %}
+    {%  set space = 'pt-12 md:pt-25' %}
+{% endif %}
+
+{% if paragraph.field_padding.value == 'small' %}
+    {%  set space_left = 'lg:px-15' %}
+{% elseif paragraph.field_padding.value == 'medium' %}
+    {%  set space_left = 'lg:px-30' %}
+{% elseif paragraph.field_padding.value == 'large' %}
+    {%  set space_left = 'lg:px-50' %}
+{% endif %}
+
+{% if paragraph.field_button_color.value == 'yellow' %}
+    {%  set color = 'btn btn-yellow' %}
+{% elseif paragraph.field_button_color.value == 'blue' %}
+    {%  set color = ' btn btn-blue' %}
+{% elseif paragraph.field_button_color.value == 'red' %}
+    {%  set color = 'btn btn-red' %}
+{% elseif paragraph.field_button_color.value == 'green' %}
+    {%  set color = 'btn btn-green' %}
+{% elseif paragraph.field_button_color.value == 'light_blue' %}
+    {%  set color = ' btn btn-light-blue' %}
+{% elseif paragraph.field_button_color.value == 'dark_red' %}
+    {%  set color = 'btn btn-dark-red' %}
+{% elseif paragraph.field_button_color.value == 'dark_blue' %}
+    {%  set color = ' btn btn-dark-blue' %}
+{% elseif paragraph.field_button_color.value == 'dark_green' %}
+    {%  set color = 'btn btn-dark-green' %}
+{% elseif paragraph.field_button_color.value == 'dark_yellow' %}
+    {%  set color = 'btn btn-dark-yellow' %}
+{% elseif paragraph.field_button_color.value == 'dark_light_blue' %}
+    {%  set color = 'btn btn-dark-light-blue' %}
+{% endif %}
+
+{% if paragraph.field_heading.value is not empty %}
+    {% set sub_title_heading =  paragraph.field_heading.value  %}
+{% else %}
+    {% set sub_title_heading =  'p'  %}
+{% endif %}
+
+{% if paragraph.field_size_weight.value is not empty %}
+    {% set sub_heading_class =  paragraph.field_size_weight.value  %}
+{% else %}
+    {% set sub_heading_class =  'text-display-sm'  %}
+{% endif %}
+
+
+{% block paragraph %}
+    {% block content %}
+        {% if paragraph.field_background_color.value is not empty %}
+            <div class="bg-{{ paragraph.field_background_color.value|raw }} pb-25">
+        {% endif %}
+        {% if paragraph.field_column.value == "1_column" %}
+            
+            <div class="container mx-auto  {{ space }} ">
+                {% if paragraph.field_text_align.value == "center" %}
+                    <div class="{{ space_left }} max-w-245 mx-auto space-y-2.5 md:space-y-7.5 md:text-center">
+                        {% if paragraph.field_title.value is not empty %}<{{ title_heading }} class="{{ heading_class }}">{{ paragraph.field_title.value|raw }}</{{ title_heading }}>{% endif %}
+                        {% if paragraph.field_sub_title.value is not empty %}<{{ sub_title_heading }} class="{{ sub_heading_class }}">{{ paragraph.field_sub_title.value|raw }}</{{ sub_title_heading }}>{% endif %}
+                        {{ content.field_text|raw }}
+                    </div>
+                {% elseif paragraph.field_text_align.value == "right" %}
+                
+                {% else %}
+                    <div class="{{ space_left }}  space-y-2.5 md:space-y-7.5">
+                        {% if paragraph.field_title.value is not empty %}<{{ title_heading }} class="{{ heading_class }}">{{ paragraph.field_title.value|raw }}</{{ title_heading }}>{% endif %}
+                        {% if paragraph.field_sub_title.value is not empty %}<{{ sub_title_heading }} class="{{ sub_heading_class }}">{{ paragraph.field_sub_title.value|raw }}</{{ sub_title_heading }}>{% endif %}
+                        {{ content.field_text|raw }}
+                    </div>
+                {% endif %}
+                
+            </div>
+        {% endif %}
+        {% if paragraph.field_column.value == "2_column" %}
+            <div class="container mx-auto  {{ space }}">
+                {% if paragraph.field_text_align.value == "center" %}
+                    <div class="{{ space_left }} max-w-245 mx-auto space-y-2.5 md:space-y-7.5 md:text-center">
+                        {% if paragraph.field_title.value is not empty %}<{{ title_heading }} class="{{ heading_class }}">{{ paragraph.field_title.value|raw }}</{{ title_heading }}>{% endif %}
+                        {% if paragraph.field_sub_title.value is not empty %}<{{ sub_title_heading }} class="{{ sub_heading_class }}">{{ paragraph.field_sub_title.value|raw }}</{{ sub_title_heading }}>{% endif %}
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-y-7.5 gap-x-12.5">
+                            <div class="space-y-2.5">
+                                {{ content.field_text|raw }}
+                            </div>
+                            <div class="space-y-2.5">
+                                {{ content.field_text_2|raw }}
+                            </div>
+                        </div>
+                    </div>
+                {% elseif paragraph.field_text_align.value == "right" %}
+                
+                {% else %}
+                    <div class="{{ space_left }} space-y-2.5 md:space-y-7.5">
+                        {% if paragraph.field_title.value is not empty %}<{{ title_heading }} class="{{ heading_class }}">{{ paragraph.field_title.value|raw }}</{{ title_heading }}>{% endif %}
+                        {% if paragraph.field_sub_title.value is not empty %}<{{ sub_title_heading }} class="{{ sub_heading_class }}">{{ paragraph.field_sub_title.value|raw }}</{{ sub_title_heading }}>{% endif %}
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-y-7.5 gap-x-12.5">
+                            <div class="space-y-2.5">
+                                {{ content.field_text|raw }}
+                            </div>
+                            <div class="space-y-2.5">
+                                {{ content.field_text_2|raw }}
+                            </div>
+                            
+                        </div>
+                    </div>
+                {% endif %}
+                
+            </div>
+        {% endif %}
+        {% if paragraph.field_column.value == "3_column" %}
+            <div class="container mx-auto  {{ space }}">
+                {% if paragraph.field_text_align.value == "center" %}
+                    <div class="{{ space_left }} max-w-245 mx-auto space-y-2.5 md:space-y-7.5 md:text-center">
+                        {% if paragraph.field_title.value is not empty %}<{{ title_heading }} class="{{ heading_class }}">{{ paragraph.field_title.value|raw }}</{{ title_heading }}>{% endif %}
+                        {% if paragraph.field_sub_title.value is not empty %}<{{ sub_title_heading }} class="{{ sub_heading_class }}">{{ paragraph.field_sub_title.value|raw }}</{{ sub_title_heading }}>{% endif %}
+                        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-y-2.5 md:gap-y-7.5 gap-x-12.5">
+                            <div class="space-y-2.5">
+                                {{ content.field_text|raw }}
+                            </div>
+                            <div class="space-y-2.5">
+                                {{ content.field_text_2|raw }}
+                            </div>
+                            <div class="space-y-2.5">
+                                {{ content.field_text_3|raw }}
+                            </div>
+                        </div>
+                    </div>
+                {% elseif paragraph.field_text_align.value == "right" %}
+                
+                {% else %}
+                    <div class="{{ space_left }} space-y-2.5 md:space-y-7.5">
+                        {% if paragraph.field_title.value is not empty %}<{{ title_heading }} class="{{ heading_class }}">{{ paragraph.field_title.value|raw }}</{{ title_heading }}>{% endif %}
+                        {% if paragraph.field_sub_title.value is not empty %}<{{ sub_title_heading }} class="{{ sub_heading_class }}">{{ paragraph.field_sub_title.value|raw }}</{{ sub_title_heading }}>{% endif %}
+                        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-y-2.5 md:gap-y-7.5 gap-x-12.5">
+                            <div class="space-y-2.5">
+                                {{ content.field_text|raw }}
+                            </div>
+                            <div class="space-y-2.5">
+                                {{ content.field_text_2|raw }}
+                            </div>
+                            <div class="space-y-2.5">
+                                {{ content.field_text_3|raw }}
+                            </div>
+                        </div>
+                    </div>
+                {% endif %}
+                
+            </div>
+        {% endif %}
+        {% if paragraph.field_link.title is not empty %}
+            <div class="container mx-auto">
+                <div class="{{ space_left }} mx-auto flex flex-wrap gap-2.5 lg:gap-7.5 pt-10">
+                    <a href="{{ paragraph.field_link.get(0).getUrl().toString() }}" class="{{ color }}">{{ paragraph.field_link.title }}</a>
+                    {% if paragraph.field_button_link_2.title is not empty %}<a href="{{ paragraph.field_button_link_2.get(0).getUrl().toString() }}" class="{{ color }}">{{ paragraph.field_button_link_2.title }}</a>{% endif %}
+                </div>
+            </div>
+        {% endif %}
+
+        {% if paragraph.field_background_color.value is not empty %}
+            </div>
+        {% endif %}
+    {% endblock %}
+{% endblock paragraph %}
+ 
+ 

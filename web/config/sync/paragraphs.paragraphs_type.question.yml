@@ -1,0 +1,10 @@
+uuid: 4ac08025-3333-44c3-8e0b-0e3424d383d9
+langcode: en
+status: true
+dependencies: {  }
+id: question
+label: 'Fagerström Test Questions'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

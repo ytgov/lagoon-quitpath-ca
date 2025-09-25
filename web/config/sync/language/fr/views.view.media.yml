@@ -1,0 +1,20 @@
+display:
+  default:
+    display_title: 'Par défaut'
+    display_options:
+      fields:
+        bundle:
+          label: Type
+        status:
+          label: État
+        changed:
+          label: 'Mis à jour'
+        operations:
+          label: Actions
+      filters:
+        bundle:
+          expose:
+            label: Type
+        langcode:
+          expose:
+            label: Langue

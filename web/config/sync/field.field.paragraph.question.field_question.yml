@@ -1,0 +1,24 @@
+uuid: 424ba54c-5ae7-4d43-8bb6-edf6a3a33f93
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_question
+    - paragraphs.paragraphs_type.question
+  module:
+    - tmgmt_content
+third_party_settings:
+  tmgmt_content:
+    excluded: false
+id: paragraph.question.field_question
+field_name: field_question
+entity_type: paragraph
+bundle: question
+label: Question
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

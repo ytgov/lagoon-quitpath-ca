@@ -1,0 +1,10 @@
+uuid: b87bcfed-e00d-434d-82f0-bca61ad0814a
+langcode: en
+status: true
+dependencies: {  }
+id: chewing_tobacco_nicotine_pouches
+label: 'Chewing Tobacco/Nicotine Pouches'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

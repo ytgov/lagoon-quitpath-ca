@@ -1,0 +1,10 @@
+uuid: 97ee1ea5-f976-4a7a-b9c9-4d0a6cde057b
+langcode: en
+status: true
+dependencies: {  }
+id: cost_calculator
+label: 'Cost Calculator'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

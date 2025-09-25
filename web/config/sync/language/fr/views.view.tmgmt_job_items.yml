@@ -1,0 +1,19 @@
+display:
+  default:
+    display_options:
+      fields:
+        state:
+          label: État
+        type:
+          label: Type
+        operations:
+          label: Actions
+      arguments:
+        tjid:
+          exception:
+            title: Tout
+  checkout:
+    display_options:
+      fields:
+        type:
+          label: Type

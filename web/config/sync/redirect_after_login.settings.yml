@@ -1,0 +1,9 @@
+login_redirection:
+  anonymous: null
+  authenticated: /
+  editor: /
+  translator: /
+  publisher: /
+  site_administrator: /
+  administrator: /
+exclude_urls: ''

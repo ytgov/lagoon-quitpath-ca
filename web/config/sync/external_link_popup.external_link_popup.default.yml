@@ -1,0 +1,18 @@
+uuid: b2095220-4bdb-4de2-8265-bd7aa36b0f71
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: DRsPbzDjR0Wd8sK-_ufsabTUg31xjbZ1SaIf21Ijlr0
+name: Default
+id: default
+weight: 10
+close: true
+title: 'You are about to be redirected to an external website.'
+body:
+  value: 'Do you wish to continue?'
+  format: plain_text
+labelyes: Continue
+labelno: Cancel
+domains: '*'
+new_tab: true

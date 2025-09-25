@@ -1,0 +1,42 @@
+# This theme is marked as @internal. It is intended to evolve and change over
+# minor releases.
+# As the UI of Drupal improves between minor versions, the markup and assets in
+# the quitpath theme will change. The quitpath theme is not backwards compatible
+# If you wish to modify the output or assets of quitpath you can:
+# 1. Copy the whole of quitpath and rename it as your own theme. You will need to
+# manually manage your own updates if you want to stay up to date with quitpath's
+# bug fixes and feature support.
+#
+# 2. Sub-theme quitpath. This is only recommended if you want to make minor
+# tweaks and understand that quitpath could break your modifications as it
+# changes.
+name: Quitpath
+type: theme
+base theme: false
+description: A clean, accessible, and flexible Drupal front-end theme.
+alt text: Screenshot of quitpath, Drupal front-end theme.
+package: Core
+version: VERSION
+core_version_requirement: ^10 || ^11
+libraries:
+  - quitpath/global-styling
+regions:
+  logo: Logo
+  tabs: Tabs
+  search: Search
+  language: Language
+  header: Header
+  primary_menu: Primary menu
+  secondary_menu: Secondary menu
+  hero: Hero (full width)
+  highlighted: Highlighted
+  breadcrumb: Breadcrumb
+  social: Social Bar
+  content_above: Content Above
+  content: Content
+  sidebar: Sidebar
+  content_below: Content Below
+  footer_menu: Footer Menu
+  footer_copyright: Footer Copyright
+  footer_bottom: Footer Bottom
+  feedback: Feedback

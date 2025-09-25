@@ -1,0 +1,7 @@
+_core:
+  default_config_hash: 3pJAnNNBFB0dIvpkAObocapvrqgrjM0nL1tnYttGZc4
+whitelist: ''
+show_admin: false
+width:
+  value: 85
+  units: '%'

@@ -1,0 +1,29 @@
+uuid: 256ea668-a110-4ab7-a200-e2846103a60a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_text_3
+    - paragraphs.paragraphs_type.text_block
+  module:
+    - allowed_formats
+    - text
+    - tmgmt_content
+third_party_settings:
+  allowed_formats:
+    allowed_formats: {  }
+  tmgmt_content:
+    excluded: false
+id: paragraph.text_block.field_text_3
+field_name: field_text_3
+entity_type: paragraph
+bundle: text_block
+label: 'Column 3 text'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

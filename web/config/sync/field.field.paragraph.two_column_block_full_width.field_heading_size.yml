@@ -1,0 +1,25 @@
+uuid: cccd3374-9d25-41c0-b141-da94629c7f6f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_heading_size
+    - paragraphs.paragraphs_type.two_column_block_full_width
+  module:
+    - options
+    - tmgmt_content
+third_party_settings:
+  tmgmt_content:
+    excluded: false
+id: paragraph.two_column_block_full_width.field_heading_size
+field_name: field_heading_size
+entity_type: paragraph
+bundle: two_column_block_full_width
+label: 'Title size'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,62 @@
+uuid: 5022b4f1-41a2-4356-ae61-4e095eba9549
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.fagerstrom_result.field_button_link_2
+    - field.field.paragraph.fagerstrom_result.field_description
+    - field.field.paragraph.fagerstrom_result.field_link
+    - field.field.paragraph.fagerstrom_result.field_score
+    - field.field.paragraph.fagerstrom_result.field_title
+    - paragraphs.paragraphs_type.fagerstrom_result
+  module:
+    - link
+    - text
+id: paragraph.fagerstrom_result.default
+targetEntityType: paragraph
+bundle: fagerstrom_result
+mode: default
+content:
+  field_button_link_2:
+    type: link_default
+    weight: 16
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  field_description:
+    type: text_textarea
+    weight: 3
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_link:
+    type: link_default
+    weight: 6
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  field_score:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

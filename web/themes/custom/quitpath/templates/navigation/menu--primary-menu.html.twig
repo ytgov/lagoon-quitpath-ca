@@ -1,0 +1,214 @@
+{#
+/**
+ * @file
+ * Quitpath's theme implementation for the menus in the primary_menu region.
+ *
+ * Available variables:
+ * - menu_name: The machine name of the menu.
+ * - items: A nested list of menu items. Each menu item contains:
+ *   - attributes: HTML attributes for the menu item.
+ *   - below: The menu item child items.
+ *   - title: The menu link title.
+ *   - url: The menu link URL, instance of \Drupal\Core\Url
+ *   - localized_options: Menu link localized options.
+ *   - is_expanded: TRUE if the link has visible children within the current
+ *     menu tree.
+ *   - is_collapsed: TRUE if the link has children within the current menu tree
+ *     that are not currently visible.
+ *   - in_active_trail: TRUE if the link is in the active trail.
+ *
+ * @ingroup themeable
+ */
+#}
+
+{% import _self as menus %}
+
+{#
+  We call a macro which calls itself to render the full tree.
+  @see https://twig.symfony.com/doc/3.x/tags/macro.html
+#}
+{% set attributes = attributes.addClass('menu') %}
+{{ menus.menu_links(items, attributes, 0, 'primary-menu-item-') }}
+
+{# Mobile Menu #}
+
+<div class="xl:hidden hidden" id="mobile-menu">
+	<div class="absolute left-0 max-md:top-17.5 md:top-30.5 bg-white h-screen w-screen z-10">
+		<div class="container mx-auto h-[calc(100vh-140px)]">
+			<div class="flex flex-col justify-between h-full pt-7.5 pb-15 border-t border-t-gray-300">
+				<div class="space-y-7.5 w-full">
+					<nav class="text-gray-900 text-xl font-semibold">
+						<ul class="space-y-6">
+							{% for item in items %}
+								<li class="menu-item space-y-2.5 {% if item.in_active_trail %} active{% endif %}">
+									<span>
+									    <a href="{{ item.url.toString() }}" class="cursor-pointer">
+    										{{ item.title }}
+    									</a>
+									    {% if item.below %}
+											<span class="icon">
+												<svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+												</svg>
+											</span>
+										{% endif %}
+									</span>
+
+									{% if item.below %}
+										<div class="sub-menu hidden space-y-2.5 pl-5">
+											{% for sub_item in item.below %}
+												<a href="{{ sub_item.url.toString() }}" class="block {% if sub_item.in_active_trail %} is-active{% endif %}">{{ sub_item.title }}</a>
+											{% endfor %}
+										</div>
+									{% endif %}
+								</li>
+							{% endfor %}
+						</ul>
+					</nav>
+					<div>
+					       {{ drupal_block('language_block:language_interface', wrapper=false) }}
+						{#<span class="inline-block bg-gray-900 p-1 rounded font-bold text-[13px] text-gray-25 leading-[13px]">EN11</span>#}
+					</div>
+				</div>
+				<div class="text-gray-900 relative text-md search-wrapper">
+					<span class="icon absolute top-1/2 -translate-y-1/2" id="search-icon">
+						<svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M23.6012 21.7284L17.7153 15.8354C20.6747 11.9836 20.3787 6.41976 16.8275 2.89712C14.8874 0.954706 12.3884 0 9.85646 0C7.32458 0 4.82547 0.954761 2.88542 2.89712C-0.961806 6.74898 -0.961806 13.0041 2.88542 16.856C4.8255 18.7984 7.32452 19.7531 9.85646 19.7531C11.9609 19.7531 14.0654 19.0947 15.8081 17.7449L21.727 23.605C21.9901 23.8684 22.3189 24 22.6806 24C23.0094 24 23.3711 23.8683 23.6342 23.605C24.1273 23.1112 24.1273 22.2551 23.6012 21.7284ZM9.88928 17.0864C7.9492 17.0864 6.17359 16.3292 4.79253 14.9794C1.99754 12.1811 1.99754 7.60492 4.79253 4.77364C6.14068 3.42387 7.94923 2.66661 9.88928 2.66661C11.8294 2.66661 13.605 3.42387 14.986 4.77364C16.367 6.12341 17.0905 7.93414 17.0905 9.87653C17.0905 11.8189 16.3342 13.5967 14.986 14.9794C13.6378 16.3622 11.7965 17.0864 9.88928 17.0864Z" fill="currentColor"/>
+						</svg>
+					</span>
+					<form action="/search/node" method="get" id="search-block-form" accept-charset="UTF-8" class="search-form search-block-form" data-once="form-updated" data-drupal-form-fields="edit-keys">
+					    <input title="Enter the terms you wish to search for." placeholder="Search by keyword or phrase." data-drupal-selector="edit-keys" type="search" id="edit-keys" name="keys" value="" size="15" maxlength="128" class="!w-full !border-x-0 !border-t-0 !border-b !min-h-[44px] !px-0 !pr-0 !pl-10 !ring-0 !rounded-none !border-b-gray-900 !outline-0">
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+{% macro menu_links(items, attributes, menu_level, aria_id) %}
+  {% set primary_nav_level = 'primary-nav__menu--level-' ~ (menu_level + 1) %}
+  {% set drupal_selector_primary_nav_level = menu_level <= 1 ? 'primary-nav-menu--level-' ~ (menu_level + 1) : false %}
+  {% set is_top_level_menu = menu_level == 0 %}
+  {% import _self as menus %}
+  {% if items %}
+
+    {#
+      Place the menu arrow (caret) outside of the submenu because the submenu
+      has the overflow:hidden CSS rule applied.
+    #}
+    {#{% if menu_level == 1 %}#}
+    {#  <span data-drupal-selector="primary-nav-menu-🥕" class="primary-nav__menu-🥕"></span>#}
+    {#{% endif %}#}
+    
+    {% if menu_level == 1 %}
+        <div class="absolute sub-menu left-0 top-full w-full bg-white border-b border-gray-100 py-3">
+        <ul class="menu container mx-auto grid grid-cols-3 gap-5">
+    {% endif %}
+    {% if menu_level == 0 %}
+        <ul class="max-xl:hidden xl:flex space-x-5 text-xl">
+    {% endif %}
+      {% set attributes = attributes.removeClass(primary_nav_level) %}
+      {% for item in items %}
+
+        {% if item.url.isRouted and item.url.routeName == '<nolink>' %}
+          {% set menu_item_type = 'nolink' %}
+        {% elseif item.url.isRouted and item.url.routeName == '<button>' %}
+          {% set menu_item_type = 'button' %}
+        {% else %}
+          {% set menu_item_type = 'link' %}
+        {% endif %}
+
+        {% set item_classes = [
+            'primary-nav__menu-item',
+            'primary-nav__menu-item--' ~ menu_item_type,
+            'primary-nav__menu-item--level-' ~ (menu_level + 1),
+            item.in_active_trail ? 'primary-nav__menu-item--active-trail',
+            item.below ? 'primary-nav__menu-item--has-children',
+          ]
+        %}
+        {% if menu_level == 0 %}
+            {% set link_classes = [
+                'primary-nav__menu-link',
+                'primary-nav__menu-link--' ~ menu_item_type,
+                'primary-nav__menu-link--level-' ~ (menu_level + 1),
+                item.in_active_trail ? 'primary-nav__menu-link--active-trail',
+                item.below ? 'primary-nav__menu-link--has-children',
+                'flex items-center gap-1 font-semibold hover:text-green-300 duration-500'
+              ]
+            %}
+        {% endif %}
+        {% if menu_level == 1 %}
+            {% set link_classes = [
+                'flex gap-7.5 items-center pl-20 pr-5 py-7.5 text-black text-xl rounded hover:bg-green-200 hover:text-black duration-500'
+              ]
+            %}
+        {% endif %}
+        <li {{ item.attributes.addClass(item_classes) }}>
+          {#
+            A unique HTML ID should be used, but that isn't available through
+            Twig yet, so the |clean_id filter is used for now.
+            @see https://www.drupal.org/project/drupal/issues/3115445
+          #}
+          {% set aria_id = (aria_id ~ loop.index)|clean_id %}
+          {% set link_title %}
+            {{ item.title }}
+            {% if menu_level == 0 %}
+                <span class="flex justify-center items-center size-6 transition-transform duration-500">
+                    <svg class="max-w-3" width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 1L7 7L13 1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                </span>
+            {% endif %}
+          {% endset %}
+
+          {% if menu_item_type == 'link' or menu_item_type == 'nolink' %}
+            {{ link(menu_item_type == 'link' ? link_title : item.title, item.url, {
+              'class': link_classes,
+              'data-drupal-selector': is_top_level_menu ? 'primary-nav-menu-link-has-children' : false,
+              })
+            }}
+
+            {% if item.below %}
+              {#
+                Aria-hidden  and tabindex attributes are removed via JS. Button is non-functional,
+                but still visible in non-JS environments so that chevron can indicate presence of
+                drop menu).
+              #}
+              {% if is_top_level_menu %}
+                {% set toggle_button_attributes = create_attribute({
+                  'class': 'primary-nav__button-toggle',
+                  'data-drupal-selector': 'primary-nav-submenu-toggle-button',
+                  'aria-controls': aria_id,
+                  'aria-expanded': 'false',
+                  'aria-hidden': 'true',
+                  'tabindex': '-1',
+                }) %}
+
+                {#<button{{ toggle_button_attributes }}>#}
+                {#  <span class="visually-hidden">{{ '@title sub-navigation'|t({'@title': item.title}) }}</span>#}
+                {#  <span class="icon--menu-toggle"></span>#}
+                {#</button>#}
+              {% endif %}
+
+              {% set attributes = attributes.setAttribute('id', aria_id) %}
+              {{ menus.menu_links(item.below, attributes, menu_level + 1, aria_id) }}
+            {% endif %}
+
+          {% elseif menu_item_type == 'button' %}
+
+            {{ link(link_title, item.url, {
+              'class': link_classes,
+              'aria-controls': is_top_level_menu and item.below ? aria_id : false,
+              'aria-expanded': is_top_level_menu and item.below ? 'false' : false,
+              'data-drupal-selector': is_top_level_menu and item.below ? 'primary-nav-submenu-toggle-button' : false,
+            }) }}
+
+            {% set attributes = attributes.setAttribute('id', aria_id) %}
+            {{ menus.menu_links(item.below, attributes, menu_level + 1, aria_id) }}
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ul>
+    </div>
+  {% endif %}
+{% endmacro %}

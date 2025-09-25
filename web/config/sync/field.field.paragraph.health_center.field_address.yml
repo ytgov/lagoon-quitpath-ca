@@ -1,0 +1,29 @@
+uuid: 9c5cd446-ea8d-495a-8ff2-f7875be85a92
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_address
+    - paragraphs.paragraphs_type.health_center
+  module:
+    - allowed_formats
+    - text
+    - tmgmt_content
+third_party_settings:
+  allowed_formats:
+    allowed_formats: {  }
+  tmgmt_content:
+    excluded: false
+id: paragraph.health_center.field_address
+field_name: field_address
+entity_type: paragraph
+bundle: health_center
+label: Address
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

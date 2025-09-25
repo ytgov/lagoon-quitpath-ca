@@ -28,7 +28,7 @@
 *.key
 .editorconfig
 .gitattributes
-
+.DS_Store
 # Ignore local overrides
 phpcs.xml
 

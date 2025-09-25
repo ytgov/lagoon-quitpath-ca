@@ -1,0 +1,19 @@
+display:
+  default:
+    display_title: 'Par défaut'
+    display_options:
+      fields:
+        type:
+          label: Type
+        message:
+          label: Message
+        name:
+          label: Utilisateur
+        link:
+          label: Actions
+      filters:
+        type:
+          expose:
+            label: Type
+  page:
+    display_title: Page
