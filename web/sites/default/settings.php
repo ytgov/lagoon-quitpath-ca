@@ -146,9 +146,9 @@ if (file_exists(__DIR__ . '/services.local.yml')) {
   $settings['container_yamls'][] = __DIR__ . '/services.local.yml';
 }
 $databases['default']['default'] = array (
-  'database' => '#',
-  'username' => '#',
-  'password' => '#',
+  'database' => '',
+  'username' => '',
+  'password' => '',
   'prefix' => '',
   'host' => 'localhost',
   'port' => '3306',
