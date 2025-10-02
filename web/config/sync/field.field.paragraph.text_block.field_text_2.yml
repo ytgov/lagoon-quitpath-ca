@@ -1,0 +1,29 @@
+uuid: df510e33-c4c8-42fc-aec7-cf84f6d45617
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_text_2
+    - paragraphs.paragraphs_type.text_block
+  module:
+    - allowed_formats
+    - text
+    - tmgmt_content
+third_party_settings:
+  allowed_formats:
+    allowed_formats: {  }
+  tmgmt_content:
+    excluded: false
+id: paragraph.text_block.field_text_2
+field_name: field_text_2
+entity_type: paragraph
+bundle: text_block
+label: 'Column 2 text'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

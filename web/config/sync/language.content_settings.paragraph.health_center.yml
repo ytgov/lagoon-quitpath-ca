@@ -1,0 +1,18 @@
+uuid: 3593dfd3-dec2-4994-ac4c-8dd95a5a9299
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.health_center
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: paragraph.health_center
+target_entity_type_id: paragraph
+target_bundle: health_center
+default_langcode: site_default
+language_alterable: true

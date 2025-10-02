@@ -1,0 +1,42 @@
+uuid: f97463fd-a232-4edd-be77-f983664be5a6
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_size
+field_name: field_size
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: '25_75'
+      label: 25-75
+    -
+      value: '33_66'
+      label: 33-66
+    -
+      value: '40_60'
+      label: 40-60
+    -
+      value: '50_50'
+      label: 50-50
+    -
+      value: '60_40'
+      label: 60-40
+    -
+      value: '66_33'
+      label: 66-33
+    -
+      value: '75_25'
+      label: 75-25
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

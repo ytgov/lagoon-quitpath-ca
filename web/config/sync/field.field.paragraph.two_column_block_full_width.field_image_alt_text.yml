@@ -1,0 +1,24 @@
+uuid: 3dea4de4-884e-4bb8-b131-83e5eb46b9a3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_image_alt_text
+    - paragraphs.paragraphs_type.two_column_block_full_width
+  module:
+    - tmgmt_content
+third_party_settings:
+  tmgmt_content:
+    excluded: false
+id: paragraph.two_column_block_full_width.field_image_alt_text
+field_name: field_image_alt_text
+entity_type: paragraph
+bundle: two_column_block_full_width
+label: 'Image Alt text'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

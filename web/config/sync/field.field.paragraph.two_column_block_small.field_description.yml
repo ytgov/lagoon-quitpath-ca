@@ -1,0 +1,29 @@
+uuid: 82b74dc1-f3a2-4144-a348-a426e7df651a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_description
+    - paragraphs.paragraphs_type.two_column_block_small
+  module:
+    - allowed_formats
+    - text
+    - tmgmt_content
+third_party_settings:
+  allowed_formats:
+    allowed_formats: {  }
+  tmgmt_content:
+    excluded: false
+id: paragraph.two_column_block_small.field_description
+field_name: field_description
+entity_type: paragraph
+bundle: two_column_block_small
+label: Description
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

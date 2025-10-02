@@ -1,0 +1,25 @@
+uuid: 066c12bb-6b87-412d-9d59-cf3bb14bc721
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_heading
+    - paragraphs.paragraphs_type.cta_block_text_section
+  module:
+    - options
+    - tmgmt_content
+third_party_settings:
+  tmgmt_content:
+    excluded: false
+id: paragraph.cta_block_text_section.field_heading
+field_name: field_heading
+entity_type: paragraph
+bundle: cta_block_text_section
+label: Tags
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

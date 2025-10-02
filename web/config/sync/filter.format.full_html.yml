@@ -1,0 +1,28 @@
+uuid: 5ad107ea-0f8d-4818-8581-c706601d9fd8
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+name: 'Full HTML'
+format: full_html
+weight: 0
+filters:
+  filter_html:
+    id: filter_html
+    provider: filter
+    status: false
+    weight: -10
+    settings:
+      allowed_html: '<p class="s16-w400 s16-w500 s16-w600 s16-w700 s20-w400 s20-w500 s20-w600 s20-w700 s24-w400 s24-w500 s24-w600 s24-w700 s30-w400 s30-w500 s30-w600 s30-w700 s48-w400 s48-w500 s48-w600 s48-w700 s60-w400 s60-w500 s60-w600 s60-w700 s72-w400 s72-w500 s72-w600 s72-w700"> <h2 class="s16-w400 s16-w500 s16-w600 s16-w700 s20-w400 s20-w500 s20-w600 s20-w700 s24-w400 s24-w500 s24-w600 s24-w700 s30-w400 s30-w500 s30-w600 s30-w700 s48-w400 s48-w500 s48-w600 s48-w700 s60-w400 s60-w500 s60-w600 s60-w700 s72-w400 s72-w500 s72-w600 s72-w700"> <h3 class="s16-w400 s16-w500 s16-w600 s16-w700 s20-w400 s20-w500 s20-w600 s20-w700 s24-w400 s24-w500 s24-w600 s24-w700 s30-w400 s30-w500 s30-w600 s30-w700 s48-w400 s48-w500 s48-w600 s48-w700 s60-w400 s60-w500 s60-w600 s60-w700 s72-w400 s72-w500 s72-w600 s72-w700"> <h4 class="s16-w400 s16-w500 s16-w600 s16-w700 s20-w400 s20-w500 s20-w600 s20-w700 s24-w400 s24-w500 s24-w600 s24-w700 s30-w400 s30-w500 s30-w600 s30-w700 s48-w400 s48-w500 s48-w600 s48-w700 s60-w400 s60-w500 s60-w600 s60-w700 s72-w400 s72-w500 s72-w600 s72-w700"> <h5 class="s16-w400 s16-w500 s16-w600 s16-w700 s20-w400 s20-w500 s20-w600 s20-w700 s24-w400 s24-w500 s24-w600 s24-w700 s30-w400 s30-w500 s30-w600 s30-w700 s48-w400 s48-w500 s48-w600 s48-w700 s60-w400 s60-w500 s60-w600 s60-w700 s72-w400 s72-w500 s72-w600 s72-w700"> <h6 class="s16-w400 s16-w500 s16-w600 s16-w700 s20-w400 s20-w500 s20-w600 s20-w700 s24-w400 s24-w500 s24-w600 s24-w700 s30-w400 s30-w500 s30-w600 s30-w700 s48-w400 s48-w500 s48-w600 s48-w700 s60-w400 s60-w500 s60-w600 s60-w700 s72-w400 s72-w500 s72-w600 s72-w700">'
+      filter_html_help: true
+      filter_html_nofollow: false
+  media_embed:
+    id: media_embed
+    provider: media
+    status: true
+    weight: 100
+    settings:
+      default_view_mode: default
+      allowed_view_modes: {  }
+      allowed_media_types: {  }

@@ -1,0 +1,22 @@
+uuid: bff1a7bc-f123-47b8-af7d-3ccba9937311
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - quitpath
+_core:
+  default_config_hash: eYL19CLDyinGTWYQfBD1DswWzglEotE_kHnHx3AxTXM
+id: quitpath_powered
+theme: quitpath
+region: footer_bottom
+weight: 0
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  label_display: '0'
+  provider: system
+visibility: {  }

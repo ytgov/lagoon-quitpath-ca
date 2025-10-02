@@ -1,0 +1,25 @@
+uuid: 5f13717b-3a01-414a-9bf6-e419b4cb653c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title_tags
+    - paragraphs.paragraphs_type.health_center
+  module:
+    - options
+    - tmgmt_content
+third_party_settings:
+  tmgmt_content:
+    excluded: false
+id: paragraph.health_center.field_title_tags
+field_name: field_title_tags
+entity_type: paragraph
+bundle: health_center
+label: 'Title tags'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

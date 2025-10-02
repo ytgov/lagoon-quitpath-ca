@@ -1,0 +1,10 @@
+uuid: 7bb83424-67f7-4c60-a4dc-21747db9d0e9
+langcode: en
+status: true
+dependencies: {  }
+id: story
+label: Story
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

@@ -1,0 +1,29 @@
+uuid: 9d36e928-1c01-4300-b2ad-96839983ef0c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_story
+    - paragraphs.paragraphs_type.story
+  module:
+    - allowed_formats
+    - text
+    - tmgmt_content
+third_party_settings:
+  allowed_formats:
+    allowed_formats: {  }
+  tmgmt_content:
+    excluded: false
+id: paragraph.story.field_story
+field_name: field_story
+entity_type: paragraph
+bundle: story
+label: Story
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

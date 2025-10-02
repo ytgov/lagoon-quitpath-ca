@@ -1,0 +1,18 @@
+uuid: e2e67300-21bd-4c03-af6e-81fbc4a8c05a
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.e_cigarette_fagerstrom_test
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: paragraph.e_cigarette_fagerstrom_test
+target_entity_type_id: paragraph
+target_bundle: e_cigarette_fagerstrom_test
+default_langcode: site_default
+language_alterable: true

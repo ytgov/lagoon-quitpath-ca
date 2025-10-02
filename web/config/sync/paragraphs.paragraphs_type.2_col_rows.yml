@@ -1,0 +1,10 @@
+uuid: d90297ce-0fe6-413c-8919-0d850b2d4122
+langcode: en
+status: true
+dependencies: {  }
+id: 2_col_rows
+label: '2-Col Rows'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

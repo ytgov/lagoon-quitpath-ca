@@ -1,0 +1,33 @@
+{
+    "name": "quitpath",
+    "version": "1.0.0",
+    "description": "Quitpath Drupal theme with Tailwind CSS",
+    "scripts": {
+        "build": "npm run build:css && npm run build:js",
+        "build:css": "postcss src/style.css -o css/style.css --env production",
+        "build:js": "webpack --mode production",
+        "dev": "npm run dev:css & npm run dev:js",
+        "dev:css": "postcss src/style.css -o css/style.css --watch",
+        "dev:js": "webpack --mode development --watch",
+        "clean": "rimraf css/style.css js/dist/*",
+        "lint": "eslint src//**/*.js",
+        "lint:fix": "eslint src//**/*.js --fix"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.23.9",
+        "@babel/preset-env": "^7.23.9",
+        "autoprefixer": "^10.4.17",
+        "babel-loader": "^9.1.3",
+        "cssnano": "^6.0.3",
+        "eslint": "^8.56.0",
+        "postcss": "^8.4.35",
+        "postcss-cli": "^11.0.0",
+        "postcss-import": "^16.0.1",
+        "postcss-nested": "^6.0.1",
+        "rimraf": "^5.0.5",
+        "webpack": "^5.90.1",
+        "webpack-cli": "^5.1.4",
+        "@tailwindcss/postcss": "^4.1.10",
+        "tailwindcss": "^4.1.10"
+    }
+}

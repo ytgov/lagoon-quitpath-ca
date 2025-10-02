@@ -1,0 +1,16 @@
+contact_form.form:
+  path: '/contact-form'
+  defaults:
+    _form: '\Drupal\contact_form\Form\CustomContactForm'
+    _title: 'Quit Help Contact Form'
+  requirements:
+    _permission: 'access content'
+
+contact_form.contact_mail:
+  path: '/contact-mail'
+  defaults:
+    _controller: '\Drupal\contact_form\Controller\ContactMailController::handleContactMail'
+    _title: 'Contact Mail AJAX'
+  requirements:
+    _access: 'TRUE'
+  methods: [POST]

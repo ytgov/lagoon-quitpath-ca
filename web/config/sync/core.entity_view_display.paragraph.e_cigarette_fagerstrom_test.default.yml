@@ -1,0 +1,24 @@
+uuid: 7449df7e-e38e-4ee3-96af-f411994bc8ac
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.e_cigarette_fagerstrom_test.field_fagerstrom_test_questions
+    - paragraphs.paragraphs_type.e_cigarette_fagerstrom_test
+  module:
+    - entity_reference_revisions
+id: paragraph.e_cigarette_fagerstrom_test.default
+targetEntityType: paragraph
+bundle: e_cigarette_fagerstrom_test
+mode: default
+content:
+  field_fagerstrom_test_questions:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

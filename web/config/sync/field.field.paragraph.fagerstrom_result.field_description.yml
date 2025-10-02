@@ -1,0 +1,29 @@
+uuid: 44b6b9e6-a7a5-489c-b1b3-860f00cdcaf0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_description
+    - paragraphs.paragraphs_type.fagerstrom_result
+  module:
+    - allowed_formats
+    - text
+    - tmgmt_content
+third_party_settings:
+  allowed_formats:
+    allowed_formats: {  }
+  tmgmt_content:
+    excluded: false
+id: paragraph.fagerstrom_result.field_description
+field_name: field_description
+entity_type: paragraph
+bundle: fagerstrom_result
+label: Description
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

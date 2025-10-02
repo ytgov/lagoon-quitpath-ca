@@ -1,0 +1,167 @@
+uuid: 58ce1fe9-f12f-4745-95ea-9b19f4e0307f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_content
+    - node.type.page
+    - paragraphs.paragraphs_type.2_col_rows
+    - paragraphs.paragraphs_type.chewing_tobacco_nicotine_pouches
+    - paragraphs.paragraphs_type.cigarettes
+    - paragraphs.paragraphs_type.contact_section
+    - paragraphs.paragraphs_type.cost_calculator
+    - paragraphs.paragraphs_type.cta_block_section
+    - paragraphs.paragraphs_type.cta_block_text_section
+    - paragraphs.paragraphs_type.e_cigarette_fagerstrom_test
+    - paragraphs.paragraphs_type.fagerstrom_test
+    - paragraphs.paragraphs_type.fagerstrom_test_result
+    - paragraphs.paragraphs_type.feature_section
+    - paragraphs.paragraphs_type.health_center_section
+    - paragraphs.paragraphs_type.padding
+    - paragraphs.paragraphs_type.partner_logos
+    - paragraphs.paragraphs_type.previous_next_button
+    - paragraphs.paragraphs_type.question
+    - paragraphs.paragraphs_type.story
+    - paragraphs.paragraphs_type.text_block
+    - paragraphs.paragraphs_type.top_banner
+    - paragraphs.paragraphs_type.two_column_block_full_width
+    - paragraphs.paragraphs_type.two_column_block_small
+    - paragraphs.paragraphs_type.vaping
+  module:
+    - entity_reference_revisions
+    - tmgmt_content
+third_party_settings:
+  tmgmt_content:
+    excluded: false
+id: node.page.field_content
+field_name: field_content
+entity_type: node
+bundle: page
+label: Content
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      question: question
+      chewing_tobacco_nicotine_pouches: chewing_tobacco_nicotine_pouches
+      cigarettes: cigarettes
+      vaping: vaping
+      cta_block_section: cta_block_section
+      text_block: text_block
+      cta_block_text_section: cta_block_text_section
+      top_banner: top_banner
+      cost_calculator: cost_calculator
+      two_column_block_full_width: two_column_block_full_width
+      two_column_block_small: two_column_block_small
+      2_col_rows: 2_col_rows
+      fagerstrom_test: fagerstrom_test
+      previous_next_button: previous_next_button
+      story: story
+      contact_section: contact_section
+      feature_section: feature_section
+      health_center_section: health_center_section
+      e_cigarette_fagerstrom_test: e_cigarette_fagerstrom_test
+      fagerstrom_test_result: fagerstrom_test_result
+      padding: padding
+      partner_logos: partner_logos
+    negate: 0
+    target_bundles_drag_drop:
+      2_col_rows:
+        weight: 23
+        enabled: true
+      chewing_tobacco_nicotine_pouches:
+        weight: 6
+        enabled: true
+      cigarettes:
+        weight: 7
+        enabled: true
+      contact_info:
+        weight: 30
+        enabled: false
+      contact_section:
+        weight: 31
+        enabled: true
+      cost_calculator:
+        weight: 21
+        enabled: true
+      cost_calculator_options:
+        weight: 22
+        enabled: false
+      cta_block:
+        weight: 15
+        enabled: false
+      cta_block_section:
+        weight: 17
+        enabled: true
+      cta_block_text:
+        weight: 16
+        enabled: false
+      cta_block_text_section:
+        weight: 20
+        enabled: true
+      e_cigarette_fagerstrom_test:
+        weight: 43
+        enabled: true
+      fagerstrom_result:
+        weight: 42
+        enabled: false
+      fagerstrom_test:
+        weight: 23
+        enabled: true
+      fagerstrom_test_result:
+        weight: 44
+        enabled: true
+      feature_section:
+        weight: 31
+        enabled: true
+      featured_content:
+        weight: 30
+        enabled: false
+      health_center:
+        weight: 37
+        enabled: false
+      health_center_section:
+        weight: 38
+        enabled: true
+      options:
+        weight: 3
+        enabled: false
+      padding:
+        weight: 45
+        enabled: true
+      partner_logos:
+        weight: 47
+        enabled: true
+      previous_next_button:
+        weight: 23
+        enabled: true
+      question:
+        weight: 4
+        enabled: true
+      rows:
+        weight: 38
+        enabled: false
+      story:
+        weight: 23
+        enabled: true
+      text_block:
+        weight: 19
+        enabled: true
+      top_banner:
+        weight: 20
+        enabled: true
+      two_column_block_full_width:
+        weight: 21
+        enabled: true
+      two_column_block_small:
+        weight: 22
+        enabled: true
+      vaping:
+        weight: 10
+        enabled: true
+field_type: entity_reference_revisions

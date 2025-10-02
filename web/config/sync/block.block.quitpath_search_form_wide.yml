@@ -1,0 +1,23 @@
+uuid: cf9c1979-268b-43ce-a02b-c4b1983f34e9
+langcode: en
+status: true
+dependencies:
+  module:
+    - search
+  theme:
+    - quitpath
+_core:
+  default_config_hash: imMyHD6LYci0gtXq56qr9ZKGHzbEG9uFydrN5EhKtSU
+id: quitpath_search_form_wide
+theme: quitpath
+region: secondary_menu
+weight: -5
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: 'Search form (wide)'
+  label_display: '0'
+  provider: search
+  page_id: ''
+visibility: {  }

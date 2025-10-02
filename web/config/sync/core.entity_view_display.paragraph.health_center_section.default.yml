@@ -1,0 +1,50 @@
+uuid: 08b9e0a7-9b4e-4ea8-8149-321414df69c5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.health_center_section.field_health_center
+    - field.field.paragraph.health_center_section.field_title
+    - field.field.paragraph.health_center_section.field_title_size_weight
+    - field.field.paragraph.health_center_section.field_title_tags
+    - paragraphs.paragraphs_type.health_center_section
+  module:
+    - entity_reference_revisions
+    - options
+id: paragraph.health_center_section.default
+targetEntityType: paragraph
+bundle: health_center_section
+mode: default
+content:
+  field_health_center:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_title:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_title_size_weight:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 11
+    region: content
+  field_title_tags:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+hidden: {  }

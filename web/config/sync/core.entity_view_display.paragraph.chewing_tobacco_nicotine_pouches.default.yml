@@ -1,0 +1,48 @@
+uuid: 0eaeb901-f978-47d8-8586-2ee77f7c2742
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.chewing_tobacco_nicotine_pouches.field_class
+    - field.field.paragraph.chewing_tobacco_nicotine_pouches.field_question_1
+    - field.field.paragraph.chewing_tobacco_nicotine_pouches.field_question_2
+    - field.field.paragraph.chewing_tobacco_nicotine_pouches.field_question_3
+    - paragraphs.paragraphs_type.chewing_tobacco_nicotine_pouches
+id: paragraph.chewing_tobacco_nicotine_pouches.default
+targetEntityType: paragraph
+bundle: chewing_tobacco_nicotine_pouches
+mode: default
+content:
+  field_class:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_question_1:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_question_2:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_question_3:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden: {  }

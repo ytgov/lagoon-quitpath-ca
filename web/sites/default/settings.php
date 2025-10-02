@@ -145,3 +145,21 @@ if (file_exists(__DIR__ . '/settings.local.php')) {
 if (file_exists(__DIR__ . '/services.local.yml')) {
   $settings['container_yamls'][] = __DIR__ . '/services.local.yml';
 }
+$databases['default']['default'] = array (
+  'database' => '',
+  'username' => '',
+  'password' => '',
+  'prefix' => '',
+  'host' => 'localhost',
+  'port' => '3306',
+  'isolation_level' => 'READ COMMITTED',
+  'driver' => 'mysql',
+  'namespace' => 'Drupal\\mysql\\Driver\\Database\\mysql',
+  'autoload' => 'core/modules/mysql/src/Driver/Database/mysql/',
+);
+$settings['hash_salt'] = 'uUxjehOS9NxgNWCKDDZZZV980laCfIb80B_Z7ZXHrysj7KR-td4r6vhH2W4WY4tXMQ3QQ6TxOg';
+
+if ( isset($GLOBALS['request']) && '/web/index.php' === $GLOBALS['request']->server->get('SCRIPT_NAME') ) {
+    $GLOBALS['request']->server->set('SCRIPT_NAME', '/index.php'); 
+}
+$settings['config_sync_directory'] = 'config/sync'; 

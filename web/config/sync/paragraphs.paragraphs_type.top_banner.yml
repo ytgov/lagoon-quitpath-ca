@@ -1,0 +1,10 @@
+uuid: 0fad8b1b-ee27-45f6-a8f5-308ff680e4d3
+langcode: en
+status: true
+dependencies: {  }
+id: top_banner
+label: 'Top Banner'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

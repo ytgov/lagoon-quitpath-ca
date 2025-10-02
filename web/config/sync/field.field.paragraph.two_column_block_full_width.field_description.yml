@@ -1,0 +1,29 @@
+uuid: aeab9044-336a-4ff0-9e07-595a657362d5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_description
+    - paragraphs.paragraphs_type.two_column_block_full_width
+  module:
+    - allowed_formats
+    - text
+    - tmgmt_content
+third_party_settings:
+  allowed_formats:
+    allowed_formats: {  }
+  tmgmt_content:
+    excluded: false
+id: paragraph.two_column_block_full_width.field_description
+field_name: field_description
+entity_type: paragraph
+bundle: two_column_block_full_width
+label: Description
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

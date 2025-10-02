@@ -1,0 +1,25 @@
+uuid: c28f954c-3339-437c-b862-5d6bcdba2c61
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_padding
+    - paragraphs.paragraphs_type.text_block
+  module:
+    - options
+    - tmgmt_content
+third_party_settings:
+  tmgmt_content:
+    excluded: false
+id: paragraph.text_block.field_padding
+field_name: field_padding
+entity_type: paragraph
+bundle: text_block
+label: 'Padding - left & right'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

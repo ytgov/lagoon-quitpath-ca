@@ -1,0 +1,25 @@
+uuid: 70125dff-eefd-42b4-a5d2-549b3258d84e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title_tags
+    - paragraphs.paragraphs_type.cta_block_text_section
+  module:
+    - options
+    - tmgmt_content
+third_party_settings:
+  tmgmt_content:
+    excluded: false
+id: paragraph.cta_block_text_section.field_title_tags
+field_name: field_title_tags
+entity_type: paragraph
+bundle: cta_block_text_section
+label: 'Title tags'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

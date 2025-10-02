@@ -1,0 +1,25 @@
+uuid: 5da662b9-5b64-4e75-93cd-c92e1f081872
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_column_type
+    - paragraphs.paragraphs_type.cta_block_text_section
+  module:
+    - options
+    - tmgmt_content
+third_party_settings:
+  tmgmt_content:
+    excluded: false
+id: paragraph.cta_block_text_section.field_column_type
+field_name: field_column_type
+entity_type: paragraph
+bundle: cta_block_text_section
+label: 'Column type'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

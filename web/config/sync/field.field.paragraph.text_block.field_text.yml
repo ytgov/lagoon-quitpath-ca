@@ -1,0 +1,29 @@
+uuid: fa505c7a-d6a9-44a4-9d10-2fab787fa45d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_text
+    - paragraphs.paragraphs_type.text_block
+  module:
+    - allowed_formats
+    - text
+    - tmgmt_content
+third_party_settings:
+  allowed_formats:
+    allowed_formats: {  }
+  tmgmt_content:
+    excluded: false
+id: paragraph.text_block.field_text
+field_name: field_text
+entity_type: paragraph
+bundle: text_block
+label: 'Column 1 text'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

@@ -1,0 +1,22 @@
+uuid: 087be65a-b0ef-466b-b715-bf844fcb1639
+langcode: en
+status: true
+dependencies:
+  theme:
+    - quitpath
+_core:
+  default_config_hash: nGE3EoPQQaQCuqTUtZgw0-KIzmrqdKDzdNQf2JyPUt4
+id: quitpath_primary_local_tasks
+theme: quitpath
+region: tabs
+weight: -8
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Primary tabs'
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: false
+visibility: {  }

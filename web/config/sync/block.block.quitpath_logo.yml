@@ -1,0 +1,25 @@
+uuid: 87b462a6-ae02-42ef-9682-1da8a7a23740
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:a70bd969-ac39-4836-892e-481d1a04f80c'
+  module:
+    - block_content
+  theme:
+    - quitpath
+id: quitpath_logo
+theme: quitpath
+region: logo
+weight: 0
+provider: null
+plugin: 'block_content:a70bd969-ac39-4836-892e-481d1a04f80c'
+settings:
+  id: 'block_content:a70bd969-ac39-4836-892e-481d1a04f80c'
+  label: logo
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

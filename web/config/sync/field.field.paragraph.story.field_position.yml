@@ -1,0 +1,25 @@
+uuid: 262c9b0f-d3a9-40bb-b711-dc6bd7c42cad
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_position
+    - paragraphs.paragraphs_type.story
+  module:
+    - options
+    - tmgmt_content
+third_party_settings:
+  tmgmt_content:
+    excluded: false
+id: paragraph.story.field_position
+field_name: field_position
+entity_type: paragraph
+bundle: story
+label: Position
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

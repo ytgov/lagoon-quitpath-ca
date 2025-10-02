@@ -1,0 +1,14 @@
+display:
+  default:
+    display_options:
+      fields:
+        status:
+          label: État
+        item_type:
+          label: Type
+        operations:
+          label: Actions
+      arguments:
+        tltid:
+          exception:
+            title: Tout

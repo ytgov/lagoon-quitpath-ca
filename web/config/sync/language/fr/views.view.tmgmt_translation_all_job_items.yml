@@ -1,0 +1,16 @@
+display:
+  default:
+    display_options:
+      fields:
+        state:
+          label: État
+        type:
+          label: Type
+        operations:
+          label: Actions
+      filters:
+        state:
+          group_info:
+            label: État
+  page_1:
+    display_title: Page

@@ -1,0 +1,18 @@
+uuid: e48a6aa7-c620-4e05-a425-b7e889e4d6d0
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.partner_logos
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: paragraph.partner_logos
+target_entity_type_id: paragraph
+target_bundle: partner_logos
+default_langcode: site_default
+language_alterable: true

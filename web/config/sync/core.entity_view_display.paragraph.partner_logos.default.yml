@@ -1,0 +1,22 @@
+uuid: eafdd9ca-12fa-4761-8e1e-9611ebabccce
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.partner_logos.field_image
+    - paragraphs.paragraphs_type.partner_logos
+id: paragraph.partner_logos.default
+targetEntityType: paragraph
+bundle: partner_logos
+mode: default
+content:
+  field_image:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden: {  }

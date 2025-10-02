@@ -1,0 +1,25 @@
+uuid: 3369ba04-8193-484a-9e7a-804351de0969
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_image_position
+    - paragraphs.paragraphs_type.two_column_block_small
+  module:
+    - options
+    - tmgmt_content
+third_party_settings:
+  tmgmt_content:
+    excluded: false
+id: paragraph.two_column_block_small.field_image_position
+field_name: field_image_position
+entity_type: paragraph
+bundle: two_column_block_small
+label: 'Image position'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

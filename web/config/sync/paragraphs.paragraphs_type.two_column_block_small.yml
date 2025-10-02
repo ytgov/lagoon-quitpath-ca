@@ -1,0 +1,10 @@
+uuid: 91201767-5b62-48b6-a243-8b320d9ec9a7
+langcode: en
+status: true
+dependencies: {  }
+id: two_column_block_small
+label: '2-Col Image'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

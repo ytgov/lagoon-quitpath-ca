@@ -1,0 +1,25 @@
+uuid: 180622e1-86db-477f-92fa-8697585b4afd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_width
+    - paragraphs.paragraphs_type.top_banner
+  module:
+    - options
+    - tmgmt_content
+third_party_settings:
+  tmgmt_content:
+    excluded: false
+id: paragraph.top_banner.field_width
+field_name: field_width
+entity_type: paragraph
+bundle: top_banner
+label: Width
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

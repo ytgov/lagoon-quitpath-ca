@@ -1,0 +1,25 @@
+uuid: daea0608-6685-492a-b520-0eb5e4309c51
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_text_align
+    - paragraphs.paragraphs_type.text_block
+  module:
+    - options
+    - tmgmt_content
+third_party_settings:
+  tmgmt_content:
+    excluded: false
+id: paragraph.text_block.field_text_align
+field_name: field_text_align
+entity_type: paragraph
+bundle: text_block
+label: 'Text align'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

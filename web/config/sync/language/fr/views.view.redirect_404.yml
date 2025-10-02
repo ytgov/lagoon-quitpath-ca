@@ -1,0 +1,19 @@
+display:
+  default:
+    display_options:
+      fields:
+        path:
+          label: Chemin
+        langcode:
+          label: Langue
+        redirect_404_operations:
+          label: Actions
+      filters:
+        path:
+          expose:
+            label: Chemin
+        langcode:
+          expose:
+            label: Langue
+  page_1:
+    display_title: Page

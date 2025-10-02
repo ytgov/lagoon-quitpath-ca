@@ -1,0 +1,25 @@
+uuid: 3eb73e5b-d690-45d2-af93-0cdcedbc6a02
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_gap
+    - paragraphs.paragraphs_type.two_column_block_small
+  module:
+    - options
+    - tmgmt_content
+third_party_settings:
+  tmgmt_content:
+    excluded: false
+id: paragraph.two_column_block_small.field_gap
+field_name: field_gap
+entity_type: paragraph
+bundle: two_column_block_small
+label: 'Two column grid gap'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

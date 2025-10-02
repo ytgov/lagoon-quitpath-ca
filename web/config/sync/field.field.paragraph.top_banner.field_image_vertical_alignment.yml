@@ -1,0 +1,25 @@
+uuid: 273c64a9-298b-48b2-afd2-6c0c7468aa40
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_image_vertical_alignment
+    - paragraphs.paragraphs_type.top_banner
+  module:
+    - options
+    - tmgmt_content
+third_party_settings:
+  tmgmt_content:
+    excluded: false
+id: paragraph.top_banner.field_image_vertical_alignment
+field_name: field_image_vertical_alignment
+entity_type: paragraph
+bundle: top_banner
+label: 'Image vertical alignment'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

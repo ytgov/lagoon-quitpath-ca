@@ -1,0 +1,81 @@
+uuid: 6c911371-8d4d-41f5-a239-877cca387d36
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_background_color
+field_name: field_background_color
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: green-100
+      label: Green-100
+    -
+      value: green-200
+      label: Green-200
+    -
+      value: green-300
+      label: Green-300
+    -
+      value: light-blue-50
+      label: Light-Blue-50
+    -
+      value: light-blue-100
+      label: Light-Blue-100
+    -
+      value: light-blue-200
+      label: Light-Blue-200
+    -
+      value: light-blue-300
+      label: Light-Blue-300
+    -
+      value: red-50
+      label: Red-50
+    -
+      value: red-100
+      label: Red-100
+    -
+      value: red-200
+      label: Red-200
+    -
+      value: red-300
+      label: Red-300
+    -
+      value: blue-50
+      label: Blue-50
+    -
+      value: blue-100
+      label: Blue-100
+    -
+      value: blue-200
+      label: Blue-200
+    -
+      value: blue-300
+      label: Blue-300
+    -
+      value: blue-800
+      label: Blue-800
+    -
+      value: yellow-50
+      label: Yellow-50
+    -
+      value: yellow-100
+      label: Yellow-100
+    -
+      value: yellow-200
+      label: Yellow-200
+    -
+      value: yellow-300
+      label: Yellow-300
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

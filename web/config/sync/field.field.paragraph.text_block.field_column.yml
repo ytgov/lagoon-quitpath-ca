@@ -1,0 +1,25 @@
+uuid: e757c017-de91-475c-9e0f-de4566bdb482
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_column
+    - paragraphs.paragraphs_type.text_block
+  module:
+    - options
+    - tmgmt_content
+third_party_settings:
+  tmgmt_content:
+    excluded: false
+id: paragraph.text_block.field_column
+field_name: field_column
+entity_type: paragraph
+bundle: text_block
+label: Column
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

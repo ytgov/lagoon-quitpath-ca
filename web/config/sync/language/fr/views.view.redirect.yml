@@ -1,0 +1,8 @@
+display:
+  default:
+    display_options:
+      fields:
+        created:
+          label: Créé
+  page_1:
+    display_title: Page

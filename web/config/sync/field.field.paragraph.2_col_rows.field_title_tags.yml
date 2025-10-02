@@ -1,0 +1,25 @@
+uuid: 0f8dc7cc-bfb9-497e-9fa2-8169e03b78fb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title_tags
+    - paragraphs.paragraphs_type.2_col_rows
+  module:
+    - options
+    - tmgmt_content
+third_party_settings:
+  tmgmt_content:
+    excluded: false
+id: paragraph.2_col_rows.field_title_tags
+field_name: field_title_tags
+entity_type: paragraph
+bundle: 2_col_rows
+label: 'Title tags'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,38 @@
+<?php 
+use Drupal\Core\Form\FormStateInterface;
+
+function contact_form_mail($key, &$message, $params) {
+  switch ($key) {
+    case 'contact_form_submit':
+      $message['subject'] = t('New contact form submission');
+      $message['body'][] = $params['message'];
+      break;
+  }
+}
+
+/**
+ * Implements hook_form_alter() to add custom CSS to a form.
+ */
+function contact_form_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  // Check if we are altering the correct form.
+  if (strpos($form_id, 'node_') === 0) {
+    // Attach the CSS file to the form.
+    $form['#attached']['library'][] = 'contact_form/custom_styles';
+  }
+}
+
+/**
+ * Implements hook_field_widget_form_alter().
+ */
+function contact_form_field_widget_form_alter(&$element, FormStateInterface $form_state, $context) {
+  // Replace with your field name.
+  if ($context['items']->getFieldDefinition()->getName() === 'field_content') {
+
+    // Check if this is the Paragraphs widget that shows multiple types.
+    if (isset($element['add_more']['#options']) && is_array($element['add_more']['#options'])) {
+
+      // Sort the paragraph type options alphabetically by label.
+      asort($element['add_more']['#options'], SORT_NATURAL | SORT_FLAG_CASE);
+    }
+  }
+}
