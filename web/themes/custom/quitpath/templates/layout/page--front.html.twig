@@ -130,7 +130,7 @@
         <div class="space-y-2.5 mx-auto container">
             <div class="flex flex-col gap-2.5 feedback">
                 <div class="flex items-center justify-end gap-2.5">
-                    <p class="text-gray-600 text-md">Was this page helpful?</p>
+                    <p class="text-gray-600 text-md">{{ "Was this page helpful?"|t }}</p>
                     <div class="flex gap-2.5 text-gray-600 like-dislike-btn">
                         <div class="like size-6">
                             <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -170,11 +170,11 @@
                 </div>
                 <div class="flex max-md:flex-col max-md:space-y-2.5 md:space-x-7.5 font-semibold text-gray-600 text-md max-md:text-right items-end md:items-center">
                     {{ page.footer_menu }}
-                    <div class="max-md:hidden">{{ footer_copyrights }}</div>
+                    <div class="max-md:hidden">© {{ 'now'|date('Y') }} {{ "Government of Yukon"|t }}</div>
                 </div>
             </div>
             <div class="w-full text-center">
-                <div class="md:hidden">{{ footer_copyrights }}</div>
+                <div class="md:hidden">© {{ 'now'|date('Y') }} {{ "Government of Yukon"|t }}</div>
             </div>
         </div>
     </footer>
