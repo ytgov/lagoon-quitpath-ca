@@ -3,6 +3,8 @@ langcode: en
 status: true
 dependencies:
   config:
+    - filter.format.full_html
+    - node.type.page
     - workflows.workflow.editorial
   module:
     - content_moderation
@@ -10,6 +12,7 @@ dependencies:
     - contextual
     - editoria11y
     - file
+    - filter
     - locale
     - media
     - menu_link_content
@@ -27,6 +30,7 @@ label: Translator
 weight: -7
 is_admin: null
 permissions:
+  - 'accept translation jobs'
   - 'access administration pages'
   - 'access content overview'
   - 'access contextual links'
@@ -36,14 +40,18 @@ permissions:
   - 'access site in maintenance mode'
   - 'access taxonomy overview'
   - 'access toolbar'
+  - 'administer menu'
   - 'create content translations'
   - 'create media'
   - 'create translation jobs'
   - 'create url aliases'
+  - 'delete any media'
   - 'delete content translations'
   - 'delete media'
   - 'delete own files'
   - 'delete translation jobs'
+  - 'edit any page content'
+  - 'edit own page content'
   - 'mark as hidden in editoria11y'
   - 'provide translation services'
   - 'submit translation jobs'
@@ -52,12 +60,15 @@ permissions:
   - 'translate editable entities'
   - 'translate interface'
   - 'translate menu_link_content'
+  - 'translate page node'
+  - 'update any media'
   - 'update content translations'
   - 'update media'
   - 'use editorial transition create_new_draft'
   - 'use editorial transition publish'
   - 'use editorial transition restore_to_draft'
   - 'use editorial transition review'
+  - 'use text format full_html'
   - 'view all media revisions'
   - 'view all revisions'
   - 'view all taxonomy revisions'
