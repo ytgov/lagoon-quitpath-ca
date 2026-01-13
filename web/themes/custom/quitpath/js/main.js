@@ -6,6 +6,15 @@ jQuery(document).ready(function($){
         }
     });
     
+    $('html[lang=fr] input[required]').each(function() {
+      this.oninvalid = function(e) {
+        e.target.setCustomValidity(Drupal.t('Veuillez remplir ce champ.'));
+      };
+      this.oninput = function(e) {
+        e.target.setCustomValidity('');
+      };
+    });
+    
      $('form#custom-contact-form').submit( function(event){ 
         var validation = 'pass';
         
@@ -222,12 +231,22 @@ jQuery(document).ready(function($){
     // next button
     $('[class^="question-"] .next-prev-btn p:last-child').not('.question-5 .next-prev-btn p:last-child').click(function() {
         var class_name = $(this).closest('[class^="question-"]').attr("class");
-        class_name = class_name.replace("hidden", "")
+        class_name = class_name.replace("hidden", "");
+        var parent_name = $(this).closest('[class^="question-"]').parent().attr("class");
+        var parent_class = '.' + parent_name.replace(/\s+/g, '.');
 
-        if (!$("." + class_name + ' input').is(':checked')) {
+        if (!$(parent_class + " ." + class_name + ' input').is(':checked')) {
             // Please select an option to processed
             $('.red_error').remove();
-            $(this).parent().before("<p class='red_error' style='color:red'>* Please select an option to proceed</a>");
+            var lang = $('html').attr('lang');
+            if (lang == "fr") {
+                var message = "Veuillez sélectionner une option pour continuer.";
+            }
+            else {
+                var message = "Please select an option to proceed";
+            }
+            
+            $(this).parent().before("<p class='red_error' style='color:red'>* "+message+"</a>");
             return false;
             //alert("Selected value: " + $(this).val());
         }
@@ -248,7 +267,14 @@ jQuery(document).ready(function($){
     $('#fagerst_test .question-5 .next-prev-btn p:last-child').click(function() {
         if (!$('.question-5 input').is(':checked')) {
             $('.red_error').remove();
-            $(this).parent().before("<p class='red_error' style='color:red'> Please select an option to proceed</a>");
+            var lang = $('html').attr('lang');
+            if (lang == "fr") {
+                var message = "Veuillez sélectionner une option pour continuer.";
+            }
+            else {
+                var message = "Please select an option to proceed";
+            }
+            $(this).parent().before("<p class='red_error' style='color:red'> "+message+"</a>");
             return false;
             //alert("Selected value: " + $(this).val());
         }
@@ -269,7 +295,14 @@ jQuery(document).ready(function($){
     $('#e-cigarette-test .question-5 .next-prev-btn p:last-child').click(function() {
         if (!$('.question-5 input').is(':checked')) {
             $('.red_error').remove();
-            $(this).parent().before("<p class='red_error' style='color:red'> Please select an option to proceed</a>");
+            var lang = $('html').attr('lang');
+            if (lang == "fr") {
+                var message = "Veuillez sélectionner une option pour continuer.";
+            }
+            else {
+                var message = "Please select an option to proceed";
+            }
+            $(this).parent().before("<p class='red_error' style='color:red'> "+message+"</a>");
             return false;
             //alert("Selected value: " + $(this).val());
         }
@@ -367,6 +400,9 @@ jQuery(document).ready(function($){
            $('#e-cigarette-test-result').fadeIn();
         }
     });
+    
+    $("p.cigarettes_form_prev.prev-btn").hide();
+    
     $('#cigarettes_form').submit( function(event){
         event.preventDefault();
         var data = $(this).serializeArray();
@@ -377,10 +413,20 @@ jQuery(document).ready(function($){
         var peryear = data[0].value * price_per_cigrate * 365;
         var lifetime = data[0].value * price_per_cigrate * 365 * data[3].value;
         
-        var result = "<h4>Your Results</h4><p>Here’s how much your smoking, vaping or tobacco use is really costing you. This is just the money – not the time, energy or peace of mind it takes away from you.</p> <p>$"+perday.toFixed(2)+" per day <br> $"+perweek.toFixed(2)+" per week <br> $"+permonth.toFixed(2)+" per month <br> $"+peryear.toFixed(2)+" per year <br> $"+lifetime.toFixed(2)+" over your lifetime of use</p>"
+        var result = "<div class='cigarettes_form_result'><h4>Your Results</h4><p>Here’s how much your smoking, vaping or tobacco use is really costing you. This is just the money – not the time, energy or peace of mind it takes away from you.</p> <p>$"+perday.toFixed(2)+" per day <br> $"+perweek.toFixed(2)+" per week <br> $"+permonth.toFixed(2)+" per month <br> $"+peryear.toFixed(2)+" per year <br> $"+lifetime.toFixed(2)+" over your lifetime of use</p></div>"
         
-        $(this).html(result);
+        $(this).hide();
+        $("p.cigarettes_form_prev.prev-btn").show();
+        $(this).after(result);
     });
+    $('.cigarettes_form_prev').click( function(event){
+        event.preventDefault();
+        $('#cigarettes_form').show();
+        $(this).hide();
+        $('.cigarettes_form_result').remove();
+    });
+    
+    $("p.vaping_form_prev.prev-btn").hide();
     $('#vaping_form').submit( function(event){
         event.preventDefault();
         var data = $(this).serializeArray();
@@ -393,11 +439,20 @@ jQuery(document).ready(function($){
         var peryear = Math.round (pods_per_day * 365) + (cost_per_device * 365);
         var lifetime = Math.round (data[2].value * pods_per_day * 365) + Math.round(data[0].value);
         
-        var result = "<h4>Your Results</h4> <p>Here’s how much your smoking, vaping or tobacco use is really costing you. This is just the money – not the time, energy or peace of mind it takes away from you.</p> <p>$"+perday.toFixed(2)+" per day <br> $"+perweek.toFixed(2)+" per week <br> $"+permonth.toFixed(2)+" per month <br> $"+peryear.toFixed(2)+" per year <br> $"+lifetime.toFixed(2)+" over your lifetime of use</p>"
+        var result = "<div class='vaping_form_result'><h4>Your Results</h4> <p>Here’s how much your smoking, vaping or tobacco use is really costing you. This is just the money – not the time, energy or peace of mind it takes away from you.</p> <p>$"+perday.toFixed(2)+" per day <br> $"+perweek.toFixed(2)+" per week <br> $"+permonth.toFixed(2)+" per month <br> $"+peryear.toFixed(2)+" per year <br> $"+lifetime.toFixed(2)+" over your lifetime of use</p></div>"
         
-        $(this).html(result);
+        $(this).hide();
+        $("p.vaping_form_prev.prev-btn").show();
+        $(this).after(result);
+    });
+    $('.vaping_form_prev').click( function(event){
+        event.preventDefault();
+        $('#vaping_form').show();
+        $(this).hide();
+        $('.vaping_form_result').remove();
     });
     
+    $("p.chewing_form_prev.prev-btn").hide();
     $('#chewing_form').submit( function(event){
         event.preventDefault();
         var data = $(this).serializeArray();
@@ -408,9 +463,17 @@ jQuery(document).ready(function($){
         var peryear = data[1].value * can_per_day * 365;
         var lifetime = data[1].value * can_per_day * 365 * data[2].value;
         
-        var result = "<h4>Your Results</h4> <p>Here’s how much your smoking, vaping or tobacco use is really costing you. This is just the money – not the time, energy or peace of mind it takes away from you.</p> <p>$"+perday.toFixed(2)+" per day <br> $"+perweek.toFixed(2)+" per week <br> $"+permonth.toFixed(2)+" per month <br> $"+peryear.toFixed(2)+" per year <br> $"+lifetime.toFixed(2)+" over your lifetime of use</p>"
+        var result = "<div class='chewing_form_result'><h4>Your Results</h4> <p>Here’s how much your smoking, vaping or tobacco use is really costing you. This is just the money – not the time, energy or peace of mind it takes away from you.</p> <p>$"+perday.toFixed(2)+" per day <br> $"+perweek.toFixed(2)+" per week <br> $"+permonth.toFixed(2)+" per month <br> $"+peryear.toFixed(2)+" per year <br> $"+lifetime.toFixed(2)+" over your lifetime of use</p></div>"
         
-        $(this).html(result);
+        $(this).hide();
+        $("p.chewing_form_prev.prev-btn").show();
+        $(this).after(result);
+    });
+    $('.chewing_form_prev').click( function(event){
+        event.preventDefault();
+        $('#chewing_form').show();
+        $(this).hide();
+        $('.chewing_form_result').remove();
     });
 })
 
@@ -593,3 +656,23 @@ jQuery("#edit-phone-number").on("input", function(e){
       }
     }
   });
+  
+
+function setSubmenuTop() {
+  const header = document.querySelector('header');
+  const subMenus = document.querySelectorAll('li.primary-nav__menu-item--has-children > .sub-menu');
+ 
+  if (!header || !subMenus.length) return;
+ 
+  // Get header height and subtract 30px
+  const headerHeight = header.getBoundingClientRect().height - 30;
+ 
+  // Apply to each submenu
+  subMenus.forEach(menu => {
+    menu.style.top = `${headerHeight}px`;
+  });
+}
+ 
+// Run on load and resize
+window.addEventListener('load', setSubmenuTop);
+window.addEventListener('resize', setSubmenuTop);
