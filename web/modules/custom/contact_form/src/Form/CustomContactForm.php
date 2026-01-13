@@ -133,6 +133,24 @@ class CustomContactForm extends FormBase {
 
     $message = $form_state->get('custom_form_message');
     if (empty($message)) {
+        $current_language = \Drupal::languageManager()->getCurrentLanguage()->getId();
+        
+        $target = theme_get_setting('link_open_new_tab');
+        
+        if ($target) {
+            $link_target = 'target="_blank"';
+        }
+        else {
+            $link_target = '';
+        }
+
+        if ($current_language == "fr") {
+            $new_message = "<a href='" . theme_get_setting('contact_form_click_here_link_fr') ."' class='underline' ".$link_target.">" . theme_get_setting('contact_form_submit_text_fr') ."</a>";
+        }
+        else {
+            $new_message = "<a href='" . theme_get_setting('contact_form_click_here_link') ."' class='underline' ".$link_target.">" . theme_get_setting('contact_form_submit_text') . "</a>";
+        }
+        
         $form['submit'] = [
           '#type' => 'submit',
           '#value' => $this->t('Submit'),
@@ -141,6 +159,7 @@ class CustomContactForm extends FormBase {
         //     'wrapper' => 'custom-form-message-wrapper',
         //     'effect' => 'fade',
         //   ],
+          '#prefix' => $new_message
         ];
     }
 
