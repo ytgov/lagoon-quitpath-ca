@@ -9,7 +9,6 @@ dependencies:
     - content_moderation
     - content_translation
     - contextual
-    - editoria11y
     - entity_reference_revisions
     - file
     - locale
@@ -69,7 +68,6 @@ permissions:
   - 'delete own files'
   - 'delete translation jobs'
   - 'edit any webform submission'
-  - 'mark as hidden in editoria11y'
   - 'provide translation services'
   - 'revert all revisions'
   - 'revert all taxonomy revisions'
@@ -93,7 +91,6 @@ permissions:
   - 'view all taxonomy revisions'
   - 'view any unpublished content'
   - 'view any webform submission'
-  - 'view editoria11y checker'
   - 'view latest version'
   - 'view the administration theme'
   - 'view unpublished paragraphs'
