@@ -11,6 +11,7 @@ dependencies:
     - field.field.paragraph.two_column_block_full_width.field_image_alt_text
     - field.field.paragraph.two_column_block_full_width.field_image_overlay_text
     - field.field.paragraph.two_column_block_full_width.field_link
+    - field.field.paragraph.two_column_block_full_width.field_overlay_color
     - field.field.paragraph.two_column_block_full_width.field_size_weight
     - field.field.paragraph.two_column_block_full_width.field_title
     - field.field.paragraph.two_column_block_full_width.field_title_size_weight
@@ -70,11 +71,19 @@ content:
     third_party_settings: {  }
   field_link:
     type: link_default
-    weight: 10
+    weight: 11
     region: content
     settings:
       placeholder_url: ''
       placeholder_title: ''
+    third_party_settings: {  }
+  field_overlay_color:
+    type: string_textfield
+    weight: 10
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
   field_size_weight:
     type: options_select
@@ -103,7 +112,7 @@ content:
     settings: {  }
     third_party_settings: {  }
   translation:
-    weight: 11
+    weight: 12
     region: content
     settings: {  }
     third_party_settings: {  }

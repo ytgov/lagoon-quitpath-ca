@@ -95,7 +95,7 @@
                         class="max-md:max-w-50 md:max-w-82 float-end mr-3.75 md:mr-16"
                         alt="{{ alt_text }}"
                     />
-                    <{{ paragraph.field_heading.value }} class="{{ paragraph.field_size_weight.value|raw }} absolute text-white bottom-0 max-md:left-[27px] md:px-14 py-[23px] md:py-10 max-md:w-[274px]">
+                    <{{ paragraph.field_heading.value }} class="{{ paragraph.field_size_weight.value|raw }} absolute text-white bottom-0 max-md:left-[27px] md:px-14 py-[23px] md:py-10 max-md:w-[274px]" {% if paragraph.field_overlay_color.value is not empty %}style="background-color:{{ paragraph.field_overlay_color.value }}"{% endif %}>
                         {{ paragraph.field_image_overlay_text.value|raw }}
                     </{{ paragraph.field_heading.value }}>
                 </div>

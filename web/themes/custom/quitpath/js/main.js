@@ -6,6 +6,15 @@ jQuery(document).ready(function($){
         }
     });
     
+    $('html[lang=fr] input[required]').each(function() {
+      this.oninvalid = function(e) {
+        e.target.setCustomValidity(Drupal.t('Veuillez remplir ce champ.'));
+      };
+      this.oninput = function(e) {
+        e.target.setCustomValidity('');
+      };
+    });
+    
      $('form#custom-contact-form').submit( function(event){ 
         var validation = 'pass';
         
@@ -222,12 +231,22 @@ jQuery(document).ready(function($){
     // next button
     $('[class^="question-"] .next-prev-btn p:last-child').not('.question-5 .next-prev-btn p:last-child').click(function() {
         var class_name = $(this).closest('[class^="question-"]').attr("class");
-        class_name = class_name.replace("hidden", "")
+        class_name = class_name.replace("hidden", "");
+        var parent_name = $(this).closest('[class^="question-"]').parent().attr("class");
+        var parent_class = '.' + parent_name.replace(/\s+/g, '.');
 
-        if (!$("." + class_name + ' input').is(':checked')) {
+        if (!$(parent_class + " ." + class_name + ' input').is(':checked')) {
             // Please select an option to processed
             $('.red_error').remove();
-            $(this).parent().before("<p class='red_error' style='color:red'>* Please select an option to proceed</a>");
+            var lang = $('html').attr('lang');
+            if (lang == "fr") {
+                var message = "Veuillez sélectionner une option pour continuer.";
+            }
+            else {
+                var message = "Please select an option to proceed";
+            }
+            
+            $(this).parent().before("<p class='red_error' style='color:red'>* "+message+"</a>");
             return false;
             //alert("Selected value: " + $(this).val());
         }
@@ -248,7 +267,14 @@ jQuery(document).ready(function($){
     $('#fagerst_test .question-5 .next-prev-btn p:last-child').click(function() {
         if (!$('.question-5 input').is(':checked')) {
             $('.red_error').remove();
-            $(this).parent().before("<p class='red_error' style='color:red'> Please select an option to proceed</a>");
+            var lang = $('html').attr('lang');
+            if (lang == "fr") {
+                var message = "Veuillez sélectionner une option pour continuer.";
+            }
+            else {
+                var message = "Please select an option to proceed";
+            }
+            $(this).parent().before("<p class='red_error' style='color:red'> "+message+"</a>");
             return false;
             //alert("Selected value: " + $(this).val());
         }
@@ -269,7 +295,14 @@ jQuery(document).ready(function($){
     $('#e-cigarette-test .question-5 .next-prev-btn p:last-child').click(function() {
         if (!$('.question-5 input').is(':checked')) {
             $('.red_error').remove();
-            $(this).parent().before("<p class='red_error' style='color:red'> Please select an option to proceed</a>");
+            var lang = $('html').attr('lang');
+            if (lang == "fr") {
+                var message = "Veuillez sélectionner une option pour continuer.";
+            }
+            else {
+                var message = "Please select an option to proceed";
+            }
+            $(this).parent().before("<p class='red_error' style='color:red'> "+message+"</a>");
             return false;
             //alert("Selected value: " + $(this).val());
         }
@@ -593,3 +626,23 @@ jQuery("#edit-phone-number").on("input", function(e){
       }
     }
   });
+  
+
+function setSubmenuTop() {
+  const header = document.querySelector('header');
+  const subMenus = document.querySelectorAll('li.primary-nav__menu-item--has-children > .sub-menu');
+ 
+  if (!header || !subMenus.length) return;
+ 
+  // Get header height and subtract 30px
+  const headerHeight = header.getBoundingClientRect().height - 30;
+ 
+  // Apply to each submenu
+  subMenus.forEach(menu => {
+    menu.style.top = `${headerHeight}px`;
+  });
+}
+ 
+// Run on load and resize
+window.addEventListener('load', setSubmenuTop);
+window.addEventListener('resize', setSubmenuTop);

@@ -1,0 +1,14 @@
+title: 'Avez-vous trouvé ce que vous cherchiez?'
+elements: |
+  was_this_page_helpful:
+    '#title': 'Avez-vous trouvé ce que vous cherchiez?'
+  how_did_this_page_help_you:
+    '#title': 'En quoi cette page vous a-t-elle été utile?'
+    '#description': '<p><a href="/fr/vie-privee" target="_blank">Pour plus d''informations sur la manière dont nous utilisons vos données</a></p>'
+  how_can_we_improve_this_page:
+    '#title': 'Comment peut-on améliorer cette page?'
+    '#description': '<p><a href="/fr/vie-privee" target="_blank">Pour plus d''informations sur la manière dont nous utilisons vos données</a></p>'
+  actions:
+    '#submit__label': 'Faire un commentaire'
+settings:
+  confirmation_message: '<p>Merci d’avoir pris le temps de nous faire part de vos commentaires.</p>'
