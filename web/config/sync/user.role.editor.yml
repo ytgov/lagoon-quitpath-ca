@@ -7,7 +7,6 @@ dependencies:
   module:
     - content_moderation
     - contextual
-    - editoria11y
     - file
     - media
     - node
@@ -35,7 +34,6 @@ permissions:
   - 'create url aliases'
   - 'delete media'
   - 'delete own files'
-  - 'mark as hidden in editoria11y'
   - 'switch shortcut sets'
   - 'update media'
   - 'use editorial transition create_new_draft'
@@ -45,7 +43,6 @@ permissions:
   - 'view all revisions'
   - 'view all taxonomy revisions'
   - 'view any unpublished content'
-  - 'view editoria11y checker'
   - 'view latest version'
   - 'view the administration theme'
   - 'view unpublished paragraphs'
