@@ -11,17 +11,22 @@ module:
   breakpoint: 0
   ckeditor5: 0
   color_field: 0
+  conditional_fields: 0
   config: 0
   config_translation: 0
+  contact_form: 0
   content_moderation: 0
   contextual: 0
   datetime: 0
   datetime_range: 0
   dblog: 0
+  dependent_fields: 0
   dynamic_page_cache: 0
   easy_breadcrumb: 0
   editor: 0
+  editoria11y: 0
   entity_reference_revisions: 0
+  external_link_popup: 0
   field: 0
   field_group: 0
   field_ui: 0
@@ -41,6 +46,7 @@ module:
   linkit: 0
   linkit_attributes: 0
   locale: 0
+  mailsystem: 0
   matomo: 0
   media: 0
   media_library: 0
@@ -58,13 +64,17 @@ module:
   path_alias: 0
   redirect: 0
   redirect_404: 0
+  redirect_after_login: 0
   redirect_domain: 0
   responsive_image: 0
   search: 0
   shortcut: 0
+  simple_menu_icons: 0
   simple_sitemap: 0
   simple_sitemap_engines: 0
   simple_sitemap_views: 0
+  sitemap: 0
+  smtp: 0
   svg_image_field: 0
   symfony_mailer: 0
   system: 0
@@ -97,4 +107,5 @@ module:
 theme:
   olivero: 0
   claro: 0
+  quitpath: 0
 profile: minimal

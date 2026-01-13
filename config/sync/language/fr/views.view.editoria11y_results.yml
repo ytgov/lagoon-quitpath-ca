@@ -1,0 +1,81 @@
+display:
+  default:
+    display_title: 'Par défaut'
+  block_recent_issues:
+    display_options:
+      fields:
+        result_name:
+          label: Ticket
+        page_path:
+          label: 'Chemin de la page'
+        page_title:
+          label: Page
+  block_top_issues:
+    display_options:
+      fields:
+        result_name:
+          label: Ticket
+  block_top_results:
+    display_options:
+      fields:
+        page_title:
+          label: Page
+        page_path:
+          label: 'Chemin de la page'
+  issues__page:
+    display_options:
+      fields:
+        result_name:
+          label: Ticket
+  issues_by_page__page:
+    display_options:
+      fields:
+        result_name:
+          label: Ticket
+        page_path:
+          label: 'Chemin de la page'
+        page_title:
+          label: 'Titre de la page'
+      arguments:
+        page_path:
+          exception:
+            title: Tout
+  pages__page:
+    display_options:
+      fields:
+        page_title:
+          label: Page
+        page_path:
+          label: Chemin
+        entity_type:
+          label: Type
+        page_language:
+          label: Langue
+      filters:
+        page_language:
+          expose:
+            label: Langue
+  pages_by_issue__page:
+    display_options:
+      fields:
+        page_title:
+          label: Page
+      arguments:
+        result_name:
+          exception:
+            title: Tout
+  recent__page:
+    display_options:
+      fields:
+        result_name:
+          label: Ticket
+        page_title:
+          label: Page
+        entity_type:
+          label: Type
+        page_language:
+          label: Langue
+      filters:
+        page_language:
+          expose:
+            label: Langue

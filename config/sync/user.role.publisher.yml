@@ -8,6 +8,7 @@ dependencies:
     - content_moderation
     - content_translation
     - contextual
+    - editoria11y
     - file
     - media
     - menu_link_content
@@ -38,6 +39,7 @@ permissions:
   - 'delete content translations'
   - 'delete media'
   - 'delete own files'
+  - 'mark as hidden in editoria11y'
   - 'switch shortcut sets'
   - 'translate any entity'
   - 'translate editable entities'
@@ -55,6 +57,7 @@ permissions:
   - 'view all revisions'
   - 'view all taxonomy revisions'
   - 'view any unpublished content'
+  - 'view editoria11y checker'
   - 'view latest version'
   - 'view the administration theme'
   - 'view unpublished paragraphs'
