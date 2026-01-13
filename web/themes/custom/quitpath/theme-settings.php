@@ -120,7 +120,7 @@ function quitpath_form_system_theme_settings_alter(&$form, FormStateInterface $f
   // Add a new textfield.
   $form['footer_logo'] = [
     '#type' => 'managed_file',
-    '#title' => t('Footer Logo'),
+    '#title' => t('Footer logo'),
     '#upload_location' => 'public://',
     '#default_value' => theme_get_setting('footer_logo'),
     '#upload_validators' => [
@@ -130,15 +130,49 @@ function quitpath_form_system_theme_settings_alter(&$form, FormStateInterface $f
 
   $form['footer_copyrights'] = [
     '#type' => 'textfield',
-    '#title' => t('Footer Copyrights'),
+    '#title' => t('Footer copyrights'),
     '#default_value' => theme_get_setting('footer_copyrights'),
   ];
   
   $form['contact_form_recipient_email'] = [
     '#type' => 'textfield',
-    '#title' => t('Contact Form Recipient Email'),
+    '#title' => t('Contact form recipient email'),
     '#default_value' => theme_get_setting('contact_form_recipient_email'),
     '#description' => t('You can add multiple emails with comma separated.')
+  ];
+  
+  $form['contact_form_submit_text'] = [
+    '#type' => 'textfield',
+    '#title' => t('Contact form submit text (English)'),
+    '#default_value' => theme_get_setting('contact_form_submit_text'),
+    //'#description' => t('You can add multiple emails with comma separated.')
+  ];
+  
+  $form['contact_form_submit_text_fr'] = [
+    '#type' => 'textfield',
+    '#title' => t('Contact form submit text (French)'),
+    '#default_value' => theme_get_setting('contact_form_submit_text_fr'),
+    //'#description' => t('You can add multiple emails with comma separated.')
+  ];
+  
+  $form['contact_form_click_here_link'] = [
+    '#type' => 'textfield',
+    '#title' => t('Contact form click here link (English)'),
+    '#default_value' => theme_get_setting('contact_form_click_here_link'),
+    //'#description' => t('You can add multiple emails with comma separated.')
+  ];
+  
+  $form['contact_form_click_here_link_fr'] = [
+    '#type' => 'textfield',
+    '#title' => t('Contact form click here link (French)'),
+    '#default_value' => theme_get_setting('contact_form_click_here_link_fr'),
+    //'#description' => t('You can add multiple emails with comma separated.')
+  ];
+  $form['link_open_new_tab'] = [
+    '#type' => 'checkbox',
+    '#title' => t('Link open in new tab'),
+    '#default_value' => theme_get_setting('link_open_new_tab'),
+    //'#description' => t('You can add multiple emails with comma separated.')
   ];
   // Add custom submit handler.
   $form['#submit'][] = 'quitpath_theme_settings_submit';

@@ -56,9 +56,9 @@
     {% for key, item in items %}
         {% set content_string = item.content|render|striptags|trim %}
         {% set btn_class = '' %}
-        {% if content_string == 'Next' %}
+        {% if content_string == 'Next' or content_string == 'Question suivante' %}
           {% set btn_class = 'next-btn' %}
-        {% elseif content_string == 'Previous' %}
+        {% elseif content_string == 'Previous' or content_string == 'Question précédente' %}
           {% set btn_class = 'prev-btn' %}
         {% endif %}
         <p class="{{ btn_class }}">{{ item.content }}</p>

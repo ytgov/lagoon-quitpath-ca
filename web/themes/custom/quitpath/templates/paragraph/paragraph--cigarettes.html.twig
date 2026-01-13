@@ -49,7 +49,7 @@
 {% block paragraph %}
     {% block content %}
     <div class="container mx-auto space-y-15 py-15 pb-0 cost_question {{ paragraph.field_class.value|raw }}" >
-        <div class="max-w-245 mx-auto border rounded-[10px] p-7.5 space-y-7.5 ">
+        <div class="max-w-245 mx-auto border rounded-[10px] p-7.5 space-y-7.5">
             <h3>{{ 'Cigarettes, cigarillos or cigars'|t }}</h3>
             <form id="cigarettes_form" class="space-y-7.5">
                 <div class="form-item flex flex-col">
@@ -72,9 +72,6 @@
                    <input type="submit" value="{{ 'Calculate your costs'|t }} ➜">
                 </div>
             </form>
-            <div class="next-prev-btn">
-                <p class="cigarettes_form_prev prev-btn">{{ "Previous"|t }}</p>
-            </div>
         </div>
     </div>
     {% endblock %}

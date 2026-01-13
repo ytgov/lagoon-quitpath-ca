@@ -400,9 +400,6 @@ jQuery(document).ready(function($){
            $('#e-cigarette-test-result').fadeIn();
         }
     });
-    
-    $("p.cigarettes_form_prev.prev-btn").hide();
-    
     $('#cigarettes_form').submit( function(event){
         event.preventDefault();
         var data = $(this).serializeArray();
@@ -413,20 +410,10 @@ jQuery(document).ready(function($){
         var peryear = data[0].value * price_per_cigrate * 365;
         var lifetime = data[0].value * price_per_cigrate * 365 * data[3].value;
         
-        var result = "<div class='cigarettes_form_result'><h4>Your Results</h4><p>Here’s how much your smoking, vaping or tobacco use is really costing you. This is just the money – not the time, energy or peace of mind it takes away from you.</p> <p>$"+perday.toFixed(2)+" per day <br> $"+perweek.toFixed(2)+" per week <br> $"+permonth.toFixed(2)+" per month <br> $"+peryear.toFixed(2)+" per year <br> $"+lifetime.toFixed(2)+" over your lifetime of use</p></div>"
+        var result = "<h4>Your Results</h4><p>Here’s how much your smoking, vaping or tobacco use is really costing you. This is just the money – not the time, energy or peace of mind it takes away from you.</p> <p>$"+perday.toFixed(2)+" per day <br> $"+perweek.toFixed(2)+" per week <br> $"+permonth.toFixed(2)+" per month <br> $"+peryear.toFixed(2)+" per year <br> $"+lifetime.toFixed(2)+" over your lifetime of use</p>"
         
-        $(this).hide();
-        $("p.cigarettes_form_prev.prev-btn").show();
-        $(this).after(result);
+        $(this).html(result);
     });
-    $('.cigarettes_form_prev').click( function(event){
-        event.preventDefault();
-        $('#cigarettes_form').show();
-        $(this).hide();
-        $('.cigarettes_form_result').remove();
-    });
-    
-    $("p.vaping_form_prev.prev-btn").hide();
     $('#vaping_form').submit( function(event){
         event.preventDefault();
         var data = $(this).serializeArray();
@@ -439,20 +426,11 @@ jQuery(document).ready(function($){
         var peryear = Math.round (pods_per_day * 365) + (cost_per_device * 365);
         var lifetime = Math.round (data[2].value * pods_per_day * 365) + Math.round(data[0].value);
         
-        var result = "<div class='vaping_form_result'><h4>Your Results</h4> <p>Here’s how much your smoking, vaping or tobacco use is really costing you. This is just the money – not the time, energy or peace of mind it takes away from you.</p> <p>$"+perday.toFixed(2)+" per day <br> $"+perweek.toFixed(2)+" per week <br> $"+permonth.toFixed(2)+" per month <br> $"+peryear.toFixed(2)+" per year <br> $"+lifetime.toFixed(2)+" over your lifetime of use</p></div>"
+        var result = "<h4>Your Results</h4> <p>Here’s how much your smoking, vaping or tobacco use is really costing you. This is just the money – not the time, energy or peace of mind it takes away from you.</p> <p>$"+perday.toFixed(2)+" per day <br> $"+perweek.toFixed(2)+" per week <br> $"+permonth.toFixed(2)+" per month <br> $"+peryear.toFixed(2)+" per year <br> $"+lifetime.toFixed(2)+" over your lifetime of use</p>"
         
-        $(this).hide();
-        $("p.vaping_form_prev.prev-btn").show();
-        $(this).after(result);
-    });
-    $('.vaping_form_prev').click( function(event){
-        event.preventDefault();
-        $('#vaping_form').show();
-        $(this).hide();
-        $('.vaping_form_result').remove();
+        $(this).html(result);
     });
     
-    $("p.chewing_form_prev.prev-btn").hide();
     $('#chewing_form').submit( function(event){
         event.preventDefault();
         var data = $(this).serializeArray();
@@ -463,17 +441,9 @@ jQuery(document).ready(function($){
         var peryear = data[1].value * can_per_day * 365;
         var lifetime = data[1].value * can_per_day * 365 * data[2].value;
         
-        var result = "<div class='chewing_form_result'><h4>Your Results</h4> <p>Here’s how much your smoking, vaping or tobacco use is really costing you. This is just the money – not the time, energy or peace of mind it takes away from you.</p> <p>$"+perday.toFixed(2)+" per day <br> $"+perweek.toFixed(2)+" per week <br> $"+permonth.toFixed(2)+" per month <br> $"+peryear.toFixed(2)+" per year <br> $"+lifetime.toFixed(2)+" over your lifetime of use</p></div>"
+        var result = "<h4>Your Results</h4> <p>Here’s how much your smoking, vaping or tobacco use is really costing you. This is just the money – not the time, energy or peace of mind it takes away from you.</p> <p>$"+perday.toFixed(2)+" per day <br> $"+perweek.toFixed(2)+" per week <br> $"+permonth.toFixed(2)+" per month <br> $"+peryear.toFixed(2)+" per year <br> $"+lifetime.toFixed(2)+" over your lifetime of use</p>"
         
-        $(this).hide();
-        $("p.chewing_form_prev.prev-btn").show();
-        $(this).after(result);
-    });
-    $('.chewing_form_prev').click( function(event){
-        event.preventDefault();
-        $('#chewing_form').show();
-        $(this).hide();
-        $('.chewing_form_result').remove();
+        $(this).html(result);
     });
 })
 

@@ -639,6 +639,9 @@
     width: auto;
     margin: 0 auto;
   }
+  .webform-submission-was-this-page-helpful-form .form-item__description.description {
+    @apply text-right underline;
+  }
 }
 
 * {
