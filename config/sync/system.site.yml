@@ -7,8 +7,8 @@ mail: eservices@yukon.ca
 slogan: 'Get help to quit smoking and vaping'
 page:
   403: ''
-  404: ''
-  front: /user/login
+  404: /node/52
+  front: /node/1
 admin_compact_mode: false
 weight_select_max: 100
 default_langcode: en

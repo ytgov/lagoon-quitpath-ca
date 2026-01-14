@@ -149,4 +149,4 @@ if (file_exists(__DIR__ . '/services.local.yml')) {
 if ( isset($GLOBALS['request']) && '/web/index.php' === $GLOBALS['request']->server->get('SCRIPT_NAME') ) {
     $GLOBALS['request']->server->set('SCRIPT_NAME', '/index.php'); 
 }
-$settings['config_sync_directory'] = 'config/sync'; 
+$settings['config_sync_directory'] = '../config/sync'; 
