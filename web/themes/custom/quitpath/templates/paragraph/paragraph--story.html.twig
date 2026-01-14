@@ -76,10 +76,10 @@
                     <div class="w-full lg:w-7/12 space-y-2.5 lg:space-y-7.5">
                         <{{ title_heading }} class="{{ heading_class }}">{{ paragraph.field_title.value|raw }}</{{ title_heading }}>
                         <div class="text-display-xs">
-                            <p class="s24-w400"><b>{{ 'Age'|t }}:</b>&nbsp;{{ paragraph.field_age.value|raw }}</p>
-                            <p class="s24-w400"><b>{{ 'Product'|t }}:</b>&nbsp;{{ paragraph.field_product.value|raw }}</p>
-                            <p class="s24-w400"><b>{{ 'Years using'|t }}:</b>&nbsp;{{ paragraph.field_years_using.value|raw }}</p>
-                            <p class="s24-w400"><b>{{ 'Quit date'|t }}:</b>&nbsp;{{ paragraph.field_quit_date.value|raw }}</p>
+                            {% if paragraph.field_age.value is not empty %} <p class="s24-w400"><b>{{ 'Age'|t }}:</b>&nbsp;{{ paragraph.field_age.value|raw }}</p>{% endif %}
+                            {% if paragraph.field_product.value is not empty %}<p class="s24-w400"><b>{{ 'Product'|t }}:</b>&nbsp;{{ paragraph.field_product.value|raw }}</p>{% endif %}
+                            {% if paragraph.field_years_using.value is not empty %}<p class="s24-w400"><b>{{ 'Years using'|t }}:</b>&nbsp;{{ paragraph.field_years_using.value|raw }}</p>{% endif %}
+                            {% if paragraph.field_quit_date.value is not empty %}<p class="s24-w400"><b>{{ 'Quit date'|t }}:</b>&nbsp;{{ paragraph.field_quit_date.value|raw }}</p>{% endif %}
                         </div>
                         {{ paragraph.field_story.value|raw }}    
                     </div>
@@ -89,10 +89,10 @@
                     <div class="w-full lg:w-7/12 space-y-2.5 lg:space-y-7.5">
                         <{{ title_heading }} class="{{ heading_class }}">{{ paragraph.field_title.value|raw }}</{{ title_heading }}>
                         <div class="text-display-xs">
-                            <p class="s24-w400"><b>{{ 'Age'|t }}:</b>&nbsp;{{ paragraph.field_age.value|raw }}</p>
-                            <p class="s24-w400"><b>{{ 'Product'|t }}:</b>&nbsp;{{ paragraph.field_product.value|raw }}</p>
-                            <p class="s24-w400"><b>{{ 'Years using'|t }}:</b>&nbsp;{{ paragraph.field_years_using.value|raw }}</p>
-                            <p class="s24-w400"><b>{{ 'Quit date'|t }}:</b>&nbsp;{{ paragraph.field_quit_date.value|raw }}</p>
+                            {% if paragraph.field_age.value is not empty %}<p class="s24-w400"><b>{{ 'Age'|t }}:</b>&nbsp;{{ paragraph.field_age.value|raw }}</p>{% endif %}
+                            {% if paragraph.field_product.value is not empty %}<p class="s24-w400"><b>{{ 'Product'|t }}:</b>&nbsp;{{ paragraph.field_product.value|raw }}</p>{% endif %}
+                            {% if paragraph.field_years_using.value is not empty %}<p class="s24-w400"><b>{{ 'Years using'|t }}:</b>&nbsp;{{ paragraph.field_years_using.value|raw }}</p>{% endif %}
+                            {% if paragraph.field_quit_date.value is not empty %}<p class="s24-w400"><b>{{ 'Quit date'|t }}:</b>&nbsp;{{ paragraph.field_quit_date.value|raw }}</p>{% endif %}
                         </div>
                         {{ paragraph.field_story.value|raw }}
                     </div>
