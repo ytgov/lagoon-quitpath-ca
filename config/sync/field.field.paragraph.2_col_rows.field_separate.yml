@@ -1,0 +1,26 @@
+uuid: dddbec5c-161c-47de-ab51-755f8e112d25
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_separate
+    - paragraphs.paragraphs_type.2_col_rows
+  module:
+    - tmgmt_content
+third_party_settings:
+  tmgmt_content:
+    excluded: false
+id: paragraph.2_col_rows.field_separate
+field_name: field_separate
+entity_type: paragraph
+bundle: 2_col_rows
+label: 'Add section separator'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

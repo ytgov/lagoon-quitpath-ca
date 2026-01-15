@@ -1,0 +1,25 @@
+uuid: a87b8f79-b80c-4319-a09e-8a2b85a45180
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_size
+    - paragraphs.paragraphs_type.rows
+  module:
+    - options
+    - tmgmt_content
+third_party_settings:
+  tmgmt_content:
+    excluded: false
+id: paragraph.rows.field_size
+field_name: field_size
+entity_type: paragraph
+bundle: rows
+label: 'Two column grid size'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

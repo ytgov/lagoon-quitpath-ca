@@ -1,0 +1,180 @@
+{#
+/**
+ * @file
+ * Quitpath's theme implementation to display a single page.
+ *
+ * The doctype, html, head and body tags are not in this template. Instead they
+ * can be found in the html.html.twig template normally located in the
+ * core/modules/system directory.
+ *
+ * Available variables:
+ *
+ * General utility variables:
+ * - base_path: The base URL path of the Drupal installation. Will usually be
+ *   "/" unless you have installed Drupal in a sub-directory.
+ * - is_front: A flag indicating if the current page is the front page.
+ * - logged_in: A flag indicating if the user is registered and signed in.
+ * - is_admin: A flag indicating if the user has permission to access
+ *   administration pages.
+ *
+ * Site identity:
+ * - front_page: The URL of the front page. Use this instead of base_path when
+ *   linking to the front page. This includes the language domain or prefix.
+ *
+ * Page content (in order of occurrence in the default page.html.twig):
+ * - node: Fully loaded node, if there is an automatically-loaded node
+ *   associated with the page and the node ID is the second argument in the
+ *   page's path (e.g. node/12345 and node/12345/revisions, but not
+ *   comment/reply/12345).
+ *
+ * Regions:
+ * - page.header: Items for the header region.
+ * - page.highlighted: Items for the highlighted region.
+ * - page.primary_menu: Items for the primary menu region.
+ * - page.secondary_menu: Items for the secondary menu region.
+ * - page.content: The main content of the current page.
+ * - page.sidebar: Items for the first sidebar.
+ * - page.featured_bottom_first: Items for the first featured bottom region.
+ * - page.featured_bottom_second: Items for the second featured bottom region.
+ * - page.footer_first: Items for the first footer column.
+ * - page.footer_second: Items for the second footer column.
+ * - page.breadcrumb: Items for the breadcrumb region.
+ * - page.social: Items for the social region.
+ *
+ * @see template_preprocess_page()
+ * @see html.html.twig
+ */
+#}
+ <header class="sticky top-0 z-10">
+        <div class="bg-white/80 backdrop-blur-sm">
+            <div class="flex justify-between mx-auto py-3.75 md:py-7.5 container items-center">
+                <div class="logo">
+                    {% if logo %}
+                      <a href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home" class="site-logo">
+                        <img class="max-md:max-w-45 md:max-w-70" src="/{{ logo }}" alt="{{ 'Home'|t }}" />
+                      </a>
+                    {% endif %}
+                    
+                </div>
+                <div class="xl:flex flex-col gap-2.5 menu-wrapper">
+                    <div>
+                        <div class="xl:flex flex-col gap-2.5 menus">
+                            <div class="top-menu max-xl:hidden xl:flex justify-end items-center gap-5">
+                                <div class="relative search-opener">
+                                    <img class="size-6 cursor-pointer" src="data:image/svg+xml,%3csvg%20width='24'%20height='24'%20viewBox='0%200%2024%2024'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M23.6012%2021.7284L17.7153%2015.8354C20.6747%2011.9836%2020.3787%206.41976%2016.8275%202.89712C14.8874%200.954706%2012.3884%200%209.85646%200C7.32458%200%204.82547%200.954761%202.88542%202.89712C-0.961806%206.74898%20-0.961806%2013.0041%202.88542%2016.856C4.8255%2018.7984%207.32452%2019.7531%209.85646%2019.7531C11.9609%2019.7531%2014.0654%2019.0947%2015.8081%2017.7449L21.727%2023.605C21.9901%2023.8684%2022.3189%2024%2022.6806%2024C23.0094%2024%2023.3711%2023.8683%2023.6342%2023.605C24.1273%2023.1112%2024.1273%2022.2551%2023.6012%2021.7284ZM9.88928%2017.0864C7.9492%2017.0864%206.17359%2016.3292%204.79253%2014.9794C1.99754%2012.1811%201.99754%207.60492%204.79253%204.77364C6.14068%203.42387%207.94923%202.66661%209.88928%202.66661C11.8294%202.66661%2013.605%203.42387%2014.986%204.77364C16.367%206.12341%2017.0905%207.93414%2017.0905%209.87653C17.0905%2011.8189%2016.3342%2013.5967%2014.986%2014.9794C13.6378%2016.3622%2011.7965%2017.0864%209.88928%2017.0864Z'%20fill='%23A4A7AE'/%3e%3c/svg%3e" alt="Search">
+                                </div>
+                                <div>
+                                    {{ page.language }}
+                                    {#<span class="block bg-gray-200 p-1 rounded font-bold text-[13px] text-gray-900 leading-[13px] cursor-pointer">EN</span>#}
+                                </div>
+                            </div>
+                            <div class="main-menu">
+                                <div>
+                                    {{ page.primary_menu }}
+                                    <button class="xl:hidden" id="mobile-menu-button">
+                                        <img src="/themes/custom/quitpath/assets/images/mobile-menu-icon.svg" class="open-menu" alt="">
+                                        <img src="/themes/custom/quitpath/assets/images/close-menu.svg" class="close-menu hidden" alt="">
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            {{ page.search }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div class="lg:hidden hidden" id="mobile-menu-old">
+            <div class="absolute bg-white/80 backdrop-blur-sm h-screen w-screen z-10">
+                <div class="container h-[calc(100vh-140px)]">
+                    <div class="flex flex-col justify-between h-full pt-7.5 pb-15 border-t border-t-gray-300">
+                        <div class="space-y-7.5 w-full">
+                            {{ page.primary_menu }}
+                           
+                            <div>
+                                {{ page.language }}
+                                <span class="inline-block bg-gray-900 p-1 rounded font-bold text-[13px] text-gray-25 leading-[13px]">EN</span>
+                            </div>
+                        </div>
+                        <div class="text-gray-900 relative text-md">
+                            <span class="icon absolute top-1/2 -translate-y-1/2">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M23.6012 21.7284L17.7153 15.8354C20.6747 11.9836 20.3787 6.41976 16.8275 2.89712C14.8874 0.954706 12.3884 0 9.85646 0C7.32458 0 4.82547 0.954761 2.88542 2.89712C-0.961806 6.74898 -0.961806 13.0041 2.88542 16.856C4.8255 18.7984 7.32452 19.7531 9.85646 19.7531C11.9609 19.7531 14.0654 19.0947 15.8081 17.7449L21.727 23.605C21.9901 23.8684 22.3189 24 22.6806 24C23.0094 24 23.3711 23.8683 23.6342 23.605C24.1273 23.1112 24.1273 22.2551 23.6012 21.7284ZM9.88928 17.0864C7.9492 17.0864 6.17359 16.3292 4.79253 14.9794C1.99754 12.1811 1.99754 7.60492 4.79253 4.77364C6.14068 3.42387 7.94923 2.66661 9.88928 2.66661C11.8294 2.66661 13.605 3.42387 14.986 4.77364C16.367 6.12341 17.0905 7.93414 17.0905 9.87653C17.0905 11.8189 16.3342 13.5967 14.986 14.9794C13.6378 16.3622 11.7965 17.0864 9.88928 17.0864Z"
+                                        fill="currentColor" />
+                                </svg>
+                            </span>
+                            {{ page.search }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        {% if page.tabs %}
+            <div class="mx-auto container">
+                {{ page.tabs }}
+            </div>
+        {% endif %}
+        {{ page.breadcrumb }}
+        
+        {{ page.content }}
+    </main>
+
+    <footer class="py-12.5 md:py-25">
+        <div class="space-y-2.5 mx-auto container">
+            <div class="flex flex-col gap-2.5 feedback">
+                <div class="flex items-center justify-end gap-2.5">
+                    <p class="text-gray-600 text-md">{{ "Was this page helpful?"|t }}</p>
+                    <div class="flex gap-2.5 text-gray-600 like-dislike-btn">
+                        <div class="like size-6">
+                            <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_264_19715)">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M12.5931 24.0431L12.582 24.0451L12.511 24.0801L12.491 24.0841L12.477 24.0801L12.406 24.0451C12.3954 24.0418 12.3874 24.0434 12.382 24.0501L12.378 24.0601L12.361 24.4881L12.366 24.5081L12.376 24.5211L12.48 24.5951L12.495 24.5991L12.507 24.5951L12.611 24.5211L12.623 24.5051L12.627 24.4881L12.61 24.0611C12.6074 24.0504 12.6017 24.0444 12.5931 24.0431ZM12.858 23.9301L12.845 23.9321L12.66 24.0251L12.65 24.0351L12.647 24.0461L12.665 24.4761L12.67 24.4881L12.6781 24.4951L12.879 24.5881C12.8917 24.5914 12.9014 24.5888 12.908 24.5801L12.912 24.5661L12.878 23.9521C12.8747 23.9401 12.868 23.9328 12.858 23.9301ZM12.143 23.9321C12.1386 23.9294 12.1334 23.9286 12.1283 23.9297C12.1233 23.9308 12.1189 23.9338 12.116 23.9381L12.11 23.9521L12.076 24.5661C12.0767 24.5781 12.0824 24.5861 12.0931 24.5901L12.108 24.5881L12.309 24.4951L12.319 24.4871L12.323 24.4761L12.34 24.0461L12.337 24.0341L12.327 24.0241L12.143 23.9321Z" fill="currentColor"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M8.993 5.94816C9.162 7.37116 8.931 8.85516 8.417 10.1872C7.848 11.6612 7.092 13.2572 6.998 14.8442C6.919 16.1812 7.222 17.7632 8.03 18.8462C8.915 20.0322 10.368 20.7852 11.967 20.7852H13.479C14.7333 20.7852 15.9418 20.3139 16.8648 19.4646C17.7878 18.6153 18.3579 17.4501 18.462 16.2002L18.823 11.8682C18.8345 11.7303 18.8172 11.5915 18.7723 11.4606C18.7274 11.3298 18.6559 11.2097 18.5622 11.1079C18.4685 11.0061 18.3546 10.9248 18.2279 10.8693C18.1012 10.8137 17.9644 10.7851 17.826 10.7852H12.5C12.1036 10.7846 11.7235 10.6276 11.4424 10.3481C11.1613 10.0687 11.0019 9.68952 10.999 9.29316C10.991 8.32316 11.052 7.12616 10.606 6.23316C10.206 5.43316 9.832 5.28516 9.5 5.28516C9.2 5.28516 8.96 5.67816 8.993 5.94816ZM9.5 3.28516C10.856 3.28516 11.794 4.13716 12.395 5.33816C12.917 6.38316 12.966 7.63816 12.992 8.78516H17.826C18.2411 8.7851 18.6516 8.87117 19.0317 9.03793C19.4118 9.2047 19.7532 9.44852 20.0342 9.75399C20.3153 10.0595 20.5298 10.4199 20.6644 10.8126C20.799 11.2052 20.8506 11.6215 20.816 12.0352L20.455 16.3662C20.3093 18.1161 19.5112 19.7473 18.219 20.9363C16.9268 22.1253 15.235 22.7852 13.479 22.7852H11.967C11.0184 22.7877 10.0794 22.5957 9.20785 22.2211C8.33635 21.8465 7.5509 21.2972 6.9 20.6072C6.44291 20.7264 5.97237 20.7862 5.5 20.7852C4.392 20.7852 3.472 20.1652 2.876 19.1772C2.296 18.2172 2 16.8922 2 15.2852C2 13.6782 2.297 12.3542 2.876 11.3942C3.472 10.4052 4.392 9.78516 5.5 9.78516C5.781 9.78516 6.079 9.83516 6.377 9.91916C6.835 8.71916 7.161 7.48216 7.007 6.18416C6.835 4.73916 8.016 3.28516 9.5 3.28516ZM5.696 11.8092C5.211 11.7092 4.831 12.0252 4.589 12.4272C4.263 12.9672 4 13.8912 4 15.2852C4 16.6792 4.263 17.6042 4.588 18.1442C4.898 18.6562 5.228 18.7852 5.5 18.7852C5.564 18.7852 5.62733 18.7835 5.69 18.7802C5.154 17.5722 4.924 16.0402 5.002 14.7262C5.049 13.9212 5.363 12.8082 5.696 11.8092Z" fill="currentColor"/>
+                            </g>
+                            <defs>
+                            <clipPath id="clip0_264_19715">
+                            <rect width="24" height="24" fill="white" transform="translate(0 0.785156)"/>
+                            </clipPath>
+                            </defs>
+                            </svg>
+                        </div>
+                        <div class="dislike size-6">
+                            <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_264_19900)">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M12.5931 24.0431L12.582 24.0451L12.511 24.0801L12.491 24.0841L12.477 24.0801L12.406 24.0451C12.3954 24.0418 12.3874 24.0434 12.382 24.0501L12.378 24.0601L12.361 24.4881L12.366 24.5081L12.376 24.5211L12.48 24.5951L12.495 24.5991L12.507 24.5951L12.611 24.5211L12.623 24.5051L12.627 24.4881L12.61 24.0611C12.6074 24.0504 12.6017 24.0444 12.5931 24.0431ZM12.858 23.9301L12.845 23.9321L12.66 24.0251L12.65 24.0351L12.647 24.0461L12.665 24.4761L12.67 24.4881L12.6781 24.4951L12.879 24.5881C12.8917 24.5914 12.9014 24.5888 12.908 24.5801L12.912 24.5661L12.878 23.9521C12.8747 23.9401 12.868 23.9328 12.858 23.9301ZM12.143 23.9321C12.1386 23.9294 12.1334 23.9286 12.1283 23.9297C12.1233 23.9308 12.1189 23.9338 12.116 23.9381L12.11 23.9521L12.076 24.5661C12.0767 24.5781 12.0824 24.5861 12.0931 24.5901L12.108 24.5881L12.309 24.4951L12.319 24.4871L12.323 24.4761L12.34 24.0461L12.337 24.0341L12.327 24.0241L12.143 23.9321Z" fill="currentColor"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M8.993 19.6222C9.162 18.1992 8.931 16.7152 8.417 15.3832C7.848 13.9092 7.092 12.3132 6.998 10.7262C6.919 9.38918 7.222 7.80718 8.03 6.72418C8.915 5.53818 10.368 4.78518 11.967 4.78518H13.479C14.7333 4.78512 15.9418 5.25647 16.8648 6.10576C17.7878 6.95505 18.3579 8.12022 18.462 9.37018L18.823 13.7022C18.8345 13.8401 18.8172 13.9788 18.7723 14.1097C18.7274 14.2406 18.6559 14.3607 18.5622 14.4625C18.4685 14.5643 18.3546 14.6455 18.2279 14.701C18.1012 14.7566 17.9644 14.7852 17.826 14.7852H12.5C11.669 14.7852 11.005 15.4582 10.999 16.2772C10.991 17.2472 11.052 18.4442 10.606 19.3372C10.206 20.1372 9.832 20.2852 9.5 20.2852C9.2 20.2852 8.96 19.8922 8.993 19.6222ZM9.5 22.2852C10.856 22.2852 11.794 21.4332 12.395 20.2322C12.917 19.1882 12.966 17.9322 12.992 16.7852H17.826C18.2411 16.7852 18.6516 16.6992 19.0317 16.5324C19.4118 16.3656 19.7532 16.1218 20.0342 15.8163C20.3153 15.5109 20.5298 15.1504 20.6644 14.7578C20.799 14.3651 20.8506 13.9488 20.816 13.5352L20.455 9.20418C20.3093 7.45427 19.5112 5.82306 18.219 4.63406C16.9268 3.44506 15.235 2.78514 13.479 2.78518H11.967C11.0183 2.78278 10.0792 2.9749 9.20773 3.34968C8.33622 3.72446 7.55081 4.27394 6.9 4.96418C6.443 4.8443 5.97246 4.7838 5.5 4.78418C4.392 4.78418 3.472 5.40618 2.876 6.39418C2.296 7.35418 2 8.67818 2 10.2842C2 11.8902 2.297 13.2162 2.876 14.1762C3.472 15.1652 4.392 15.7852 5.5 15.7852C5.781 15.7852 6.079 15.7352 6.377 15.6512C6.835 16.8512 7.161 18.0882 7.007 19.3862C6.835 20.8312 8.016 22.2852 9.5 22.2852ZM5.696 13.7612C5.211 13.8612 4.831 13.5452 4.589 13.1432C4.263 12.6032 4 11.6792 4 10.2852C4 8.89118 4.263 7.96618 4.588 7.42618C4.898 6.91418 5.228 6.78518 5.5 6.78518C5.564 6.78518 5.62733 6.78685 5.69 6.79018C5.154 7.99818 4.924 9.53018 5.002 10.8442C5.049 11.6492 5.363 12.7622 5.696 13.7612Z" fill="currentColor"/>
+                            </g>
+                            <defs>
+                            <clipPath id="clip0_264_19900">
+                            <rect width="24" height="24" fill="white" transform="translate(0 0.785156)"/>
+                            </clipPath>
+                            </defs>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    {{ page.feedback }}
+                </div>
+            </div>
+            <div class="flex justify-between md:items-end border-gray-300 border-t min-h-23 max-md:pt-7.5">
+                <div>
+                    <img src="{{ footer_logo }}" alt="footer logo">
+                </div>
+                <div class="flex max-md:flex-col max-md:space-y-2.5 md:space-x-7.5 font-semibold text-gray-600 text-md max-md:text-right items-end md:items-center">
+                    {{ page.footer_menu }}
+                    <div class="max-md:hidden">© {{ 'now'|date('Y') }} {{ "Government of Yukon"|t }}</div>
+                </div>
+            </div>
+            <div class="w-full text-center">
+                <div class="md:hidden">© {{ 'now'|date('Y') }} {{ "Government of Yukon"|t }}</div>
+            </div>
+        </div>
+    </footer>

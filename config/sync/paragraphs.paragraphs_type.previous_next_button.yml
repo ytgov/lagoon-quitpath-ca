@@ -1,0 +1,10 @@
+uuid: 6b571a72-64ed-48ab-82c9-7aebaa180841
+langcode: en
+status: true
+dependencies: {  }
+id: previous_next_button
+label: 'Previous-Next Button'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

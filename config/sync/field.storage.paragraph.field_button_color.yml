@@ -1,0 +1,51 @@
+uuid: 3319d8b3-17fd-4cf9-9d95-c237abdbf4c9
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_button_color
+field_name: field_button_color
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: red
+      label: Red
+    -
+      value: blue
+      label: Blue
+    -
+      value: green
+      label: Green
+    -
+      value: yellow
+      label: Yellow
+    -
+      value: light_blue
+      label: 'Light blue'
+    -
+      value: dark_red
+      label: 'Dark red'
+    -
+      value: dark_blue
+      label: 'Dark blue'
+    -
+      value: dark_green
+      label: 'Dark green'
+    -
+      value: dark_yellow
+      label: 'Dark yellow'
+    -
+      value: dark_light_blue
+      label: 'Dark light blue'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

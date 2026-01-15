@@ -1,0 +1,22 @@
+uuid: 9bb0e3be-e7f2-4b88-b24f-6ff8dd136c9a
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - quitpath
+_core:
+  default_config_hash: erQSEZF2XUjNmgTl0uNRBzmg18ZGXwUcw2FhApoeuHk
+id: quitpath_content
+theme: quitpath
+region: content
+weight: -9
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility: {  }

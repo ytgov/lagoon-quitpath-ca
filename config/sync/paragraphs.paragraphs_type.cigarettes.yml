@@ -1,0 +1,10 @@
+uuid: 41dbf8e5-8c3d-4298-a709-10a1abb00756
+langcode: en
+status: true
+dependencies: {  }
+id: cigarettes
+label: Cigarettes
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

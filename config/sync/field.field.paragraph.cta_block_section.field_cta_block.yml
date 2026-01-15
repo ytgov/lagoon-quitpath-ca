@@ -1,0 +1,71 @@
+uuid: 68f6329a-559e-4a87-9113-9f578b2aa459
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_cta_block
+    - paragraphs.paragraphs_type.cta_block
+    - paragraphs.paragraphs_type.cta_block_section
+  module:
+    - entity_reference_revisions
+    - tmgmt_content
+third_party_settings:
+  tmgmt_content:
+    excluded: false
+id: paragraph.cta_block_section.field_cta_block
+field_name: field_cta_block
+entity_type: paragraph
+bundle: cta_block_section
+label: 'CTA Block'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      cta_block: cta_block
+    negate: 0
+    target_bundles_drag_drop:
+      chewing_tobacco_nicotine_pouches:
+        weight: 14
+        enabled: false
+      cigarettes:
+        weight: 15
+        enabled: false
+      cta_block:
+        weight: 16
+        enabled: true
+      cta_block_section:
+        weight: 17
+        enabled: false
+      cta_block_text:
+        weight: 18
+        enabled: false
+      options:
+        weight: 19
+        enabled: false
+      question:
+        weight: 20
+        enabled: false
+      text_block:
+        weight: 21
+        enabled: false
+      top_banner:
+        weight: 22
+        enabled: false
+      two_column_block_full_width:
+        weight: 23
+        enabled: false
+      two_column_block_small:
+        weight: 24
+        enabled: false
+      two_column_block_with_background:
+        weight: 25
+        enabled: false
+      vaping:
+        weight: 26
+        enabled: false
+field_type: entity_reference_revisions

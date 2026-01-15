@@ -1,0 +1,24 @@
+uuid: 11893c8a-47c1-4807-8a08-adc9b08dd008
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.partner_logos.field_image
+    - paragraphs.paragraphs_type.partner_logos
+  module:
+    - media_library
+id: paragraph.partner_logos.default
+targetEntityType: paragraph
+bundle: partner_logos
+mode: default
+content:
+  field_image:
+    type: media_library_widget
+    weight: 1
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

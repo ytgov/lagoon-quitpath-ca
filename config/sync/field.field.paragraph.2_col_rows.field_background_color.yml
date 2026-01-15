@@ -1,0 +1,25 @@
+uuid: 97c92049-4b28-43cb-b2da-967398abbdf1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_background_color
+    - paragraphs.paragraphs_type.2_col_rows
+  module:
+    - options
+    - tmgmt_content
+third_party_settings:
+  tmgmt_content:
+    excluded: false
+id: paragraph.2_col_rows.field_background_color
+field_name: field_background_color
+entity_type: paragraph
+bundle: 2_col_rows
+label: 'Background color'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

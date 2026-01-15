@@ -1,0 +1,10 @@
+uuid: c88d1e91-e803-4567-a138-e54d32537de5
+langcode: en
+status: true
+dependencies: {  }
+id: e_cigarette_fagerstrom_test
+label: 'E-cigarette Fagerström Test'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

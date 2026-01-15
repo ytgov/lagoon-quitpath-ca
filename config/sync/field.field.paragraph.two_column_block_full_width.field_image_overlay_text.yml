@@ -1,0 +1,29 @@
+uuid: cc3e411c-7182-4305-993b-9de09c4423fa
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_image_overlay_text
+    - paragraphs.paragraphs_type.two_column_block_full_width
+  module:
+    - allowed_formats
+    - text
+    - tmgmt_content
+third_party_settings:
+  allowed_formats:
+    allowed_formats: {  }
+  tmgmt_content:
+    excluded: false
+id: paragraph.two_column_block_full_width.field_image_overlay_text
+field_name: field_image_overlay_text
+entity_type: paragraph
+bundle: two_column_block_full_width
+label: 'Image overlay text'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text

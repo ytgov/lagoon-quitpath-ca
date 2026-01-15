@@ -1,0 +1,18 @@
+uuid: c60f5941-3569-47b8-a618-6adfef4b8c97
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.cost_calculator
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: paragraph.cost_calculator
+target_entity_type_id: paragraph
+target_bundle: cost_calculator
+default_langcode: site_default
+language_alterable: true

@@ -1,0 +1,27 @@
+uuid: 386c16f1-5a56-444b-ae58-bcd9f80bbce5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_next
+    - paragraphs.paragraphs_type.previous_next_button
+  module:
+    - link
+    - tmgmt_content
+third_party_settings:
+  tmgmt_content:
+    excluded: false
+id: paragraph.previous_next_button.field_next
+field_name: field_next
+entity_type: paragraph
+bundle: previous_next_button
+label: Next
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 1
+  link_type: 17
+field_type: link

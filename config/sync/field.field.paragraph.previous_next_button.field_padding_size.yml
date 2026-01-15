@@ -1,0 +1,25 @@
+uuid: 440b9eb1-a0f8-494f-88d8-ed6e7bc4e92b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_padding_size
+    - paragraphs.paragraphs_type.previous_next_button
+  module:
+    - options
+    - tmgmt_content
+third_party_settings:
+  tmgmt_content:
+    excluded: false
+id: paragraph.previous_next_button.field_padding_size
+field_name: field_padding_size
+entity_type: paragraph
+bundle: previous_next_button
+label: 'Padding top'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

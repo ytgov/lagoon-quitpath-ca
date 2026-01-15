@@ -1,0 +1,25 @@
+uuid: 9fa08598-ae4c-4f97-a911-8b0579a4b624
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_heading
+    - paragraphs.paragraphs_type.two_column_block_full_width
+  module:
+    - options
+    - tmgmt_content
+third_party_settings:
+  tmgmt_content:
+    excluded: false
+id: paragraph.two_column_block_full_width.field_heading
+field_name: field_heading
+entity_type: paragraph
+bundle: two_column_block_full_width
+label: Tags
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,21 @@
+uuid: 7530712e-3e3e-4383-a7a5-8d7d9c2ff575
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.padding.field_padding_size
+    - paragraphs.paragraphs_type.padding
+id: paragraph.padding.default
+targetEntityType: paragraph
+bundle: padding
+mode: default
+content:
+  field_padding_size:
+    type: options_select
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

@@ -1,0 +1,24 @@
+uuid: 2d1c0178-694e-41fc-8986-4bc2b42c841a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_question_1
+    - paragraphs.paragraphs_type.cigarettes
+  module:
+    - tmgmt_content
+third_party_settings:
+  tmgmt_content:
+    excluded: false
+id: paragraph.cigarettes.field_question_1
+field_name: field_question_1
+entity_type: paragraph
+bundle: cigarettes
+label: Question-1
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

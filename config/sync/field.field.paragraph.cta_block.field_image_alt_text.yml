@@ -1,0 +1,24 @@
+uuid: c235d48c-fc0e-4148-981a-21e33548fb67
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_image_alt_text
+    - paragraphs.paragraphs_type.cta_block
+  module:
+    - tmgmt_content
+third_party_settings:
+  tmgmt_content:
+    excluded: false
+id: paragraph.cta_block.field_image_alt_text
+field_name: field_image_alt_text
+entity_type: paragraph
+bundle: cta_block
+label: 'Image Alt text'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

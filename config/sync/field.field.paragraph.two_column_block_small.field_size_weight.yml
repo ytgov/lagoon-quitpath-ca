@@ -1,0 +1,25 @@
+uuid: e693b4fd-350b-4b3a-ae51-71baa7496458
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_size_weight
+    - paragraphs.paragraphs_type.two_column_block_small
+  module:
+    - options
+    - tmgmt_content
+third_party_settings:
+  tmgmt_content:
+    excluded: false
+id: paragraph.two_column_block_small.field_size_weight
+field_name: field_size_weight
+entity_type: paragraph
+bundle: two_column_block_small
+label: 'Title size & weight'
+description: '<a href="/font-sizes-and-corresponding-weights" target="_blank">Click here</a> to see the font sizes and corresponding weights'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

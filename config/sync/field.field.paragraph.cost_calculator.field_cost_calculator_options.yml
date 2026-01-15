@@ -1,0 +1,86 @@
+uuid: 19aa3020-99bc-4b44-8fcf-df53cbb2d8ad
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_cost_calculator_options
+    - paragraphs.paragraphs_type.cost_calculator
+    - paragraphs.paragraphs_type.cost_calculator_options
+  module:
+    - entity_reference_revisions
+    - tmgmt_content
+third_party_settings:
+  tmgmt_content:
+    excluded: false
+id: paragraph.cost_calculator.field_cost_calculator_options
+field_name: field_cost_calculator_options
+entity_type: paragraph
+bundle: cost_calculator
+label: 'Cost Calculator options'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      cost_calculator_options: cost_calculator_options
+    negate: 0
+    target_bundles_drag_drop:
+      chewing_tobacco_nicotine_pouches:
+        weight: 19
+        enabled: false
+      cigarettes:
+        weight: 20
+        enabled: false
+      cost_calculator:
+        weight: 21
+        enabled: false
+      cost_calculator_options:
+        weight: 22
+        enabled: true
+      cta_block:
+        weight: 23
+        enabled: false
+      cta_block_section:
+        weight: 24
+        enabled: false
+      cta_block_text:
+        weight: 25
+        enabled: false
+      cta_block_text_section:
+        weight: 26
+        enabled: false
+      fagerstrom_test:
+        weight: 27
+        enabled: false
+      options:
+        weight: 28
+        enabled: false
+      previous_next_button:
+        weight: 29
+        enabled: false
+      question:
+        weight: 30
+        enabled: false
+      story:
+        weight: 31
+        enabled: false
+      text_block:
+        weight: 32
+        enabled: false
+      top_banner:
+        weight: 33
+        enabled: false
+      two_column_block_full_width:
+        weight: 34
+        enabled: false
+      two_column_block_small:
+        weight: 35
+        enabled: false
+      vaping:
+        weight: 36
+        enabled: false
+field_type: entity_reference_revisions

@@ -1,0 +1,10 @@
+uuid: e661ac23-14bb-4f8f-833a-5fa317ef1ce6
+langcode: en
+status: true
+dependencies: {  }
+id: fagerstrom_result
+label: 'Fagerstrom Result'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

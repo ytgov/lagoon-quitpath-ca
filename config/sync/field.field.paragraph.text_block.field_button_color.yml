@@ -1,0 +1,25 @@
+uuid: 0ed3a195-c7fa-49bd-b1e0-56b6f34f3eee
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_button_color
+    - paragraphs.paragraphs_type.text_block
+  module:
+    - options
+    - tmgmt_content
+third_party_settings:
+  tmgmt_content:
+    excluded: false
+id: paragraph.text_block.field_button_color
+field_name: field_button_color
+entity_type: paragraph
+bundle: text_block
+label: 'Button color'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

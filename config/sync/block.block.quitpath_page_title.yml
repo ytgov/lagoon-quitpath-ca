@@ -1,0 +1,20 @@
+uuid: 6c43d593-285e-43d4-b325-ed000b865e5b
+langcode: en
+status: true
+dependencies:
+  theme:
+    - quitpath
+_core:
+  default_config_hash: 6aOgWsNTXjqrDm98TXSAjP6qd2nCijD1xw45MrnbK-Y
+id: quitpath_page_title
+theme: quitpath
+region: content_above
+weight: -5
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  label_display: '0'
+  provider: core
+visibility: {  }

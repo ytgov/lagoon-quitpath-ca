@@ -1,0 +1,30 @@
+uuid: 424faa1e-97bd-4448-982c-da4ee33da45b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.options.field_option
+    - field.field.paragraph.options.field_points
+    - paragraphs.paragraphs_type.options
+id: paragraph.options.default
+targetEntityType: paragraph
+bundle: options
+mode: default
+content:
+  field_option:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_points:
+    type: options_select
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

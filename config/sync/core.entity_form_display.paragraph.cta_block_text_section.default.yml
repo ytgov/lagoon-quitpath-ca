@@ -1,0 +1,93 @@
+uuid: 712c96d1-0d5c-441e-b2a0-f3d32b3641fd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.cta_block_text_section.field_column_type
+    - field.field.paragraph.cta_block_text_section.field_cta_block_text
+    - field.field.paragraph.cta_block_text_section.field_heading
+    - field.field.paragraph.cta_block_text_section.field_size_weight
+    - field.field.paragraph.cta_block_text_section.field_sub_title
+    - field.field.paragraph.cta_block_text_section.field_title
+    - field.field.paragraph.cta_block_text_section.field_title_size_weight
+    - field.field.paragraph.cta_block_text_section.field_title_tags
+    - paragraphs.paragraphs_type.cta_block_text_section
+  module:
+    - paragraphs
+id: paragraph.cta_block_text_section.default
+targetEntityType: paragraph
+bundle: cta_block_text_section
+mode: default
+content:
+  field_column_type:
+    type: options_select
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_cta_block_text:
+    type: paragraphs
+    weight: 7
+    region: content
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      closed_mode: summary
+      autocollapse: none
+      closed_mode_threshold: 0
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+      features:
+        collapse_edit_all: collapse_edit_all
+        duplicate: duplicate
+    third_party_settings: {  }
+  field_heading:
+    type: options_select
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_size_weight:
+    type: options_select
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_sub_title:
+    type: string_textfield
+    weight: 3
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_title_size_weight:
+    type: options_select
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_title_tags:
+    type: options_select
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  translation:
+    weight: 8
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

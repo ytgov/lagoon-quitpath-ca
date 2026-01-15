@@ -1,0 +1,84 @@
+uuid: 79c8ad32-26f0-4223-b235-bbab3045f362
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.health_center.field_address
+    - field.field.paragraph.health_center.field_days
+    - field.field.paragraph.health_center.field_hours
+    - field.field.paragraph.health_center.field_phone
+    - field.field.paragraph.health_center.field_title
+    - field.field.paragraph.health_center.field_title_size_weight
+    - field.field.paragraph.health_center.field_title_tags
+    - field.field.paragraph.health_center.field_toll_free
+    - paragraphs.paragraphs_type.health_center
+  module:
+    - options
+    - text
+id: paragraph.health_center.default
+targetEntityType: paragraph
+bundle: health_center
+mode: default
+content:
+  field_address:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_days:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 12
+    region: content
+  field_hours:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_phone:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_title:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_title_size_weight:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 11
+    region: content
+  field_title_tags:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  field_toll_free:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 13
+    region: content
+hidden: {  }

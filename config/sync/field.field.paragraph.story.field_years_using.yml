@@ -1,0 +1,24 @@
+uuid: e8eb8bf4-4913-411d-b552-4618a32b19b2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_years_using
+    - paragraphs.paragraphs_type.story
+  module:
+    - tmgmt_content
+third_party_settings:
+  tmgmt_content:
+    excluded: false
+id: paragraph.story.field_years_using
+field_name: field_years_using
+entity_type: paragraph
+bundle: story
+label: 'Years using'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

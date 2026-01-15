@@ -1,0 +1,24 @@
+uuid: 7c47dcef-b3ff-4430-9f73-d204bd6da93e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_phone
+    - paragraphs.paragraphs_type.health_center
+  module:
+    - tmgmt_content
+third_party_settings:
+  tmgmt_content:
+    excluded: false
+id: paragraph.health_center.field_phone
+field_name: field_phone
+entity_type: paragraph
+bundle: health_center
+label: Phone
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

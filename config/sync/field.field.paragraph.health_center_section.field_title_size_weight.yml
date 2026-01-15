@@ -1,0 +1,25 @@
+uuid: f86c3f61-3fce-4ee1-b28f-262436d6c7cd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title_size_weight
+    - paragraphs.paragraphs_type.health_center_section
+  module:
+    - options
+    - tmgmt_content
+third_party_settings:
+  tmgmt_content:
+    excluded: false
+id: paragraph.health_center_section.field_title_size_weight
+field_name: field_title_size_weight
+entity_type: paragraph
+bundle: health_center_section
+label: 'Title size & weight'
+description: '<a href="/font-sizes-and-corresponding-weights" target="_blank">Click here</a> to see the font sizes and corresponding weights'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

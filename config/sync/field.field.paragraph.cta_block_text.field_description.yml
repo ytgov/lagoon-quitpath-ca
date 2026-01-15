@@ -1,0 +1,29 @@
+uuid: c0fbab33-fafd-4ff9-9bcf-133b1a5331b4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_description
+    - paragraphs.paragraphs_type.cta_block_text
+  module:
+    - allowed_formats
+    - text
+    - tmgmt_content
+third_party_settings:
+  allowed_formats:
+    allowed_formats: {  }
+  tmgmt_content:
+    excluded: false
+id: paragraph.cta_block_text.field_description
+field_name: field_description
+entity_type: paragraph
+bundle: cta_block_text
+label: Description
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

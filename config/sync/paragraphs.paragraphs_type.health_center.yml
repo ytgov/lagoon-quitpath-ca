@@ -1,0 +1,10 @@
+uuid: 8b5f9540-342f-4ac3-9fb1-750c60952aea
+langcode: en
+status: true
+dependencies: {  }
+id: health_center
+label: 'Health Center'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

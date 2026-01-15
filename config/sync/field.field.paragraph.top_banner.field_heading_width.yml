@@ -1,0 +1,25 @@
+uuid: 2e39b04f-f19b-4523-96de-c53015a3defb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_heading_width
+    - paragraphs.paragraphs_type.top_banner
+  module:
+    - options
+    - tmgmt_content
+third_party_settings:
+  tmgmt_content:
+    excluded: false
+id: paragraph.top_banner.field_heading_width
+field_name: field_heading_width
+entity_type: paragraph
+bundle: top_banner
+label: 'Heading width'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

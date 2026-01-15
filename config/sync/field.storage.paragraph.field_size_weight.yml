@@ -1,0 +1,105 @@
+uuid: 33388a2e-8c67-4905-8ed8-72209df206b2
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_size_weight
+field_name: field_size_weight
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: s16-w400
+      label: s16-w400
+    -
+      value: s16-w500
+      label: s16-w500
+    -
+      value: s16-w600
+      label: s16-w600
+    -
+      value: s16-w700
+      label: s16-w700
+    -
+      value: s20-w400
+      label: s20-w400
+    -
+      value: s20-w500
+      label: s20-w500
+    -
+      value: s20-w600
+      label: s20-w600
+    -
+      value: s20-w700
+      label: s20-w700
+    -
+      value: s24-w400
+      label: s24-w400
+    -
+      value: s24-w500
+      label: s24-w500
+    -
+      value: s24-w600
+      label: s24-w600
+    -
+      value: s24-w700
+      label: s24-w700
+    -
+      value: s30-w400
+      label: s30-w400
+    -
+      value: s30-w500
+      label: s30-w500
+    -
+      value: s30-w600
+      label: s30-w600
+    -
+      value: s30-w700
+      label: s30-w700
+    -
+      value: s48-w400
+      label: s48-w400
+    -
+      value: s48-w500
+      label: s48-w500
+    -
+      value: s48-w600
+      label: s48-w600
+    -
+      value: s48-w700
+      label: s48-w700
+    -
+      value: s60-w400
+      label: s60-w400
+    -
+      value: s60-w500
+      label: s60-w500
+    -
+      value: s60-w600
+      label: s60-w600
+    -
+      value: s60-w700
+      label: s60-w700
+    -
+      value: s72-w400
+      label: s72-w400
+    -
+      value: s72-w500
+      label: s72-w500
+    -
+      value: s72-w600
+      label: s72-w600
+    -
+      value: s72-w700
+      label: s72-w700
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

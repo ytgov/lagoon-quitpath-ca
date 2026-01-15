@@ -1,0 +1,25 @@
+uuid: a0eb84c0-2e4a-41c5-a864-7489f93af13c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_space
+    - paragraphs.paragraphs_type.text_block
+  module:
+    - options
+    - tmgmt_content
+third_party_settings:
+  tmgmt_content:
+    excluded: false
+id: paragraph.text_block.field_space
+field_name: field_space
+entity_type: paragraph
+bundle: text_block
+label: 'Padding - top'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

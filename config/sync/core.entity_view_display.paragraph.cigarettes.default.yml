@@ -1,0 +1,57 @@
+uuid: ba5f72b8-d170-4c5c-933e-87704f58b632
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.cigarettes.field_class
+    - field.field.paragraph.cigarettes.field_question_1
+    - field.field.paragraph.cigarettes.field_question_2
+    - field.field.paragraph.cigarettes.field_question_3
+    - field.field.paragraph.cigarettes.field_question_4
+    - paragraphs.paragraphs_type.cigarettes
+id: paragraph.cigarettes.default
+targetEntityType: paragraph
+bundle: cigarettes
+mode: default
+content:
+  field_class:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_question_1:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_question_2:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_question_3:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_question_4:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+hidden: {  }

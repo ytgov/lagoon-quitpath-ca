@@ -1,0 +1,25 @@
+uuid: 490e4f23-cea2-467b-bc5a-351f30548ef3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title_tags
+    - paragraphs.paragraphs_type.contact_info
+  module:
+    - options
+    - tmgmt_content
+third_party_settings:
+  tmgmt_content:
+    excluded: false
+id: paragraph.contact_info.field_title_tags
+field_name: field_title_tags
+entity_type: paragraph
+bundle: contact_info
+label: 'Title tags'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

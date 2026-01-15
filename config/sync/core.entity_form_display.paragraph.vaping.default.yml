@@ -1,0 +1,55 @@
+uuid: 89e31605-ea25-4dda-8fa6-d5abc50fd78f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.vaping.field_class
+    - field.field.paragraph.vaping.field_question_1
+    - field.field.paragraph.vaping.field_question_2
+    - field.field.paragraph.vaping.field_question_3
+    - paragraphs.paragraphs_type.vaping
+id: paragraph.vaping.default
+targetEntityType: paragraph
+bundle: vaping
+mode: default
+content:
+  field_class:
+    type: string_textfield
+    weight: 11
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_question_1:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_question_2:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_question_3:
+    type: string_textfield
+    weight: 2
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  translation:
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

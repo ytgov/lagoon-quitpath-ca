@@ -1,0 +1,110 @@
+uuid: c78be4d6-2d72-4305-92b7-8a5e228d24c1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_contact
+    - paragraphs.paragraphs_type.contact_info
+    - paragraphs.paragraphs_type.contact_section
+  module:
+    - entity_reference_revisions
+    - tmgmt_content
+third_party_settings:
+  tmgmt_content:
+    excluded: false
+id: paragraph.contact_section.field_contact
+field_name: field_contact
+entity_type: paragraph
+bundle: contact_section
+label: Contact
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      contact_info: contact_info
+    negate: 0
+    target_bundles_drag_drop:
+      2_col_rows:
+        weight: 27
+        enabled: false
+      chewing_tobacco_nicotine_pouches:
+        weight: 28
+        enabled: false
+      cigarettes:
+        weight: 29
+        enabled: false
+      contact_info:
+        weight: 30
+        enabled: true
+      contact_section:
+        weight: 31
+        enabled: false
+      cost_calculator:
+        weight: 32
+        enabled: false
+      cost_calculator_options:
+        weight: 33
+        enabled: false
+      cta_block:
+        weight: 34
+        enabled: false
+      cta_block_section:
+        weight: 35
+        enabled: false
+      cta_block_text:
+        weight: 36
+        enabled: false
+      cta_block_text_section:
+        weight: 37
+        enabled: false
+      fagerstrom_test:
+        weight: 38
+        enabled: false
+      feature_section:
+        weight: 40
+        enabled: false
+      featured_content:
+        weight: 39
+        enabled: false
+      health_center:
+        weight: 41
+        enabled: false
+      health_center_section:
+        weight: 42
+        enabled: false
+      options:
+        weight: 43
+        enabled: false
+      previous_next_button:
+        weight: 44
+        enabled: false
+      question:
+        weight: 45
+        enabled: false
+      rows:
+        weight: 46
+        enabled: false
+      story:
+        weight: 47
+        enabled: false
+      text_block:
+        weight: 48
+        enabled: false
+      top_banner:
+        weight: 49
+        enabled: false
+      two_column_block_full_width:
+        weight: 50
+        enabled: false
+      two_column_block_small:
+        weight: 51
+        enabled: false
+      vaping:
+        weight: 52
+        enabled: false
+field_type: entity_reference_revisions

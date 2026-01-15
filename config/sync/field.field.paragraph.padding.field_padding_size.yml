@@ -1,0 +1,25 @@
+uuid: 0062f44a-c5b8-4218-8d24-ed4b4922ca66
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_padding_size
+    - paragraphs.paragraphs_type.padding
+  module:
+    - options
+    - tmgmt_content
+third_party_settings:
+  tmgmt_content:
+    excluded: false
+id: paragraph.padding.field_padding_size
+field_name: field_padding_size
+entity_type: paragraph
+bundle: padding
+label: Size
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

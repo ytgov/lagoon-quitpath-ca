@@ -1,0 +1,25 @@
+uuid: 7338b3b2-ed6e-4698-86c3-11f4c940112e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_button_color
+    - paragraphs.paragraphs_type.previous_next_button
+  module:
+    - options
+    - tmgmt_content
+third_party_settings:
+  tmgmt_content:
+    excluded: false
+id: paragraph.previous_next_button.field_button_color
+field_name: field_button_color
+entity_type: paragraph
+bundle: previous_next_button
+label: 'Button color'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

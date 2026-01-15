@@ -1,0 +1,24 @@
+uuid: 30356b6c-7a9b-4fe3-9141-eb00df1cedf9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_class
+    - paragraphs.paragraphs_type.chewing_tobacco_nicotine_pouches
+  module:
+    - tmgmt_content
+third_party_settings:
+  tmgmt_content:
+    excluded: false
+id: paragraph.chewing_tobacco_nicotine_pouches.field_class
+field_name: field_class
+entity_type: paragraph
+bundle: chewing_tobacco_nicotine_pouches
+label: Class
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

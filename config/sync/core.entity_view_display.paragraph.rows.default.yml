@@ -1,0 +1,91 @@
+uuid: 493f9230-41bd-4948-aa56-a09388b8c041
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.rows.field_image
+    - field.field.paragraph.rows.field_image_alt_text
+    - field.field.paragraph.rows.field_size
+    - field.field.paragraph.rows.field_text
+    - field.field.paragraph.rows.field_text_2
+    - field.field.paragraph.rows.field_title
+    - field.field.paragraph.rows.field_title_size_weight
+    - field.field.paragraph.rows.field_title_tags
+    - field.field.paragraph.rows.field_vertical_align
+    - paragraphs.paragraphs_type.rows
+  module:
+    - options
+    - text
+id: paragraph.rows.default
+targetEntityType: paragraph
+bundle: rows
+mode: default
+content:
+  field_image:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_image_alt_text:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_size:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_text:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_text_2:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_title:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_title_size_weight:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 11
+    region: content
+  field_title_tags:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  field_vertical_align:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 6
+    region: content
+hidden: {  }

@@ -1,0 +1,10 @@
+uuid: cdf95f0d-ad1a-4d6f-98cf-d13287ed5450
+langcode: en
+status: true
+dependencies: {  }
+id: fagerstrom_test_result
+label: 'Fagerström Test Result'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

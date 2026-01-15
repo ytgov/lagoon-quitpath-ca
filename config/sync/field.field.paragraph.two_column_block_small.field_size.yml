@@ -1,0 +1,25 @@
+uuid: 98d6ae2c-9c59-49df-9a68-83b6b26b3f68
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_size
+    - paragraphs.paragraphs_type.two_column_block_small
+  module:
+    - options
+    - tmgmt_content
+third_party_settings:
+  tmgmt_content:
+    excluded: false
+id: paragraph.two_column_block_small.field_size
+field_name: field_size
+entity_type: paragraph
+bundle: two_column_block_small
+label: 'Two column grid size'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

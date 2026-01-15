@@ -1,0 +1,22 @@
+uuid: 41d760c4-bae4-472f-b134-ede32d191a80
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.padding.field_padding_size
+    - paragraphs.paragraphs_type.padding
+  module:
+    - options
+id: paragraph.padding.default
+targetEntityType: paragraph
+bundle: padding
+mode: default
+content:
+  field_padding_size:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

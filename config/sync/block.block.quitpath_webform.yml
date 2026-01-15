@@ -1,0 +1,26 @@
+uuid: 85295537-7b0e-478d-a47e-6c9f5ce1e578
+langcode: en
+status: true
+dependencies:
+  config:
+    - webform.webform.was_this_page_helpful
+  module:
+    - webform
+  theme:
+    - quitpath
+id: quitpath_webform
+theme: quitpath
+region: feedback
+weight: 0
+provider: null
+plugin: webform_block
+settings:
+  id: webform_block
+  label: Webform
+  label_display: '0'
+  provider: webform
+  webform_id: was_this_page_helpful
+  default_data: ''
+  redirect: false
+  lazy: false
+visibility: {  }

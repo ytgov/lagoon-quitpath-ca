@@ -1,0 +1,24 @@
+uuid: ea1a9936-63fb-499e-9c92-fd12e36b0c79
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_question_1
+    - paragraphs.paragraphs_type.chewing_tobacco_nicotine_pouches
+  module:
+    - tmgmt_content
+third_party_settings:
+  tmgmt_content:
+    excluded: false
+id: paragraph.chewing_tobacco_nicotine_pouches.field_question_1
+field_name: field_question_1
+entity_type: paragraph
+bundle: chewing_tobacco_nicotine_pouches
+label: Question-1
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

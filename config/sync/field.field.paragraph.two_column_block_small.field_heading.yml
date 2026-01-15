@@ -1,0 +1,25 @@
+uuid: ef729bf9-e986-4fd5-b55e-2ccf0a7366fa
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_heading
+    - paragraphs.paragraphs_type.two_column_block_small
+  module:
+    - options
+    - tmgmt_content
+third_party_settings:
+  tmgmt_content:
+    excluded: false
+id: paragraph.two_column_block_small.field_heading
+field_name: field_heading
+entity_type: paragraph
+bundle: two_column_block_small
+label: 'Title Tags'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string
