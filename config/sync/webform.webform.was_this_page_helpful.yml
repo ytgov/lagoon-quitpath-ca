@@ -236,11 +236,11 @@ handlers:
     settings:
       states:
         - completed
-      to_mail: eservices@yukon.ca
+      to_mail: Emily.Bradbury@yukon.ca
       to_options: {  }
       bcc_mail: ''
       bcc_options: {  }
-      cc_mail: ''
+      cc_mail: hss@yukon.ca
       cc_options: {  }
       from_mail: _default
       from_options: {  }
