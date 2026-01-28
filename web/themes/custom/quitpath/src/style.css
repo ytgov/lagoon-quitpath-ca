@@ -1245,7 +1245,7 @@ input[type="search"]:focus-visible {
 
 /* Yukon SSO login button */
 #openid-connect-login-form {
-  margin-left: 150px;
+  text-align: center;
 }
 
 #edit-openid-connect-client-generic-login {
