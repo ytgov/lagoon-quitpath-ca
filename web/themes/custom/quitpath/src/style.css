@@ -192,7 +192,7 @@
   .breadcrumb__item.active {
     @apply text-green-500;
   }
-  
+
   #mobile-menu li.active .sub-menu a.is-active {
     @apply text-green-300;
   }
@@ -257,7 +257,7 @@
   .btn.btn-dark {
     @apply bg-gray-900 border-gray-900 text-white;
   }
-  
+
   .btn.btn-red {
     @apply bg-red-400 border-red-600 text-white;
   }
@@ -323,7 +323,7 @@
   html [hreflang="fr"] {
       @apply hidden;
   }
-  
+
   html[lang="en"] [hreflang="fr"],
   html[lang="fr"] [hreflang="en"] {
       @apply block;
@@ -333,11 +333,11 @@
     .sitemap {
         @apply container mx-auto;
     }
-    
+
     .sitemap .sitemap-item {
         @apply space-y-7.5;
     }
-    
+
     .sitemap .sitemap-item div > ul {
         @apply p-0 list-none grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5 md:gap-10;
     }
@@ -345,7 +345,7 @@
     .sitemap .sitemap-item div > ul > li > a {
         @apply text-xl md:text-2xl font-semibold;
     }
-    
+
     .sitemap .sitemap-item ul ul {
         @apply list-disc text-md md:text-xl pl-8;
     }
@@ -414,7 +414,7 @@
   input[type="radio"]:checked::before {
     @apply bg-green-300 border-green-400;
   }
-  
+
     input[type="checkbox"] {
       -webkit-appearance: none;
       -moz-appearance: none;
@@ -424,7 +424,7 @@
       cursor: pointer;
       display: inline-block;
     }
-    
+
     input[type="checkbox"]::before {
       content: "";
       position: absolute;
@@ -436,11 +436,11 @@
       background-color: #fff;
       border-radius: 4px;
     }
-    
+
     input[type="checkbox"]:checked::before {
       @apply bg-green-300 border-green-400;
     }
-    
+
     /* Add a checkmark when checked */
     input[type="checkbox"]:checked::after {
       content: "";
@@ -609,32 +609,32 @@
   .s72-w700 {
     @apply text-5xl md:text-7xl font-bold md:leading-[84px];
   }
-  
+
   .contact-form-wrapper {
     @apply pb-0;
   }
-  
+
   .divide-y div[data-node-id="285"]:first-child > h3.pt-12\.5 {
     @apply !pt-0;
   }
-  
+
   #custom-form-message-wrapper .success-message,
   #custom-form-message-wrapper [aria-label="Error message"] {
     @apply rounded-lg p-5 mt-5;
   }
-  
+
   #custom-form-message-wrapper .success-message {
     @apply bg-green-200 text-black
   }
-  
+
   #custom-form-message-wrapper [aria-label="Error message"] [role=alert] {
     @apply bg-red-200 text-red-500;
   }
-  
+
   .error {
     @apply text-red-500;
   }
-  
+
   .field-image-partner-logos img {
     width: auto;
     margin: 0 auto;
@@ -1241,4 +1241,18 @@ input[type="search"]:focus-visible {
 .pager__item--previous,
 .pager__item--first {
     @apply hidden;
+}
+
+/* Yukon SSO login button */
+#openid-connect-login-form {
+  text-align: center;
+}
+
+#edit-openid-connect-client-generic-login {
+  background-color: var(--color-blue-600);
+  border-radius: 10px;
+  color: var(--color-white);
+  padding: 10px 15px;
+  font-weight: 600;
+  font-size: 16px;
 }
