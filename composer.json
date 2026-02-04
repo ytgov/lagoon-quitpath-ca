@@ -26,7 +26,7 @@
         "drupal/smtp": "^1.4",
         "drupal/mailsystem": "^4.5",
         "drupal/external_link_popup": "^2.0",
-        "drupal/openid_connect": "^1.4"
+        "drupal/upgrade_status": "^4.3"
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
@@ -47,6 +47,12 @@
                 "sites/development.services.yml",
                 "sites/example.settings.local.php"
             ]
+        },
+        "enable-patching": true,
+        "patches": {
+          "drupal/paragraphs": {
+            "paragraghs buttons do not appear if translated node": "https://www.drupal.org/files/issues/2024-09-16/2461695-284.patch"
+          }
         }
     },
     "config": {
