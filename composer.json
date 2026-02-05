@@ -25,8 +25,7 @@
         "drupal/editoria11y": "^2.2",
         "drupal/smtp": "^1.4",
         "drupal/mailsystem": "^4.5",
-        "drupal/external_link_popup": "^2.0",
-        "drupal/upgrade_status": "^4.3"
+        "drupal/external_link_popup": "^2.0"
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
