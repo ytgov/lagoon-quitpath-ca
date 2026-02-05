@@ -47,6 +47,12 @@
                 "sites/development.services.yml",
                 "sites/example.settings.local.php"
             ]
+        },
+        "enable-patching": true,
+        "patches": {
+          "drupal/paragraphs": {
+            "paragraghs buttons do not appear if translated node": "https://www.drupal.org/files/issues/2024-09-16/2461695-284.patch"
+          }
         }
     },
     "config": {
