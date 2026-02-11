@@ -105,7 +105,7 @@
         <ul class="menu container mx-auto grid grid-cols-3 gap-5">
     {% endif %}
     {% if menu_level == 0 %}
-        <ul class="max-xl:hidden xl:flex space-x-5 text-xl">
+        <ul class="max-xl:hidden xl:flex space-x-5 max-2xl:space-x-3 text-xl max-2xl:text-base">
     {% endif %}
       {% set attributes = attributes.removeClass(primary_nav_level) %}
       {% for item in items %}
@@ -139,7 +139,7 @@
         {% endif %}
         {% if menu_level == 1 %}
             {% set link_classes = [
-                'flex gap-7.5 items-center pl-20 pr-5 py-7.5 text-black text-xl rounded hover:bg-green-200 hover:text-black duration-500'
+                'flex gap-7.5 items-center pl-20 pr-5 py-7.5 text-black text-xl max-2xl:text-base rounded hover:bg-green-200 hover:text-black duration-500'
               ]
             %}
         {% endif %}
