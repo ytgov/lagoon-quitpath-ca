@@ -15,10 +15,10 @@ favicon:
   mimetype: image/svg+xml
 footer_logo:
   - '93'
-footer_copyrights: '© 2026 Government of Yukon'
-contact_form_recipient_email: Emily.Bradbury@yukon.ca
-contact_form_submit_text: 'Find out how we use your personal health information and how we protect your privacy'
-contact_form_submit_text_fr: 'En savoir plus sur l’utilisation des renseignements médicaux  personnels et la protection de la vie privée.'
+footer_copyrights: '© 2025 Government of Yukon'
+contact_form_recipient_email: quitpath@quitpath.shareacopy.com
+contact_form_submit_text: 'For more information on how we use your information'
+contact_form_submit_text_fr: "Pour plus d'informations sur la manière dont nous utilisons vos données"
 contact_form_click_here_link: /privacy
 contact_form_click_here_link_fr: /fr/vie-privee
 link_open_new_tab: 1

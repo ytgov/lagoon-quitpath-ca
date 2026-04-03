@@ -22,7 +22,7 @@ elements: |-
   how_did_this_page_help_you:
     '#type': textarea
     '#title': 'How did this page help you?'
-    '#description': '<p><a href="/privacy" target="_blank">Find out how we protect your privacy</a></p>'
+    '#description': '<p style="text-align:right;">For more information on how we use your information, <a href="/privacy">click here</a></p>'
     '#required': true
     '#states':
       visible:
@@ -31,7 +31,7 @@ elements: |-
   how_can_we_improve_this_page:
     '#type': textarea
     '#title': 'How can we improve this page?'
-    '#description': '<p><a href="/privacy" target="_blank">Find out how we protect your privacy</a></p>'
+    '#description': '<p style="text-align:right;">For more information on how we use your information, <a href="/privacy">click here</a></p>'
     '#required': true
     '#states':
       visible:
@@ -170,7 +170,7 @@ settings:
   entity_limit_user_interval: null
   purge: none
   purge_days: null
-  results_disabled: true
+  results_disabled: false
   results_disabled_ignore: false
   results_customize: false
   token_view: false
@@ -228,7 +228,7 @@ handlers:
   email:
     id: email
     handler_id: email
-    label: 'Email feedback'
+    label: '[webform_submission:submitted-to:?]Email[webform_submission:submitted-to:?][webform_submission:submitted-to:?][webform_submission:submitted-to:?][webform_submission:submitted-to:?][webform_submission:submitted-to:?]'
     notes: ''
     status: true
     conditions: {  }
@@ -236,13 +236,13 @@ handlers:
     settings:
       states:
         - completed
-      to_mail: Emily.Bradbury@yukon.ca
+      to_mail: quitpath@quitpath.shareacopy.com
       to_options: {  }
       bcc_mail: ''
       bcc_options: {  }
-      cc_mail: hss@yukon.ca
+      cc_mail: ''
       cc_options: {  }
-      from_mail: _default
+      from_mail: quitpath@quitpath.shareacopy.com
       from_options: {  }
       from_name: _default
       reply_to: ''
@@ -250,7 +250,7 @@ handlers:
       sender_mail: ''
       sender_name: ''
       subject: _default
-      body: '<p>Submitted on [webform_submission:created]</p><p>Submitted by: [webform_submission:user]</p><p>Submitted values are:</p><p>[webform_submission:values]<br><br>Page Title: [webform_submission:source-entity:title]<br>Page URL: [webform_submission:source-entity:url]</p>'
+      body: '<p>Submitted on [webform_submission:created]</p><p>Submitted by: [webform_submission:user]</p><p>Submitted values are:</p><p>[webform_submission:values]</p><p>Submitted from: [webform_submission:source-entity:title] [webform_submission:source-entity:url]</p>'
       excluded_elements: {  }
       ignore_access: false
       exclude_empty: true
@@ -260,6 +260,7 @@ handlers:
       attachments: false
       twig: false
       theme_name: ''
+      langcode: ''
       parameters: {  }
       debug: false
 variants: {  }

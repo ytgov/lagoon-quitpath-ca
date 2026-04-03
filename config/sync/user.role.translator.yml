@@ -17,7 +17,6 @@ dependencies:
     - media
     - menu_link_content
     - node
-    - paragraphs
     - path
     - shortcut
     - system
@@ -30,7 +29,6 @@ label: Translator
 weight: -7
 is_admin: null
 permissions:
-  - 'accept translation jobs'
   - 'access administration pages'
   - 'access content overview'
   - 'access contextual links'
@@ -45,7 +43,6 @@ permissions:
   - 'create media'
   - 'create translation jobs'
   - 'create url aliases'
-  - 'delete any media'
   - 'delete content translations'
   - 'delete media'
   - 'delete own files'
@@ -61,7 +58,6 @@ permissions:
   - 'translate interface'
   - 'translate menu_link_content'
   - 'translate page node'
-  - 'update any media'
   - 'update content translations'
   - 'update media'
   - 'use editorial transition create_new_draft'
@@ -76,5 +72,4 @@ permissions:
   - 'view editoria11y checker'
   - 'view latest version'
   - 'view the administration theme'
-  - 'view unpublished paragraphs'
   - 'view vocabulary labels'

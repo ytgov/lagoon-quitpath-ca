@@ -6,12 +6,9 @@ dependencies:
     - field.storage.paragraph.field_address
     - paragraphs.paragraphs_type.health_center
   module:
-    - allowed_formats
     - text
     - tmgmt_content
 third_party_settings:
-  allowed_formats:
-    allowed_formats: {  }
   tmgmt_content:
     excluded: false
 id: paragraph.health_center.field_address

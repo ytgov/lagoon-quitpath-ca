@@ -43,3 +43,7 @@ web/sites/default/development.services.local.yml
 
 # Ignore sql file
 *.sql
+
+# Ignore node modules in theme
+/web/themes/custom/*/node_modules/
+web/themes/custom/*/node_modules/
