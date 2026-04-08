@@ -1,0 +1,5 @@
+quitpath.settings:
+  title: 'My theme settings'
+  base_route_name: system.theme_settings
+  names:
+    - quitpath.settings

@@ -6,12 +6,9 @@ dependencies:
     - field.storage.paragraph.field_story
     - paragraphs.paragraphs_type.story
   module:
-    - allowed_formats
     - text
     - tmgmt_content
 third_party_settings:
-  allowed_formats:
-    allowed_formats: {  }
   tmgmt_content:
     excluded: false
 id: paragraph.story.field_story

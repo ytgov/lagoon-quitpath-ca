@@ -1,5 +1,5 @@
 name: 'Contact Form'
 type: module
 description: 'Custom contact form for quitting help'
-core_version_requirement: ^10
+core_version_requirement: ^10 || ^11
 package: Custom

@@ -46,6 +46,7 @@ module:
   linkit: 0
   linkit_attributes: 0
   locale: 0
+  mailer_transport: 0
   mailsystem: 0
   matomo: 0
   media: 0
@@ -92,6 +93,7 @@ module:
   toolbar: 0
   twig_tweak: 0
   update: 0
+  upgrade_status: 0
   user: 0
   views_bulk_operations: 0
   views_infinite_scroll: 0
@@ -101,6 +103,7 @@ module:
   workflows: 0
   pathauto: 1
   content_translation: 10
+  externalauth: 10
   views: 10
   paragraphs: 11
   minimal: 1000

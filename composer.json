@@ -14,7 +14,7 @@
         }
     ],
     "require": {
-        "ytgov/lagoon-boutique-base-image": "dev-prod",
+        "ytgov/lagoon-boutique-base-image": "dev-w3creatives/prod11",
         "drupal/simple_menu_icons": "^3.1",
         "drupal/dependent_fields": "^1.0",
         "drupal/conditional_fields": "^4.0@alpha",
@@ -26,7 +26,8 @@
         "drupal/smtp": "^1.4",
         "drupal/mailsystem": "^4.5",
         "drupal/external_link_popup": "^2.0",
-        "drupal/openid_connect": "^1.4"
+        "drupal/openid_connect": "^3.0@alpha",
+        "drupal/upgrade_status": "^4.3"
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
