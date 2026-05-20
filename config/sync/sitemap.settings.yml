@@ -13,6 +13,7 @@ plugins:
     settings:
       title: 'Main navigation'
       show_disabled: false
+      menu_depth: 9
     id: 'menu:main'
     provider: sitemap
   frontpage:

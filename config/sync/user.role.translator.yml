@@ -4,6 +4,8 @@ status: true
 dependencies:
   config:
     - filter.format.full_html
+    - media.type.file
+    - media.type.image
     - node.type.page
     - workflows.workflow.editorial
   module:
@@ -42,18 +44,31 @@ permissions:
   - 'access toolbar'
   - 'administer menu'
   - 'create content translations'
+  - 'create file media'
+  - 'create image media'
   - 'create media'
+  - 'create page content'
   - 'create translation jobs'
   - 'create url aliases'
   - 'delete any media'
   - 'delete content translations'
   - 'delete media'
+  - 'delete own file media'
   - 'delete own files'
+  - 'delete own image media'
+  - 'delete own page content'
   - 'delete translation jobs'
+  - 'edit any file media'
+  - 'edit any image media'
   - 'edit any page content'
+  - 'edit own file media'
+  - 'edit own image media'
   - 'edit own page content'
   - 'mark as hidden in editoria11y'
   - 'provide translation services'
+  - 'revert any file media revisions'
+  - 'revert any image media revisions'
+  - 'revert page revisions'
   - 'submit translation jobs'
   - 'switch shortcut sets'
   - 'translate any entity'
@@ -72,9 +87,12 @@ permissions:
   - 'view all media revisions'
   - 'view all revisions'
   - 'view all taxonomy revisions'
+  - 'view any file media revisions'
+  - 'view any image media revisions'
   - 'view any unpublished content'
   - 'view editoria11y checker'
   - 'view latest version'
+  - 'view page revisions'
   - 'view the administration theme'
   - 'view unpublished paragraphs'
   - 'view vocabulary labels'
