@@ -3,12 +3,17 @@ langcode: en
 status: true
 dependencies:
   config:
+    - filter.format.full_html
+    - media.type.file
+    - media.type.image
+    - node.type.page
     - workflows.workflow.editorial
   module:
     - content_moderation
     - contextual
     - editoria11y
     - file
+    - filter
     - media
     - node
     - paragraphs
@@ -31,22 +36,41 @@ permissions:
   - 'access site in maintenance mode'
   - 'access taxonomy overview'
   - 'access toolbar'
+  - 'create file media'
+  - 'create image media'
   - 'create media'
+  - 'create page content'
   - 'create url aliases'
   - 'delete media'
+  - 'delete own file media'
   - 'delete own files'
+  - 'delete own image media'
+  - 'delete own page content'
+  - 'edit any file media'
+  - 'edit any image media'
+  - 'edit any page content'
+  - 'edit own file media'
+  - 'edit own image media'
   - 'mark as hidden in editoria11y'
+  - 'revert any file media revisions'
+  - 'revert any image media revisions'
+  - 'revert page revisions'
   - 'switch shortcut sets'
+  - 'update any media'
   - 'update media'
   - 'use editorial transition create_new_draft'
   - 'use editorial transition restore_to_draft'
   - 'use editorial transition review'
+  - 'use text format full_html'
   - 'view all media revisions'
   - 'view all revisions'
   - 'view all taxonomy revisions'
+  - 'view any file media revisions'
+  - 'view any image media revisions'
   - 'view any unpublished content'
   - 'view editoria11y checker'
   - 'view latest version'
+  - 'view page revisions'
   - 'view the administration theme'
   - 'view unpublished paragraphs'
   - 'view vocabulary labels'
