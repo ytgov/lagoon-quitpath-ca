@@ -30,7 +30,8 @@
         "drupal/core-recommended": "10.6.9",
         "drupal/core-composer-scaffold": "10.6.9",
         "drupal/core-project-message": "10.6.9",
-        "drupal/paragraphs": "^1.21"
+        "drupal/paragraphs": "^1.21",
+        "drupal/webform": "^6.3"
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
